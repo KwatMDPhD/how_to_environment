@@ -1,1 +1,1 @@
-For setting up coding environment.
+For setting up computational environment.
