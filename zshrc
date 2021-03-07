@@ -98,7 +98,7 @@ function sshport() {
 
 }
 
-function findremovejunk() {
+function removejunk() {
 
 	local patterns=("*.swp" "__pycache__" "*.pyc" ".ipynb_checkpoints" ".DS_Store" ".com.apple.*" ".~*")
 
@@ -110,7 +110,7 @@ function findremovejunk() {
 
 }
 
-function findresetmode() {
+function resetmode() {
 
 	find . -not -path "*/.*" -type f -exec chmod 644 {} \;
 
