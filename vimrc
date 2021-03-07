@@ -128,23 +128,25 @@ Plug 'preservim/nerdtree'
 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-Plug '/usr/local/opt/fzf'
 " Install fzf: brew install fzf
+Plug '/usr/local/opt/fzf'
+
+Plug 'junegunn/fzf.vim'
 
 Plug 'frazrepo/vim-rainbow'
 
 Plug 'altercation/vim-colors-solarized'
 
 "Plug 'sheerun/vim-polyglot'
-"
+
+Plug 'codota/tabnine-vim'
+
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "" Set up language servers: CocInstall coc-sh coc-html coc-json coc-julia coc-pyright
-""
-"Plug 'codota/tabnine-vim'
-"
+
 "Plug 'dense-analysis/ale'
 "" Install language specific linters
-"
+
 "Plug 'JuliaEditorSupport/julia-vim'
 
 " End of list
@@ -163,16 +165,16 @@ colorscheme solarized
 " Use ctrl-t to toggle
 map <C-t> :NERDTreeToggle<CR>
 
-" ================================================================================
-" CoC
-" ================================================================================
-" Use tab to navigate suggestions down and complete
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
-
-" Use shift-tab to navigate suggestions up and complete
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+"" ================================================================================
+"" CoC
+"" ================================================================================
+"" Use tab to navigate suggestions down and complete
+"inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
+"
+"" Use shift-tab to navigate suggestions up and complete
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction

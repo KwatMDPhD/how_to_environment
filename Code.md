@@ -29,7 +29,7 @@ sudo rm -fr /usr/local/*
 ```
 
 ```sh
-brew reinstall macvim fzf tree rename node julia shfmt isort black pandoc wkhtmltopdf
+brew reinstall tree rename macvim fzf the_silver_searcher node julia shfmt isort black pandoc wkhtmltopdf
 
 pip3 install jupyterlab autoflake
 ```
