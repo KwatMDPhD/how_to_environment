@@ -24,12 +24,6 @@ System Preferences > Software Update
 
 XCode
 
-Brew
-
-```sh
-brew cask
-```
-
 ### Disable PressAndHold
 
 ```sh
