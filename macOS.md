@@ -32,6 +32,14 @@ XCode
 defaults write -globalDomain ApplePressAndHoldEnabled -bool false
 ```
 
+### Get software
+
+Corsair iCUE
+
+### Get Safari extension
+
+Add block
+
 ## Set environment
 
 ### Command line
