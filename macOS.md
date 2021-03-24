@@ -2,7 +2,9 @@
 
 Boot into the recovery mode by `Cmd + R`
 
-Disk Utility > View > Show All Devices > APPLE SSD(...) > Erase > (Use the default settings) > Erase
+Erase all volumes except the base
+
+Make a new volume
 
 Reinstall macOS
 
