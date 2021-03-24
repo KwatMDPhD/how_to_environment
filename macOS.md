@@ -1,6 +1,8 @@
 ## Reset disk
 
-Boot into the recovery mode by `Cmd + R`
+Boot into the recovery mode
+
+Restart > `Cmd + R`
 
 Erase all volumes except the base
 
@@ -42,11 +44,7 @@ curl https://raw.githubusercontent.com/kwatme/environment/master/vimrc > ~/.vimr
 
 ### Global program
 
-Uninstall brew.
-
-```sh
-rm -rf ~/.*
-```
+Uninstall brew
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)" &&
@@ -54,13 +52,13 @@ rm -rf ~/.*
 sudo rm -fr /usr/local/*
 ```
 
-Install brew.
+Install brew
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-Use brew to install as many things.
+Use brew to install as many things
 
 ```sh
 brew install tree rename macvim fzf the_silver_searcher node julia shfmt isort black pandoc wkhtmltopdf
