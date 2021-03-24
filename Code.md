@@ -8,7 +8,7 @@ curl https://raw.githubusercontent.com/kwatme/environment/master/vimrc > ~/.vimr
 
 ## Global program
 
-Use brew to install everything (try to).
+Uninstall brew.
 
 ```sh
 rm -rf ~/.*
@@ -20,13 +20,13 @@ rm -rf ~/.*
 sudo rm -fr /usr/local/*
 ```
 
+Install brew.
+
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-```sh
-sudo rm -fr /usr/local/*
-```
+Use brew to install as many things.
 
 ```sh
 brew install tree rename macvim fzf the_silver_searcher node julia shfmt isort black pandoc wkhtmltopdf
