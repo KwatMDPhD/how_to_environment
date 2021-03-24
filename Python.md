@@ -62,7 +62,7 @@ vector name should end with vector
 
 table name should end with table
 
-array\_0, array\_2
+array_0, array_2
 
 array_nd
 
