@@ -1,4 +1,4 @@
-For setting up computational environment.
+For setting up a macOS computational environment.
 
 ## Reset disk
 
@@ -12,23 +12,17 @@ Make a new volume
 
 Reinstall macOS
 
-## Set OS
+## Set macOS
 
 ### Update software
 
 System Preferences > Software Update
 
-### Set System Preferences
-
-### Set Finder Preferences
-
 ### Simlify dock
 
-### Get software
+### Set System Preferences
 
-XCode
-
-### Disable PressAndHold
+### Disable press-and-hold
 
 ```sh
 defaults write -globalDomain ApplePressAndHoldEnabled -bool false
@@ -36,25 +30,19 @@ defaults write -globalDomain ApplePressAndHoldEnabled -bool false
 
 ### Get software
 
+XCode
+
 Corsair iCUE
+
+SensibleSideButtons
 
 ### Get Safari extension
 
 Add block
 
-## Set environment
+### Get Brew
 
-### Command line
-
-```sh
-curl https://raw.githubusercontent.com/kwatme/environment/master/zshrc > ~/.zshrc &&
-
-curl https://raw.githubusercontent.com/kwatme/environment/master/vimrc > ~/.vimrc
-```
-
-### Global program
-
-Uninstall brew
+Uninstall
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)" &&
@@ -62,13 +50,15 @@ Uninstall brew
 sudo rm -fr /usr/local/*
 ```
 
-Install brew
+Install
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-Use brew to install as many things
+## Set computational environment
+
+### Get global program
 
 ```sh
 brew install tree rename macvim fzf the_silver_searcher node julia shfmt isort black pandoc wkhtmltopdf
@@ -76,7 +66,15 @@ brew install tree rename macvim fzf the_silver_searcher node julia shfmt isort b
 pip3 install jupyterlab autoflake
 ```
 
-### Git
+### Set profile
+
+```sh
+curl https://raw.githubusercontent.com/kwatme/environment/master/zshrc > ~/.zshrc &&
+
+curl https://raw.githubusercontent.com/kwatme/environment/master/vimrc > ~/.vimrc
+```
+
+### Set git
 
 ```sh
 git config --global user.name "KwatME" &&
@@ -86,7 +84,7 @@ git config --global user.email "kwat.me@icloud.com" &&
 git config --global credential.helper osxkeychain
 ```
 
-### Julia
+### Set julia
 
 ```sh
 julia
@@ -111,7 +109,7 @@ using Pkg: build
 build("IJulia")
 ```
 
-### Jupyter
+### Set jupyter
 
 ```sh
 jupyter labextension install @axlair/jupyterlab_vim jupyterlab-plotly
