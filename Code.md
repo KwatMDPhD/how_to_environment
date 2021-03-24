@@ -11,7 +11,7 @@ curl https://raw.githubusercontent.com/kwatme/environment/master/vimrc > ~/.vimr
 Use brew to install everything (try to).
 
 ```sh
-rm -rf ~/.* # If something breaks, we can learn fix and learn about it
+rm -rf ~/.*
 ```
 
 ```sh
