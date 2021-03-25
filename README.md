@@ -22,6 +22,8 @@ System Preferences > Software Update
 
 ### Set System Preferences
 
+### Set Finder Preferences
+
 ### Disable press-and-hold
 
 ```sh
@@ -32,9 +34,11 @@ defaults write -globalDomain ApplePressAndHoldEnabled -bool false
 
 XCode
 
+SensibleSideButtons
+
 Corsair iCUE
 
-SensibleSideButtons
+VLC Medica Player
 
 ### Get Safari extension
 
