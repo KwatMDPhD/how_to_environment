@@ -44,6 +44,8 @@ VLC Medica Player
 
 Add block
 
+Vimari
+
 ### Get Brew
 
 Uninstall
