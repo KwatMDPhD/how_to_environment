@@ -11,6 +11,8 @@ set guifont=Menlo-Regular:h16
 
 set number
 
+set guicursor+=a:blinkon0
+
 set laststatus=2
 
 set ruler
