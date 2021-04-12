@@ -46,6 +46,11 @@ Add block
 
 Vimari
 
+```json
+"excludedUrls": "localhost,tinkercad.com",
+```
+
+
 ### Get Brew
 
 Uninstall
