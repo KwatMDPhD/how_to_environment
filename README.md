@@ -96,9 +96,11 @@ pip3 install --upgrade OUTDATED_ONES
 ### Set profile
 
 ```sh
-curl https://raw.githubusercontent.com/kwatme/environment/master/zshrc > ~/.zshrc &&
+curl https://raw.githubusercontent.com/kwatme/Environment.md/master/zshrc > ~/.zshrc &&
 
-curl https://raw.githubusercontent.com/kwatme/environment/master/vimrc > ~/.vimrc
+curl https://raw.githubusercontent.com/kwatme/Environment.md/master/vimrc > ~/.vimrc &&
+
+curl https://raw.githubusercontent.com/kwatme/Environment.md/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
 ### Set git
@@ -123,6 +125,7 @@ using Pkg: add
 for package in (
     "BenchmarkTools",
     "IJulia",
+    "JuliaFormatter",
     "PyCall",
     "Revise",
 )

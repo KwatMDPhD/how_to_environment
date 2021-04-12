@@ -1,0 +1,37 @@
+indent = 4
+
+margin = 92
+
+always_for_in = true
+
+whitespace_typedefs = true
+
+whitespace_ops_in_indices = true
+
+remove_extra_newlines = false
+
+import_to_using = true
+
+pipe_to_function_call = true
+
+short_to_long_function_def = true
+
+always_use_return = true
+
+whitespace_in_kwargs = true
+
+annotate_untyped_fields_with_any = true
+
+format_docstrings = false
+
+align_struct_field = false
+
+align_conditional = false
+
+align_assignment = false
+
+align_pair_arrow = false
+
+conditional_to_if = true
+
+normalize_line_endings = "auto"
