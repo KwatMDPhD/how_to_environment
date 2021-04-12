@@ -72,6 +72,22 @@ brew install tree rename macvim fzf the_silver_searcher node julia shfmt isort b
 pip3 install jupyterlab autoflake
 ```
 
+Upgrade the programs
+
+```sh
+brew update &&
+
+brew upgrade
+```
+
+```sh
+pip3 list --outdated
+```
+
+```sh
+pip3 install --upgrade OUTDATED_ONES
+```
+
 ### Set profile
 
 ```sh
