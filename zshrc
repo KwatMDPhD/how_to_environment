@@ -141,31 +141,30 @@ function cleansh() {
 function gitclone() {
 
 	for repository_name in \
-		Kraft.py \
-		CleanNB.py \
-		GCTGMT.py \
-		FeatureSetEnrichment.py \
-		BlogPost.jl \
-		CleanCode.jl \
-		HotPlot.jl \
+        Environment.md \
+        Medicine.md \
+        Patient.md \
+        GeneSetControl.tsv \
+        HotPlot.jl \
 		Normalization.jl \
 		InformationTheory.jl \
 		GCTGMT.jl \
+        MDNetwork.jl \
 		FeatureSetEnrichment.jl \
-		GeneSetControl.tsv \
-		GSEA.app \
-		GenomeExplorer.app \
-		Diagnosis.app \
-		MedicalExam.app \
+		Kraft.py \
+		GCTGMT.py \
+        Model.py \
+		Comparison.py \
+		Proxy.py \
+		CancerCellLine.py \
 		Medulloblastoma.py \
 		ChronicFatigueSyndrome.py \
-		CancerCellLine.py \
-		Comparison.py \
-		Model.py \
-		Proxy.py \
-		kwatme.com \
-		translational-crc.org \
-		shenjpmd.com; do
+		CleanNB.py \
+		MDPost.py \
+		FeatureSetEnrichment.py \
+        GenomeExplorer.js \
+        GSEA.js \
+		kwatme.com; do
 
 		git clone https://github.com/KwatME/$repository_name
 
