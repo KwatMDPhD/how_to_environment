@@ -44,7 +44,7 @@ alias du="du -h"
 
 alias df="df -h"
 
-alias vim="mvim"
+alias vim="mvim --remote-tab-silent"
 
 alias rsync="rsync --verbose --itemize-changes --human-readable --progress --stats --recursive"
 
@@ -120,7 +120,13 @@ function resetmode() {
 
 function cleanweb() {
 
-	npx prettier -w $1
+	npx prettier --write $1
+
+}
+
+function cleanjl() {
+
+	julia --eval 'using JuliaFormatter; format(".")'
 
 }
 
@@ -134,26 +140,26 @@ function cleanpy() {
 
 function cleansh() {
 
-	shfmt -w $1
+	shfmt -s -w $1
 
 }
 
 function gitclone() {
 
 	for repository_name in \
-        Environment.md \
-        Medicine.md \
-        Patient.md \
-        GeneSetControl.tsv \
-        HotPlot.jl \
+		Environment.md \
+		Medicine.md \
+		Patient.md \
+		GeneSetControl.tsv \
+		HotPlot.jl \
 		Normalization.jl \
 		InformationTheory.jl \
 		GCTGMT.jl \
-        MDNetwork.jl \
+		MDNetwork.jl \
 		FeatureSetEnrichment.jl \
 		Kraft.py \
 		GCTGMT.py \
-        Model.py \
+		Model.py \
 		Comparison.py \
 		Proxy.py \
 		CancerCellLine.py \
@@ -162,8 +168,8 @@ function gitclone() {
 		CleanNB.py \
 		MDPost.py \
 		FeatureSetEnrichment.py \
-        GenomeExplorer.js \
-        GSEA.js \
+		GenomeExplorer.js \
+		GSEA.js \
 		kwatme.com; do
 
 		git clone https://github.com/KwatME/$repository_name
