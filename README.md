@@ -46,10 +46,11 @@ Add block
 
 Vimari
 
+Vimari > Open Configuration File >
+
 ```json
 "excludedUrls": "localhost,tinkercad.com",
 ```
-
 
 ### Get Brew
 
