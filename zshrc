@@ -224,6 +224,18 @@ function gitsyncrepositories() {
 
 }
 
+function updatejl() {
+
+	julia --eval 'using Pkg; Pkg.update()' &&
+		for jl in *; do
+			printf "$jl\n"
+			cd $jl
+			julia --eval 'using Pkg; Pkg.activate("."); Pkg.update()'
+			cd ..
+		done
+
+}
+
 function releasepypi() {
 
 	rm -rf build dist *.egg-info &&
