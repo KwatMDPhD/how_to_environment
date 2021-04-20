@@ -73,7 +73,7 @@ Install
 ### Get global program
 
 ```sh
-brew install tree rename macvim fzf the_silver_searcher node julia python shfmt isort black pandoc wkhtmltopdf
+brew install tree rename macvim fzf the_silver_searcher node julia python shfmt isort black pandoc &&
 
 python3 -m pip install jupyterlab autoflake
 ```
@@ -87,11 +87,11 @@ brew upgrade
 ```
 
 ```sh
-pip3 list --outdated
+python3 -m pip list --outdated
 ```
 
 ```sh
-pip3 install --upgrade OUTDATED_ONES
+python3 -m pip install --upgrade OUTDATED_ONES
 ```
 
 ### Set profile
