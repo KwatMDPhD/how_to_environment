@@ -1,5 +1,3 @@
-For setting up a macOS computational environment.
-
 ## Reset disk
 
 Boot into the recovery mode
@@ -121,19 +119,19 @@ julia
 ```julia
 using Pkg: add, build
 
-for package in (
-    "BenchmarkTools",
+for name in (
     "IJulia",
     "JuliaFormatter",
-    #"PyCall",
     "Revise",
+    "BenchmarkTools",
+    #"PyCall",
 )
 
-    add(package)
+    add(; name=name)
 
 end
 
-build("IJulia")
+build(; name="IJulia")
 ```
 
 ### Set jupyter

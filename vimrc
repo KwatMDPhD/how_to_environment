@@ -149,7 +149,7 @@ Plug 'codota/tabnine-vim'
 "Plug 'dense-analysis/ale'
 "" Install language specific linters
 
-"Plug 'JuliaEditorSupport/julia-vim'
+Plug 'JuliaEditorSupport/julia-vim'
 
 " End of list
 call plug#end()
