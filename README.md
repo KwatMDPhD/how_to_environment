@@ -81,9 +81,7 @@ python3 -m pip install jupyterlab autoflake
 Upgrade the programs
 
 ```sh
-brew update &&
-
-brew upgrade
+brew update && brew upgrade
 ```
 
 ```sh
@@ -127,7 +125,7 @@ for package in (
     "BenchmarkTools",
     "IJulia",
     "JuliaFormatter",
-    "PyCall",
+    #"PyCall",
     "Revise",
 )
 
