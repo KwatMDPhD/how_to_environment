@@ -71,23 +71,47 @@ Install
 ### Get global program
 
 ```sh
-brew install tree rename macvim fzf the_silver_searcher node julia python shfmt isort black pandoc git-lfs &&
-
-python3 -m pip install jupyterlab autoflake
+brew install tree rename macvim fzf the_silver_searcher node julia pyenv-virtualenv shfmt pandoc git-lfs
 ```
 
-Upgrade the programs
+### Set python
+
+```sh
+echo -e 'eval "$(pyenv init -)"' >> ~/.zshrc &&
+
+pyenv install 3.8.9 &&
+
+pyenv global 3.8.9 &&
+
+python --version
+```
+
+```sh
+python -m pip install jupyterlab isort black autoflake
+```
+
+### Note
+
+Upgrade brew programs
 
 ```sh
 brew update && brew upgrade
 ```
 
+Upgrade python programs
+
 ```sh
-python3 -m pip list --outdated
+python -m pip list --outdated
 ```
 
 ```sh
-python3 -m pip install --upgrade OUTDATED_ONES
+python -m pip install --upgrade OUTDATED_ONES
+```
+
+Uninstall python programs
+
+```sh
+python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall -y
 ```
 
 ### Set profile
