@@ -90,30 +90,6 @@ python --version
 python -m pip install jupyterlab isort black autoflake
 ```
 
-### Note
-
-Upgrade brew programs
-
-```sh
-brew update && brew upgrade
-```
-
-Upgrade python programs
-
-```sh
-python -m pip list --outdated
-```
-
-```sh
-python -m pip install --upgrade OUTDATED_ONES
-```
-
-Uninstall python programs
-
-```sh
-python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall -y
-```
-
 ### Set profile
 
 ```sh
@@ -178,4 +154,28 @@ Settings > Advanced Settings Editor > Keyboard Shortcuts > User Preferences
     }
   ]
 }
+```
+
+## Note
+
+Upgrade brew programs
+
+```sh
+brew update && brew upgrade
+```
+
+Upgrade python programs
+
+```sh
+python -m pip list --outdated
+```
+
+```sh
+python -m pip install --upgrade OUTDATED_ONES
+```
+
+Uninstall python programs
+
+```sh
+python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall -y
 ```
