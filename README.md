@@ -119,7 +119,7 @@ julia
 ```
 
 ```julia
-using Pkg: add
+using Pkg: add, build
 
 for package in (
     "BenchmarkTools",
@@ -132,8 +132,6 @@ for package in (
     add(package)
 
 end
-
-using Pkg: build
 
 build("IJulia")
 ```
