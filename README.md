@@ -80,16 +80,6 @@ python --version
 python -m pip install jupyterlab isort black autoflake
 ```
 
-### Set profile
-
-```sh
-curl https://raw.githubusercontent.com/kwatme/Environment.md/master/zshrc > ~/.zshrc &&
-
-curl https://raw.githubusercontent.com/kwatme/Environment.md/master/vimrc > ~/.vimrc &&
-
-curl https://raw.githubusercontent.com/kwatme/Environment.md/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
-```
-
 ### Set git
 
 ```sh
@@ -144,6 +134,16 @@ Settings > Advanced Settings Editor > Keyboard Shortcuts > User Preferences
     }
   ]
 }
+```
+
+### Set profile
+
+```sh
+curl https://raw.githubusercontent.com/kwatme/Environment.md/master/zshrc > ~/.zshrc &&
+
+curl https://raw.githubusercontent.com/kwatme/Environment.md/master/vimrc > ~/.vimrc &&
+
+curl https://raw.githubusercontent.com/kwatme/Environment.md/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
 ## Note
