@@ -52,16 +52,6 @@ Vimari > Open Configuration File >
 
 ### Get Brew
 
-Uninstall
-
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)" &&
-
-sudo rm -fr /usr/local/*
-```
-
-Install
-
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
@@ -157,6 +147,14 @@ Settings > Advanced Settings Editor > Keyboard Shortcuts > User Preferences
 ```
 
 ## Note
+
+Uninstall brew
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)" &&
+
+sudo rm -fr /usr/local/*
+```
 
 Upgrade brew programs
 
