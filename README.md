@@ -106,7 +106,6 @@ for name in (
     "JuliaFormatter",
     "Revise",
     "BenchmarkTools",
-    #"PyCall",
 )
 
     add(; name=name)
@@ -169,11 +168,17 @@ python -m pip list --outdated
 ```
 
 ```sh
-python -m pip install --upgrade OUTDATED_ONES
+python -m pip install --upgrade OUTDATED_NAMES
 ```
 
 Uninstall python programs
 
 ```sh
 python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall -y
+```
+
+Uninstall jupyter kernel
+
+```sh
+jupyter kernelspec uninstall NAME
 ```
