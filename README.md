@@ -64,10 +64,22 @@ Vimari > Open Configuration File >
 brew install tree rename macvim fzf the_silver_searcher node julia pyenv-virtualenv shfmt pandoc git-lfs
 ```
 
+### Set profile
+
+```sh
+curl https://raw.githubusercontent.com/kwatme/Environment.md/master/zshrc > ~/.zshrc &&
+
+curl https://raw.githubusercontent.com/kwatme/Environment.md/master/vimrc > ~/.vimrc &&
+
+curl https://raw.githubusercontent.com/kwatme/Environment.md/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
+```
+
 ### Set python
 
 ```sh
 echo -e 'eval "$(pyenv init -)"' >> ~/.zshrc &&
+
+echo -e 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc &&
 
 pyenv install 3.8.9 &&
 
@@ -133,16 +145,6 @@ Settings > Advanced Settings Editor > Keyboard Shortcuts > User Preferences
     }
   ]
 }
-```
-
-### Set profile
-
-```sh
-curl https://raw.githubusercontent.com/kwatme/Environment.md/master/zshrc > ~/.zshrc &&
-
-curl https://raw.githubusercontent.com/kwatme/Environment.md/master/vimrc > ~/.vimrc &&
-
-curl https://raw.githubusercontent.com/kwatme/Environment.md/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
 ## Note
