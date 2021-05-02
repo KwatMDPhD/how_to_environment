@@ -256,3 +256,7 @@ elif [ "$(uname)" = "Darwin" ]; then
 	RPROMPT=" %B%*%b"
 
 fi
+
+#for f in $(find . -type directory -name "*.jl"); do pushd $f/src/; cleanjl; popd; done
+#for f in $(find . -type file -name "*.py"); do echo $f; cleanpy $f; done
+#for f in $(find . -type file -name "*ipynb"); do echo $f; cleannb $f; done
