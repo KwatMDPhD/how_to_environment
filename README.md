@@ -101,6 +101,12 @@ git config --global user.email "kwat.me@icloud.com" &&
 
 git config --global credential.helper osxkeychain &&
 
+git config --global pull.rebase true &&
+
+git config --global fetch.prune true &&
+
+git config --global diff.colorMoved zebra &&
+
 git lfs install
 ```
 
