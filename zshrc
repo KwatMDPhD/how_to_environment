@@ -147,30 +147,45 @@ function cleansh() {
 function gitclone() {
 
 	for repository_name in \
-		Environment.md \
-		Medicine.md \
-		Patient.md \
-		GeneSetControl.tsv \
-		HotPlot.jl \
+		environment \
+
+		physiology \
+		diagnosis \
+		pathogen \
+		patient \
+
+        Support.jl \
 		Normalization.jl \
-		InformationTheory.jl \
+		Information.jl \
+        DataIO.jl \
 		GCTGMT.jl \
-		MDNetwork.jl \
+		Plot.jl \
 		FeatureSetEnrichment.jl \
-		Kraft.py \
-		GCTGMT.py \
-		Model.py \
-		Comparison.py \
-		Proxy.py \
-		CancerCellLine.py \
-		Medulloblastoma.py \
-		ChronicFatigueSyndrome.py \
-		CleanNB.py \
-		MDPost.py \
-		FeatureSetEnrichment.py \
-		GenomeExplorer.js \
-		GSEA.js \
-		kwatme.com; do
+		MDNetwork.jl \
+
+        only_human \
+        blood_blood_everywhere \
+        cd4_t_cell_in_cfs \
+
+		kraft \
+		feature_set_enrichment \
+		comparison \
+		model \
+		proxy \
+
+		gene_set_control \
+
+		cancer_cell_line \
+		medulloblastoma \
+		chronic_fatigue_syndrome \
+
+		cleannb \
+		mdpost \
+
+		genome_explorer \
+
+		kwatme.com; \
+		translational-crc.org; do
 
 		git clone https://github.com/KwatME/$repository_name
 
@@ -257,7 +272,7 @@ elif [ "$(uname)" = "Darwin" ]; then
 
 fi
 
-#for f in $(find . -type directory -name "*.jl"); do pushd $f/src/; cleanjl; popd; done
-#for f in $(find . -type directory -name "*.jl"); do pushd $f/src/; julia --eval "using Pkg; Pkg.activate(); Pkg.update()"; popd; done
-#for f in $(find . -type file -name "*.py"); do echo $f; cleanpy $f; done
-#for f in $(find . -type file -name "*ipynb"); do echo $f; cleannb $f; done
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"

@@ -77,10 +77,6 @@ curl https://raw.githubusercontent.com/kwatme/Environment.md/master/JuliaFormatt
 ### Set python
 
 ```sh
-echo -e 'eval "$(pyenv init -)"' >> ~/.zshrc &&
-
-echo -e 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc &&
-
 pyenv install 3.8.9 &&
 
 pyenv global 3.8.9 &&
