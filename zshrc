@@ -148,12 +148,10 @@ function gitclone() {
 
 	for repository_name in \
 		environment \
-
 		physiology \
 		diagnosis \
 		pathogen \
 		patient \
-
         Support.jl \
 		Normalization.jl \
 		Information.jl \
@@ -162,29 +160,22 @@ function gitclone() {
 		Plot.jl \
 		FeatureSetEnrichment.jl \
 		MDNetwork.jl \
-
         only_human \
         blood_blood_everywhere \
         cd4_t_cell_in_cfs \
-
 		kraft \
 		feature_set_enrichment \
 		comparison \
 		model \
 		proxy \
-
 		gene_set_control \
-
 		cancer_cell_line \
 		medulloblastoma \
 		chronic_fatigue_syndrome \
-
 		cleannb \
 		mdpost \
-
 		genome_explorer \
-
-		kwatme.com; \
+		kwatme.com \
 		translational-crc.org; do
 
 		git clone https://github.com/KwatME/$repository_name
