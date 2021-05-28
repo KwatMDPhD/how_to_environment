@@ -32,7 +32,7 @@ Matrix => ro_co_va
 
 ### Transformation
 
-log(nu*) => nulo*
+log(nu\_) => nulo\_
 
 log(ro_co_va) => ro_co_valo
 
@@ -42,9 +42,11 @@ Directory => "directory/"
 
 Use [a-z] and \_.
 
-### Function
+### Global
 
-get*extreme(nu*, ex="minimum")
+get_extreme(nu\_, ex="minimum")
+
+GLOBAL_VARIABLE
 
 ## Code
 
