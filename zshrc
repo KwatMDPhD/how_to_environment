@@ -48,7 +48,7 @@ alias vim="mvim --remote-tab-silent"
 
 alias rsync="rsync --verbose --itemize-changes --human-readable --progress --stats --recursive"
 
-function listpath() {
+function list_path() {
 
 	tr ":" "\n" <<<$PATH
 
@@ -92,13 +92,13 @@ function extract() {
 
 }
 
-function sshport() {
+function ssh_port() {
 
 	ssh $1 -f -N -L localhost:$3:localhost:$2
 
 }
 
-function removejunk() {
+function remove_junk() {
 
 	local patterns=("*.swp" "__pycache__" "*.pyc" ".ipynb_checkpoints" ".DS_Store" ".com.apple.*" ".~*")
 
@@ -110,7 +110,7 @@ function removejunk() {
 
 }
 
-function resetmode() {
+function reset_mode() {
 
 	find . -not -path "*/.*" -type f -exec chmod 644 {} \;
 
@@ -118,13 +118,13 @@ function resetmode() {
 
 }
 
-function cleansh() {
+function clean_sh() {
 
 	shfmt -s -w $1
 
 }
 
-function cleanjl() {
+function clean_jl() {
 
 	for f in $(find . -type f -name "*.jl"); do
 		echo $f
@@ -133,7 +133,7 @@ function cleanjl() {
 
 }
 
-function cleanpy() {
+function clean_py() {
 
 	for f in $(find . -type f -name "*.py"); do
 		echo $f
@@ -144,19 +144,19 @@ function cleanpy() {
 
 }
 
-function cleannb_() {
+function clean_ipynb() {
 
 	cleannb **/*.ipynb
 
 }
 
-function cleanweb() {
+function clean_web() {
 
 	npx prettier --write "**/*.{json,js,jsx,ts,tsx,md,html}"
 
 }
 
-function gitclone() {
+function git_clone() {
 
 	for repository_name in \
 		environment \
@@ -196,13 +196,13 @@ function gitclone() {
 
 }
 
-function gitaddcommitpush() {
+function git_add_commit_push() {
 
 	git add -A && git commit -m "$1" && git push
 
 }
 
-function gitsyncrepositories() {
+function git_sync() {
 
 	for directory in *; do
 
@@ -242,7 +242,7 @@ function gitsyncrepositories() {
 
 }
 
-function updatejl() {
+function update_jl() {
 
 	julia --eval 'using Pkg; Pkg.update()' &&
 		for jl in *; do
@@ -254,7 +254,7 @@ function updatejl() {
 
 }
 
-function releasepypi() {
+function release_pypi() {
 
 	rm -rf build dist *.egg-info &&
 		python setup.py sdist &&
