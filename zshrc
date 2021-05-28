@@ -118,29 +118,41 @@ function resetmode() {
 
 }
 
-function cleanweb() {
+function cleansh() {
 
-	npx prettier --write $1
+	shfmt -s -w $1
 
 }
 
 function cleanjl() {
 
-	julia --eval 'using JuliaFormatter; format(".")'
+	for f in $(find . -type f -name "*.jl"); do
+		echo $f
+		julia --eval "using JuliaFormatter; format_file(\"$f\")"
+	done
 
 }
 
 function cleanpy() {
 
-	isort --combine-as --quiet $1 &&
-		autoflake --ignore-init-module-imports --in-place --remove-all-unused-imports $1 &&
-		black --quiet $1
+	for f in $(find . -type f -name "*.py"); do
+		echo $f
+		isort --combine-as --quiet $f
+		autoflake --ignore-init-module-imports --in-place --remove-all-unused-imports $f
+		black --quiet $f
+	done
 
 }
 
-function cleansh() {
+function cleannb_() {
 
-	shfmt -s -w $1
+	cleannb **/*.ipynb
+
+}
+
+function cleanweb() {
+
+	npx prettier --write "**/*.{json,js,jsx,ts,tsx,md,html}"
 
 }
 
@@ -152,17 +164,17 @@ function gitclone() {
 		diagnosis \
 		pathogen \
 		patient \
-        Support.jl \
+		Support.jl \
 		Normalization.jl \
 		Information.jl \
-        DataIO.jl \
+		DataIO.jl \
 		GCTGMT.jl \
 		Plot.jl \
 		FeatureSetEnrichment.jl \
 		MDNetwork.jl \
-        only_human \
-        blood_blood_everywhere \
-        cd4_t_cell_in_cfs \
+		only_human \
+		blood_blood_everywhere \
+		cd4_t_cell_in_cfs \
 		kraft \
 		feature_set_enrichment \
 		comparison \

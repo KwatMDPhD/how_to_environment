@@ -24,7 +24,7 @@ Number of thing => n_th
 
 ### Multiple
 
-Things => th_
+Things => th\_
 
 Dictionary => ke_va
 
@@ -32,7 +32,7 @@ Matrix => ro_co_va
 
 ### Transformation
 
-log(nu_) => nulo_ 
+log(nu*) => nulo*
 
 log(ro_co_va) => ro_co_valo
 
@@ -40,11 +40,11 @@ log(ro_co_va) => ro_co_valo
 
 Directory => "directory/"
 
-Use [a-z] and _.
+Use [a-z] and \_.
 
 ### Function
 
-get_extreme(nu_, ex="minimum")
+get*extreme(nu*, ex="minimum")
 
 ## Code
 
