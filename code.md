@@ -44,9 +44,9 @@ Use [a-z] and \_.
 
 ### Global
 
-get_extreme(nu\_, ex="minimum")
-
 GLOBAL_VARIABLE
+
+get_extreme(nu\_, ex="minimum")
 
 ## Code
 
