@@ -24,6 +24,10 @@ Count 1, 2, ...
 
 Take advantage of numpy and pandas.
 
+### Notebook 
+
+Import close to use.
+
 ## Name
 
 Assume context.
@@ -48,7 +52,11 @@ Boolean => `bo`
 
 Dictionary => `ke_va`
 
+Vector => `nu_`
+
 Matrix => `nu_ro_co`
+
+N dimensional number => `nu__`
 
 `log(nu_)` => `nulo_`
 
@@ -57,6 +65,8 @@ Matrix => `nu_ro_co`
 `GLOBAL_VARIABLE`
 
 `get_extreme(nu_, ex="minimum")`
+
+`list_person(pe_)`
 
 ### IO
 
