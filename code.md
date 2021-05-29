@@ -4,58 +4,64 @@ Less is more.
 
 Optimize for compression.
 
-## Name
-
-### Philosophy
-
-Assume context.
-
-Be specific.
-
-Never abbreviate.
-
-### Single
-
-Thing => th
-
-Boolean => bo
-
-Number of thing => n_th
-
-### Multiple
-
-Things => th\_
-
-Dictionary => ke_va
-
-Matrix => ro_co_va
-
-### Transformation
-
-log(nu\_) => nulo\_
-
-log(ro_co_va) => ro_co_valo
-
-### IO
-
-Directory => "directory/"
-
-Use [a-z] and \_.
-
-### Global
-
-GLOBAL_VARIABLE
-
-get_extreme(nu\_, ex="minimum")
-
-## Code
+## Practice
 
 Use default data structures.
 
-Use list over tuple.
+Instead of `()`, use `[]`.
 
-In Python, take advantage of numpy and pandas.
+Instead of `>` and `>=`, use `<` and `<=`.
 
-Use < and <= instead of > and >=.
+Avoid bitwise operator.
 
-Work on the 1st dimension of a matrix.
+Work on the first dimension of a matrix.
+
+Count 1, 2, ...
+
+### Julia
+
+### Python
+
+Take advantage of numpy and pandas.
+
+## Name
+
+Assume context.
+
+Never abbreviate.
+
+### General
+
+Thing => `th`
+
+Things => `th_`
+
+Number of thing => `n_th`
+
+Differentiate => `th1`, `th2`, ...
+
+Integer => (`in` is a reserved name, so use the next character) `it`
+
+### Object
+
+Boolean => `bo`
+
+Dictionary => `ke_va`
+
+Matrix => `nu_ro_co`
+
+`log(nu_)` => `nulo_`
+
+`square(nu_ro_co)` => `nusq_ro_co`
+
+`GLOBAL_VARIABLE`
+
+`get_extreme(nu_, ex="minimum")`
+
+### IO
+
+Keep the default name.
+
+For a new name, use `[_a-z]`.
+
+Directory => `"directory/"`
