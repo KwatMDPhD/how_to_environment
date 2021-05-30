@@ -8,15 +8,13 @@ Optimize for compression.
 
 Count 1, 2, ...
 
-Use simplest data structures.
-
-Instead of `()`, use `[]`.
+Prioritize simpler data structures.
 
 Instead of `>` and `>=`, use `<` and `<=`.
 
 Avoid bitwise operator.
 
-Match default keyword argument type.
+Try to match default keyword argument type.
 
 Work on dimension 1 of a matrix.
 
@@ -28,9 +26,9 @@ Assume context.
 
 Be specific.
 
-Never abbreviate.
-
 ### General
+
+A thing can be anything that is commonly understood.
 
 Thing => `th`
 
@@ -38,7 +36,7 @@ Things => `th_`
 
 Number of thing => `n_th`
 
-Differentiate => `th1`, `th2`, ...
+Differentiate => `thta`, `thda`, `th1`, `th2`, ...
 
 Integer => (`in` is a reserved name, so use the next character) `it`
 
@@ -60,11 +58,15 @@ N dimensional number => `nu___`
 
 `GLOBAL_VARIABLE`
 
+Match Plotly figure names.
+
+### Function
+
+Never abbreviate.
+
 `get_extreme(nu_, ex="minimum")`
 
 `list_person(pe_)`
-
-Match Plotly figure names.
 
 ### IO
 
