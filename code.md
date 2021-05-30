@@ -6,7 +6,9 @@ Optimize for compression.
 
 ## Practice
 
-Use default data structures.
+Count 1, 2, ...
+
+Use simplest data structures.
 
 Instead of `()`, use `[]`.
 
@@ -14,19 +16,11 @@ Instead of `>` and `>=`, use `<` and `<=`.
 
 Avoid bitwise operator.
 
-Work on the first dimension of a matrix.
+Match default keyword argument type.
 
-Count 1, 2, ...
+Work on dimension 1 of a matrix.
 
-### Julia
-
-### Python
-
-Take advantage of numpy and pandas.
-
-### Notebook 
-
-Import close to use.
+Introduce close to use.
 
 ## Name
 
@@ -70,7 +64,7 @@ N dimensional number => `nu___`
 
 `list_person(pe_)`
 
-Match Plotly names.
+Match Plotly figure names.
 
 ### IO
 
