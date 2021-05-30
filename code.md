@@ -32,6 +32,8 @@ Import close to use.
 
 Assume context.
 
+Be specific.
+
 Never abbreviate.
 
 ### General
@@ -56,7 +58,7 @@ Vector => `nu_`
 
 Matrix => `nu_ro_co`
 
-N dimensional number => `nu__`
+N dimensional number => `nu___`
 
 `log(nu_)` => `nulo_`
 
@@ -67,6 +69,8 @@ N dimensional number => `nu__`
 `get_extreme(nu_, ex="minimum")`
 
 `list_person(pe_)`
+
+Match Plotly names.
 
 ### IO
 
