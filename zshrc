@@ -139,7 +139,6 @@ function clean_py() {
 		echo $f
 		isort --combine-as --quiet $f
 		autoflake --ignore-init-module-imports --in-place --remove-all-unused-imports $f
-		black --quiet --line-length 1 $f
 		black --quiet $f
 	done
 
