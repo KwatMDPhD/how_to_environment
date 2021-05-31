@@ -67,11 +67,11 @@ brew install tree rename macvim fzf the_silver_searcher node julia pyenv-virtual
 ### Set profile
 
 ```sh
-curl https://raw.githubusercontent.com/kwatme/Environment.md/master/zshrc > ~/.zshrc &&
+curl https://raw.githubusercontent.com/kwatme/environment/master/zshrc > ~/.zshrc &&
 
-curl https://raw.githubusercontent.com/kwatme/Environment.md/master/vimrc > ~/.vimrc &&
+curl https://raw.githubusercontent.com/kwatme/environment/master/vimrc > ~/.vimrc &&
 
-curl https://raw.githubusercontent.com/kwatme/Environment.md/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
+curl https://raw.githubusercontent.com/kwatme/environment/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
 ### Set python
