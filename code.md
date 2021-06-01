@@ -60,6 +60,8 @@ N dimensional number => `nu___`
 
 Match Plotly figure names.
 
+Pandas index => `la_`
+
 ### Function
 
 Never abbreviate.
