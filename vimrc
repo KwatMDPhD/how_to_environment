@@ -1,182 +1,124 @@
 " ================================================================================
-" Appearance
-" ================================================================================
-set title
-
-set guifont=Menlo-Regular:h16
-
-"set lines=72
-
-"set columns=96
-
-set number
-
-set guicursor+=a:blinkon0
-
-set laststatus=2
-
-set ruler
-
-" ================================================================================
-" Language
-" ================================================================================
-"set encoding=utf-8
-
-syntax enable
-
-" ================================================================================
-" Line
-" ================================================================================
-"set wrap
-
-set linebreak
-
-"set display+=lastline
-
-set scrolloff=8
-
-set sidescrolloff=8
-
-set nofoldenable
-
-" ================================================================================
-" Indent
-" ================================================================================
-set tabstop=4
-
-set softtabstop=4
-
-set shiftwidth=4
-
-set expandtab
-
-"set autoindent
-
-"filetype plugin indent on 
-
-"set backspace=indent,eol,start
-
-" ================================================================================
-" Search
-" ================================================================================
-set incsearch
-
-set hlsearch
-
-set ignorecase
-
-set smartcase
-
-" Use \ to clear search highlight
-nnoremap <leader> :nohlsearch<CR>
-
-" ================================================================================
-" Highlight
-" ================================================================================
-set showmatch
-
-set mps+=<:>
-
-" ================================================================================
-" Error
-" ================================================================================
-set belloff=all
-
-"set noerrorbells
-
-"set novisualbell
-
-" ================================================================================
-" Interface
-" ================================================================================
-set lazyredraw
-
-set wildmenu
-
-"set mouse=a
-
-" ================================================================================
-" Input and output
-" ================================================================================
-"set autoread
-
-"set history=1000
-
-" Establish ~/.cache/vim
-if empty(glob('~/.cache/vim'))
-  silent !mkdir -p ~/.cache/vim
-endif
-
-set dir=~/.cache/vim
-
-set backupdir=~/.cache/vim
-
-set confirm
-
-" ================================================================================
 " Plug
 " ================================================================================
-" Install plug, which is a plugin manager for vim
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" List plugins
 call plug#begin()
-
+Plug 'altercation/vim-colors-solarized'
 Plug 'preservim/nerdtree'
-
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
+Plug 'luochen1990/rainbow'
+Plug 'tpope/vim-commentary'
 " Install fzf: brew install fzf
 Plug '/usr/local/opt/fzf'
-
 Plug 'junegunn/fzf.vim'
-
-Plug 'frazrepo/vim-rainbow'
-
-Plug 'altercation/vim-colors-solarized'
-
-"Plug 'sheerun/vim-polyglot'
-
+Plug 'airblade/vim-gitgutter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Set up language servers: CocInstall coc-sh coc-html coc-json coc-julia coc-pyright
 Plug 'codota/tabnine-vim'
-
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"" Set up language servers: CocInstall coc-sh coc-html coc-json coc-julia coc-pyright
-
-"Plug 'dense-analysis/ale'
-"" Install language specific linters
-
-Plug 'JuliaEditorSupport/julia-vim'
-
-" End of list
 call plug#end()
 
 " ================================================================================
-" Color scheme
+" General setting
 " ================================================================================
-set background=dark
+if empty(glob('~/.cache/vim'))
+  silent !mkdir -p ~/.cache/vim
+endif
+set dir=~/.cache/vim
+set backupdir=~/.cache/vim
 
+set nobackup
+set nowritebackup
+
+set updatetime=200
+
+set encoding=utf-8
+
+set confirm
+set hidden
+set lazyredraw
+set wildmenu
+
+set title
 colorscheme solarized
+set background=dark
+set guifont=Menlo-Regular:h16
+set guicursor+=a:blinkon0
+set belloff=all
+
+set number
+set signcolumn=number
+set ruler
+set laststatus=2
+set cmdheight=1
+
+syntax enable
+
+set linebreak
+set scrolloff=8
+set sidescrolloff=8
+set nofoldenable
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+nnoremap <leader> :nohlsearch<CR>
+set showmatch
+
+set mps+=<:>
+
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <Leader>r :Rg <C-R><C-W><CR>
 
 " ================================================================================
-" NerdTree
+" Plug setting
 " ================================================================================
-" Use ctrl-t to toggle
-map <C-t> :NERDTreeToggle<CR>
+highlight SignColumn guibg=NONE guifg=NONE ctermbg=NONE ctermbg=NONE
 
-"" ================================================================================
-"" CoC
-"" ================================================================================
-"" Use tab to navigate suggestions down and complete
-"inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
-"
-"" Use shift-tab to navigate suggestions up and complete
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-"
-"function! s:check_back_space() abort
-"  let col = col('.') - 1
-"  return !col || getline('.')[col - 1]  =~# '\s'
-"endfunction
+let g:rainbow_active = 1
+
+map <leader>t :NERDTreeToggle<CR>
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> D :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+nmap <leader>rn <Plug>(coc-rename)
+nnoremap <leader>prn :CocSearch <C-R>=expand("<cword>")<CR><CR>

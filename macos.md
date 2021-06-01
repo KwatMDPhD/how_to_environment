@@ -61,7 +61,7 @@ Vimari > Open Configuration File >
 ### Get global program
 
 ```sh
-brew install tree rename macvim fzf the_silver_searcher node julia pyenv-virtualenv shfmt pandoc mactex git-lfs
+brew install tree rename macvim fzf ripgrep node julia pyenv-virtualenv shfmt pandoc mactex git-lfs
 ```
 
 ### Set profile
