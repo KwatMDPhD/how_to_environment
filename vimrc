@@ -12,7 +12,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'preservim/nerdtree'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-commentary'
-" Install fzf: brew install fzf
+" brew install fzf ripgrep
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
@@ -73,13 +73,10 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-nnoremap <leader> :nohlsearch<CR>
+nnoremap <leader>hl :nohlsearch<CR>
 set showmatch
 
 set mps+=<:>
-
-nnoremap <silent> <leader>f :Files<CR>
-nnoremap <silent> <Leader>r :Rg <C-R><C-W><CR>
 
 " ================================================================================
 " Plug setting
@@ -88,7 +85,10 @@ highlight SignColumn guibg=NONE guifg=NONE ctermbg=NONE ctermbg=NONE
 
 let g:rainbow_active = 1
 
-map <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>fi :Files<CR>
+nnoremap <leader>rg :Rg <C-R><C-W><CR>
+
+map <leader>tt :NERDTreeToggle<CR>
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -101,14 +101,12 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
 
-nnoremap <silent> D :call <SID>show_documentation()<CR>
+nnoremap <leader>do :call <SID>documentation()<CR>
 
-function! s:show_documentation()
+function! s:documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   elseif (coc#rpc#ready())
@@ -121,4 +119,4 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap <leader>rn <Plug>(coc-rename)
-nnoremap <leader>prn :CocSearch <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>se :CocSearch <C-R>=expand("<cword>")<CR><CR>
