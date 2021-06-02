@@ -35,6 +35,8 @@ set backupdir=~/.cache/vim
 set nobackup
 set nowritebackup
 
+autocmd BufEnter * lcd %:p:h
+
 set updatetime=200
 
 set encoding=utf-8
