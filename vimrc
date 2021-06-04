@@ -8,7 +8,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'preservim/nerdtree'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-commentary'
@@ -47,8 +48,6 @@ set lazyredraw
 set wildmenu
 
 set title
-colorscheme solarized
-set background=dark
 set guifont=Menlo-Regular:h16
 set guicursor+=a:blinkon0
 set belloff=all
@@ -83,6 +82,7 @@ set mps+=<:>
 " ================================================================================
 " Plug setting
 " ================================================================================
+colorscheme onehalfdark
 highlight SignColumn guibg=NONE guifg=NONE ctermbg=NONE ctermbg=NONE
 
 let g:rainbow_active = 1
