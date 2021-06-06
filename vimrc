@@ -82,7 +82,9 @@ set mps+=<:>
 " Plug setting
 " ================================================================================
 colorscheme onehalfdark
+
 highlight SignColumn guibg=NONE guifg=NONE ctermbg=NONE ctermbg=NONE
+highlight Cursor guibg=#20d9ba guifg=#ebf6f7
 
 let g:rainbow_active = 1
 
@@ -91,7 +93,9 @@ nnoremap <leader>rg :Rg<CR>
 
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
-map <leader>tt :NERDTreeToggle<CR>
+nnoremap <leader>tt :NERDTreeToggle<CR>
+
+let NERDTreeQuitOnOpen=0
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -104,8 +108,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nmap <leader>de <Plug>(coc-definition)
-nmap <leader>re <Plug>(coc-references)
+nnoremap <leader>de <Plug>(coc-definition)
+nnoremap <leader>re <Plug>(coc-references)
 
 nnoremap <leader>do :call <SID>documentation()<CR>
 
@@ -121,5 +125,5 @@ endfunction
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-nmap <leader>rn <Plug>(coc-rename)
+nnoremap <leader>rn <Plug>(coc-rename)
 nnoremap <leader>se :CocSearch <C-R>=expand("<cword>")<CR><CR>
