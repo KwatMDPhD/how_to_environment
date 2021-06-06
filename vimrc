@@ -10,6 +10,7 @@ endif
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-commentary'
@@ -35,8 +36,6 @@ set backupdir=~/.cache/vim
 
 set nobackup
 set nowritebackup
-
-autocmd BufEnter * lcd %:p:h
 
 set updatetime=200
 
@@ -74,7 +73,7 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-nnoremap <leader>hl :nohlsearch<CR>
+nnoremap <leader>nh :nohlsearch<CR>
 set showmatch
 
 set mps+=<:>
@@ -88,7 +87,9 @@ highlight SignColumn guibg=NONE guifg=NONE ctermbg=NONE ctermbg=NONE
 let g:rainbow_active = 1
 
 nnoremap <leader>fi :Files<CR>
-nnoremap <leader>rg :Rg <C-R><C-W><CR>
+nnoremap <leader>rg :Rg<CR>
+
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 map <leader>tt :NERDTreeToggle<CR>
 
@@ -103,8 +104,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gr <Plug>(coc-references)
+nmap <leader>de <Plug>(coc-definition)
+nmap <leader>re <Plug>(coc-references)
 
 nnoremap <leader>do :call <SID>documentation()<CR>
 
