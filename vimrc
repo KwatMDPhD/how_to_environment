@@ -95,8 +95,6 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 
 nnoremap <leader>tt :NERDTreeToggle<CR>
 
-let NERDTreeQuitOnOpen=0
-
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
