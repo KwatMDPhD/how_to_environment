@@ -95,6 +95,7 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 
 nnoremap <leader>tt :NERDTreeToggle<CR>
 nnoremap <leader>tf :NERDTreeFind<CR>
+let NERDTreeWinSize = 64
 let NERDTreeNaturalSort = 1
 let NERDTreeAutoDeleteBuffer = 1
 
