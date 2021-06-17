@@ -44,7 +44,7 @@ alias du="du -h"
 
 alias df="df -h"
 
-alias vim="mvim --remote-tab-silent"
+alias vim="mvim"
 
 alias rsync="rsync --verbose --itemize-changes --human-readable --progress --stats --recursive"
 
