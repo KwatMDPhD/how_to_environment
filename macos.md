@@ -74,6 +74,18 @@ curl https://raw.githubusercontent.com/kwatme/environment/master/vimrc > ~/.vimr
 curl https://raw.githubusercontent.com/kwatme/environment/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
+### Set MacVim
+
+Preferences >:
+
+General > Open untitled window > never
+
+General > Open files from applications > in the current window
+
+General > After last window closes > Quit MacVim
+
+Appearance > Titlebar appearance > Transparent
+
 ### Set python
 
 ```sh
