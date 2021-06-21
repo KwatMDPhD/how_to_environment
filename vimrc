@@ -10,7 +10,6 @@ endif
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-commentary'
@@ -46,7 +45,6 @@ set hidden
 set lazyredraw
 set wildmenu
 
-set title
 set guifont=Menlo-Regular:h16
 set guicursor+=a:blinkon0
 set belloff=all
@@ -98,6 +96,9 @@ nnoremap <leader>tf :NERDTreeFind<CR>
 let NERDTreeWinSize = 64
 let NERDTreeNaturalSort = 1
 let NERDTreeAutoDeleteBuffer = 1
+
+let g:NERDTreeGitStatusShowClean = 1
+let g:NERDTreeGitStatusConcealBrackets = 1
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
