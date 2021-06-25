@@ -89,9 +89,9 @@ Appearance > Titlebar appearance > Transparent
 ### Set python
 
 ```sh
-pyenv install 3.8.9 &&
+pyenv install 3.9.5 &&
 
-pyenv global 3.8.9 &&
+pyenv global 3.9.5 &&
 
 python --version
 ```
