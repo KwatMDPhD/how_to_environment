@@ -110,6 +110,12 @@ function remove_junk() {
 
 }
 
+function clean_name() {
+
+	find . -d | xargs rename --sanitize --lower-case --expr "s/-/_/g" --force *
+
+}
+
 function reset_mode() {
 
 	find . -not -path "*/.*" -type f -exec chmod 644 {} \;
@@ -251,6 +257,12 @@ function update_jl() {
 			julia --eval 'using Pkg; Pkg.activate("."); Pkg.update()'
 			cd ..
 		done
+
+}
+
+function pip_update() {
+
+	python3 -m pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 python3 -m pip install --upgrade
 
 }
 
