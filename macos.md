@@ -61,7 +61,7 @@ Vimari > Open Configuration File >
 ### Get global program
 
 ```sh
-brew install tree rename macvim fzf ripgrep node julia pyenv-virtualenv shfmt pandoc mactex git-lfs
+brew install tree rename macvim fzf ripgrep node pyenv-virtualenv shfmt pandoc mactex git-lfs
 ```
 
 ### Set profile
@@ -89,9 +89,9 @@ Appearance > Titlebar appearance > Transparent
 ### Set python
 
 ```sh
-pyenv install 3.9.5 &&
+pyenv install 3.9.6 &&
 
-pyenv global 3.9.5 &&
+pyenv global 3.9.6 &&
 
 python --version
 ```
@@ -119,6 +119,10 @@ git lfs install
 ```
 
 ### Set julia
+
+Install Julia 1.5.4
+
+Link into /usr/local/bin/julia
 
 ```sh
 julia
