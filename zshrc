@@ -165,36 +165,33 @@ function clean_web() {
 function git_clone() {
 
 	for repository_name in \
+        \
 		environment \
-		physiology \
-		diagnosis \
-		pathogen \
+        \
+		medicine \
 		patient \
-		Support.jl \
-		Normalization.jl \
-		Information.jl \
-		DataIO.jl \
-		GCTGMT.jl \
-		Plot.jl \
-		FeatureSetEnrichment.jl \
-		MDNetwork.jl \
-		only_human \
-		blood_blood_everywhere \
-		cd4_t_cell_in_cfs \
-		kraft \
-		feature_set_enrichment \
+        \
+		Kwat.jl \
+		kwat.py \
+		clean_nb \
+		md_post \
+        \
 		comparison \
 		model \
 		proxy \
-		gene_set_control \
+        \
 		cancer_cell_line \
 		medulloblastoma \
 		chronic_fatigue_syndrome \
-		cleannb \
-		mdpost \
+        \
+		only_human \
+		blood_blood_everywhere \
+		cd4_t_cell_in_cfs \
+        \
 		genome_explorer \
+        \
 		kwatme.com \
-		translational-crc.org; do
+        ; do
 
 		git clone https://github.com/KwatME/$repository_name
 
