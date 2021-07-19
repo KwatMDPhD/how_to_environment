@@ -173,6 +173,7 @@ function git_clone() {
         \
 		Kwat.jl \
 		kwat.py \
+        gsea \
 		clean_nb \
 		md_post \
         \
