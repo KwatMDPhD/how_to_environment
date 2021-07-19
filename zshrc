@@ -187,10 +187,10 @@ function git_clone() {
 		only_human \
 		blood_blood_everywhere \
 		cd4_t_cell_in_cfs \
-        \
-		genome_explorer \
+		metformin_in_cancer \
         \
 		kwatme.com \
+		genome_explorer \
         ; do
 
 		git clone https://github.com/KwatME/$repository_name
@@ -259,7 +259,13 @@ function update_jl() {
 
 function pip_update() {
 
-	python3 -m pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 python3 -m pip install --upgrade
+	python -m pip list --outdated --format=freeze | grep -v "^-e" | cut -d = -f 1 | xargs python -m pip install --upgrade
+
+}
+
+function pip_uninstall() {
+
+    python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall --yes
 
 }
 

@@ -136,6 +136,7 @@ for name in (
     "JuliaFormatter",
     "Revise",
     "BenchmarkTools",
+    "PyCall",
 )
 
     add(; name=name)
@@ -179,22 +180,6 @@ Upgrade brew programs
 
 ```sh
 brew update && brew upgrade
-```
-
-Upgrade python programs
-
-```sh
-python -m pip list --outdated
-```
-
-```sh
-python -m pip install --upgrade OUTDATED_NAMES
-```
-
-Uninstall python programs
-
-```sh
-python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall -y
 ```
 
 Uninstall jupyter kernel
