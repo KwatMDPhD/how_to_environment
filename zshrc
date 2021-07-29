@@ -181,6 +181,7 @@ function git_clone() {
 		model \
 		proxy \
         \
+		gene_set \
 		cancer_cell_line \
 		medulloblastoma \
 		chronic_fatigue_syndrome \
