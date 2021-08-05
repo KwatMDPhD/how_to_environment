@@ -89,11 +89,17 @@ let g:rainbow_active = 1
 nnoremap <leader>fi :Files<CR>
 nnoremap <leader>rg :Rg<CR>
 
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>),
+  \   1,
+  \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),
+  \   <bang>0,
+  \ )
 
 nnoremap <leader>tt :NERDTreeToggle<CR>
 nnoremap <leader>tf :NERDTreeFind<CR>
-let NERDTreeWinSize = 64
+let NERDTreeWinSize = 48
 let NERDTreeNaturalSort = 1
 let NERDTreeAutoDeleteBuffer = 1
 
