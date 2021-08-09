@@ -152,7 +152,7 @@ function clean_py() {
 
 function clean_ipynb() {
 
-	cleannb **/*.ipynb
+	clean_nb **/*.ipynb
 
 }
 
