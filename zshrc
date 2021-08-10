@@ -150,7 +150,7 @@ function clean_py() {
 
 }
 
-function clean_ipynb() {
+function clean_nb_() {
 
 	clean_nb **/*.ipynb
 
@@ -165,35 +165,33 @@ function clean_web() {
 function git_clone() {
 
 	for repository_name in \
-        \
+		\
 		environment \
-        \
+		\
 		medicine \
 		patient \
-        \
+		\
 		Kwat.jl \
 		kwat.py \
-        gsea \
+		gsea \
 		clean_nb \
 		md_post \
-        \
+		\
 		comparison \
 		model \
 		proxy \
-        \
-		gene_set \
+		\
 		cancer_cell_line \
 		medulloblastoma \
 		chronic_fatigue_syndrome \
-        \
+		\
 		only_human \
 		blood_blood_everywhere \
 		cd4_t_cell_in_cfs \
 		metformin_in_cancer \
-        \
+		\
 		kwatme.com \
-		genome_explorer \
-        ; do
+		genome_explorer; do
 
 		git clone https://github.com/KwatME/$repository_name
 
@@ -267,7 +265,7 @@ function pip_update() {
 
 function pip_uninstall() {
 
-    python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall --yes
+	python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall --yes
 
 }
 
