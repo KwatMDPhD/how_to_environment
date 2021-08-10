@@ -99,7 +99,7 @@ command! -bang -nargs=* Rg
 
 nnoremap <leader>tt :NERDTreeToggle<CR>
 nnoremap <leader>tf :NERDTreeFind<CR>
-let NERDTreeWinSize = 48
+let NERDTreeWinSize = 64
 let NERDTreeNaturalSort = 1
 let NERDTreeAutoDeleteBuffer = 1
 
