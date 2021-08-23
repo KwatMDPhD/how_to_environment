@@ -98,6 +98,12 @@ function ssh_port() {
 
 }
 
+function find_and_replace() {
+
+	rg --files-with-matches $1 | xargs sed -i "" "s/$1/$2/g"
+
+}
+
 function remove_junk() {
 
 	local patterns=("*.swp" "__pycache__" "*.pyc" ".ipynb_checkpoints" ".DS_Store" ".com.apple.*" ".~*")
