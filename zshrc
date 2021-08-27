@@ -44,7 +44,7 @@ alias du="du -h"
 
 alias df="df -h"
 
-alias vim="mvim --remote-tab-silent"
+alias vim="mvim"
 
 alias rsync="rsync --verbose --itemize-changes --human-readable --progress --stats --recursive"
 
@@ -98,6 +98,12 @@ function ssh_port() {
 
 }
 
+function find_and_replace() {
+
+	rg --files-with-matches $1 | xargs sed -i "" "s/$1/$2/g"
+
+}
+
 function remove_junk() {
 
 	local patterns=("*.swp" "__pycache__" "*.pyc" ".ipynb_checkpoints" ".DS_Store" ".com.apple.*" ".~*")
@@ -107,6 +113,12 @@ function remove_junk() {
 		find . -name $pattern -prune -exec rm -rf {} \;
 
 	done
+
+}
+
+function clean_name() {
+
+	find . -d | xargs rename --sanitize --lower-case --expr "s/-/_/g" --force *
 
 }
 
@@ -144,9 +156,9 @@ function clean_py() {
 
 }
 
-function clean_ipynb() {
+function clean_nb_() {
 
-	cleannb **/*.ipynb
+	clean_nb **/*.ipynb
 
 }
 
@@ -159,36 +171,33 @@ function clean_web() {
 function git_clone() {
 
 	for repository_name in \
+		\
 		environment \
-		physiology \
-		diagnosis \
-		pathogen \
+		\
+		medicine \
 		patient \
-		Support.jl \
-		Normalization.jl \
-		Information.jl \
-		DataIO.jl \
-		GCTGMT.jl \
-		Plot.jl \
-		FeatureSetEnrichment.jl \
-		MDNetwork.jl \
-		only_human \
-		blood_blood_everywhere \
-		cd4_t_cell_in_cfs \
-		kraft \
-		feature_set_enrichment \
+		\
+		Kwat.jl \
+		kwat.py \
+		gsea \
+		clean_nb \
+		md_post \
+		\
 		comparison \
 		model \
 		proxy \
-		gene_set_control \
+		\
 		cancer_cell_line \
 		medulloblastoma \
 		chronic_fatigue_syndrome \
-		cleannb \
-		mdpost \
-		genome_explorer \
+		\
+		only_human \
+		blood_blood_everywhere \
+		cd4_t_cell_in_cfs \
+		metformin_in_cancer \
+		\
 		kwatme.com \
-		translational-crc.org; do
+		genome_explorer; do
 
 		git clone https://github.com/KwatME/$repository_name
 
@@ -202,41 +211,35 @@ function git_add_commit_push() {
 
 }
 
-function git_sync() {
+function find_and_git() {
 
-	for directory in *; do
+	for directory in $(find . -name .git -type d); do
 
-		if [ -d "$directory/.git" ]; then
+		printf "$FONT_BOLD$FONT_EMERALD$d\n"
 
-			printf "$FONT_BOLD$FONT_EMERALD$d\n"
+		pushd $directory/../
 
-			printf "$directory\n"
+		printf "${FONT_PURPLE}git status$FONT_DEFAULT\n"
 
-			cd $directory
+		git status
 
-			printf "${FONT_PURPLE}git status$FONT_DEFAULT\n"
+		printf "${FONT_BLUE}git add -A$FONT_DEFAULT\n"
 
-			git status
+		git add -A
 
-			printf "${FONT_BLUE}git add -A$FONT_DEFAULT\n"
+		printf "${FONT_PURPLE}git commit -m $1$FONT_DEFAULT\n"
 
-			git add -A
+		git commit -m "$1"
 
-			printf "${FONT_PURPLE}git commit -m $1$FONT_DEFAULT\n"
+		printf "${FONT_BLUE}git pull$FONT_DEFAULT\n"
 
-			git commit -m "$1"
+		git pull
 
-			printf "${FONT_BLUE}git pull$FONT_DEFAULT\n"
+		printf "${FONT_PURPLE}git push$FONT_DEFAULT\n"
 
-			git pull
+		git push
 
-			printf "${FONT_PURPLE}git push$FONT_DEFAULT\n"
-
-			git push
-
-			cd ..
-
-		fi
+		popd
 
 	done
 
@@ -251,6 +254,18 @@ function update_jl() {
 			julia --eval 'using Pkg; Pkg.activate("."); Pkg.update()'
 			cd ..
 		done
+
+}
+
+function pip_update() {
+
+	python -m pip list --outdated --format=freeze | grep -v "^-e" | cut -d = -f 1 | xargs python -m pip install --upgrade
+
+}
+
+function pip_uninstall() {
+
+	python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall --yes
 
 }
 

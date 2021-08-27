@@ -61,7 +61,7 @@ Vimari > Open Configuration File >
 ### Get global program
 
 ```sh
-brew install tree rename macvim fzf ripgrep node julia pyenv-virtualenv shfmt pandoc mactex git-lfs
+brew install tree rename macvim fzf ripgrep node pyenv-virtualenv shfmt pandoc mactex git-lfs
 ```
 
 ### Set profile
@@ -74,12 +74,24 @@ curl https://raw.githubusercontent.com/kwatme/environment/master/vimrc > ~/.vimr
 curl https://raw.githubusercontent.com/kwatme/environment/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
+### Set MacVim
+
+Preferences >:
+
+General > Open untitled window > never
+
+General > Open files from applications > in the current window
+
+General > After last window closes > Quit MacVim
+
+Appearance > Titlebar appearance > Transparent
+
 ### Set python
 
 ```sh
-pyenv install 3.8.9 &&
+pyenv install 3.9.6 &&
 
-pyenv global 3.8.9 &&
+pyenv global 3.9.6 &&
 
 python --version
 ```
@@ -108,6 +120,10 @@ git lfs install
 
 ### Set julia
 
+Install Julia 1.5.4
+
+Link into /usr/local/bin/julia
+
 ```sh
 julia
 ```
@@ -120,6 +136,7 @@ for name in (
     "JuliaFormatter",
     "Revise",
     "BenchmarkTools",
+    "PyCall",
 )
 
     add(; name=name)
@@ -139,13 +156,30 @@ Settings > Advanced Settings Editor > Keyboard Shortcuts > User Preferences
 
 ```json
 {
-  "shortcuts": [
-    {
-      "command": "kernelmenu:restart-and-clear",
-      "keys": ["Shift 0", "Shift 0"],
-      "selector": "[data-jp-kernel-user]:focus"
-    }
-  ]
+   "shortcuts":[
+      {
+         "command":"kernelmenu:restart-and-clear",
+         "keys":[
+            "Ctrl 0"
+         ],
+         "selector":"[data-jp-kernel-user]:focus"
+      },
+      {
+         "command":"runmenu:restart-and-run-all",
+         "keys":[
+            "Ctrl 9"
+         ],
+         "selector":"[data-jp-kernel-user]:focus"
+      },
+      {
+         "command":"notebook:enter-command-mode",
+         "keys":[
+            "Escape"
+         ],
+         "selector":".jp-Notebook.jp-mod-editMode",
+         "disabled":true
+      }
+   ]
 }
 ```
 
@@ -163,22 +197,6 @@ Upgrade brew programs
 
 ```sh
 brew update && brew upgrade
-```
-
-Upgrade python programs
-
-```sh
-python -m pip list --outdated
-```
-
-```sh
-python -m pip install --upgrade OUTDATED_NAMES
-```
-
-Uninstall python programs
-
-```sh
-python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall -y
 ```
 
 Uninstall jupyter kernel
