@@ -211,41 +211,35 @@ function git_add_commit_push() {
 
 }
 
-function git_sync() {
+function find_and_git() {
 
-	for directory in *; do
+	for directory in $(find . -name .git -type d); do
 
-		if [ -d "$directory/.git" ]; then
+		printf "$FONT_BOLD$FONT_EMERALD$d\n"
 
-			printf "$FONT_BOLD$FONT_EMERALD$d\n"
+		pushd $directory/../
 
-			printf "$directory\n"
+		printf "${FONT_PURPLE}git status$FONT_DEFAULT\n"
 
-			cd $directory
+		git status
 
-			printf "${FONT_PURPLE}git status$FONT_DEFAULT\n"
+		printf "${FONT_BLUE}git add -A$FONT_DEFAULT\n"
 
-			git status
+		git add -A
 
-			printf "${FONT_BLUE}git add -A$FONT_DEFAULT\n"
+		printf "${FONT_PURPLE}git commit -m $1$FONT_DEFAULT\n"
 
-			git add -A
+		git commit -m "$1"
 
-			printf "${FONT_PURPLE}git commit -m $1$FONT_DEFAULT\n"
+		printf "${FONT_BLUE}git pull$FONT_DEFAULT\n"
 
-			git commit -m "$1"
+		git pull
 
-			printf "${FONT_BLUE}git pull$FONT_DEFAULT\n"
+		printf "${FONT_PURPLE}git push$FONT_DEFAULT\n"
 
-			git pull
+		git push
 
-			printf "${FONT_PURPLE}git push$FONT_DEFAULT\n"
-
-			git push
-
-			cd ..
-
-		fi
+		popd
 
 	done
 
