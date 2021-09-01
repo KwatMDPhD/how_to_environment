@@ -89,7 +89,7 @@ Appearance > Titlebar appearance > Transparent
 ### Set python
 
 ```sh
-pyenv install 3.9.6 &&
+PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.9.6 &&
 
 pyenv global 3.9.6 &&
 
