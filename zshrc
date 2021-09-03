@@ -46,7 +46,7 @@ alias df="df -h"
 
 alias vim="mvim"
 
-alias rsync="rsync --verbose --itemize-changes --human-readable --progress --stats --recursive"
+alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
 function list_path() {
 
