@@ -38,6 +38,10 @@ Corsair iCUE
 
 VLC Medica Player
 
+Docker
+
+Zoom
+
 ### Get Safari extension
 
 Add block
