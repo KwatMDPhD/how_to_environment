@@ -156,30 +156,24 @@ Settings > Advanced Settings Editor > Keyboard Shortcuts > User Preferences
 
 ```json
 {
-   "shortcuts":[
-      {
-         "command":"kernelmenu:restart-and-clear",
-         "keys":[
-            "Ctrl 0"
-         ],
-         "selector":"[data-jp-kernel-user]:focus"
-      },
-      {
-         "command":"runmenu:restart-and-run-all",
-         "keys":[
-            "Ctrl 9"
-         ],
-         "selector":"[data-jp-kernel-user]:focus"
-      },
-      {
-         "command":"notebook:enter-command-mode",
-         "keys":[
-            "Escape"
-         ],
-         "selector":".jp-Notebook.jp-mod-editMode",
-         "disabled":true
-      }
-   ]
+  "shortcuts": [
+    {
+      "command": "kernelmenu:restart-and-clear",
+      "keys": ["Ctrl 0"],
+      "selector": "[data-jp-kernel-user]:focus"
+    },
+    {
+      "command": "runmenu:restart-and-run-all",
+      "keys": ["Ctrl 9"],
+      "selector": "[data-jp-kernel-user]:focus"
+    },
+    {
+      "command": "notebook:enter-command-mode",
+      "keys": ["Escape"],
+      "selector": ".jp-Notebook.jp-mod-editMode",
+      "disabled": true
+    }
+  ]
 }
 ```
 
