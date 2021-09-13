@@ -18,11 +18,11 @@ Words `Esc + T`
 
 ## Format word
 
-UPPERCASE `Alt + U`
+UPPERCASE `Esc + U`
 
-lowercase `Alt + L`
+lowercase `Esc + L`
 
-Capitalize `Alt + C`
+Capitalize `Esc + C`
 
 ## Use background process
 
