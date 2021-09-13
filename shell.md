@@ -1,12 +1,12 @@
 ## Move
 
-Line (Atama | End) `Ctrl + A|E`
+Line (Atama|End) `Ctrl + A|E`
 
-Word (Back | Forward) `Alt + B|F`
+Word (Back|Forward) `Alt + B|F`
 
 ## Delete
 
-Line (Undo | Korekara) `Ctrl + U|K`
+Line (Undo|Korekara) `Ctrl + U|K`
 
 Word (WorD) `Ctrl + W|D`
 
