@@ -64,9 +64,9 @@ Plotly colorscale => (general) `colorscale` (match Plotly naming), (specific for
 
 ### Function
 
-Never abbreviate: `get_information_coefficient(ve1, ve2)`.
+Never abbreviate => `get_information_coefficient(ve1, ve2)`.
 
-Never use plural: `list_person(pe_)`.
+Never use plural => `list_person(pe_)`.
 
 ### IO
 
@@ -74,4 +74,4 @@ Keep the default name.
 
 For a new name, use `[_a-z]`.
 
-End directory path with "/": `"directory/"`.
+End directory path with "/" => `"directory/"`.
