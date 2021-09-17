@@ -278,6 +278,12 @@ function release_pypi() {
 
 }
 
+function container_exec() {
+
+	docker exec -it $1 /bin/bash
+
+}
+
 if [ "$(uname)" = "Linux" ]; then
 
 	PS1="\[$FONT_BOLD\]\w\[$FONT_DEFAULT\] "
