@@ -66,9 +66,9 @@ Plotly colorscale => (general) `colorscale` (match Plotly naming), (specific for
 
 Never abbreviate.
 
-Never use plural.
-
 `get_extreme(ve, ex="minimum")`.
+
+Never use plural.
 
 `list_person(pe_)`.
 
