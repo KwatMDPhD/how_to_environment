@@ -286,7 +286,7 @@ function container_exec() {
 
 function container_run() {
 
-		docker run --rm --publish 10000:8888 --env JUPYTER_ENABLE_LAB=yes --volume ~/craft/:/home/jovyan/craft/ katharineme/kate
+	docker run --rm --publish 10000:8888 --env JUPYTER_ENABLE_LAB=yes --volume ~/craft/:/home/jovyan/craft/ katharineme/kate
 
 }
 
