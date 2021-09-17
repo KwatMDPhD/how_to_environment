@@ -1,8 +1,14 @@
 ## Philosophy
 
+Be specific.
+
+Be explicit.
+
+Assume context.
+
 Less is more.
 
-Optimize for compression.
+Optimize for compression (do not repeat).
 
 ## Practice
 
@@ -14,7 +20,7 @@ Instead of `>` and `>=`, use `<` and `<=`.
 
 Avoid bitwise operator.
 
-Try to match default keyword argument type.
+Match default keyword argument type.
 
 Work on dimension 1 of a matrix.
 
@@ -22,53 +28,49 @@ Introduce close to use.
 
 ## Name
 
-Assume context.
-
-Be specific.
-
 ### General
 
 A thing can be anything that is commonly understood.
 
-Thing => `th`
+Thing => `th`.
 
-Things => `th_`
+Things => `th_`.
 
-Number of thing => `n_th`
+Number of thing => `n_th`.
 
-Differentiate => `thta`, `thda`, `th1`, `th2`, ...
-
-Integer => (`in` is a reserved name, so use the next character) `it`
+Differentiate with 1 character => `tha`, `thb`, `th1_`, `th2_`.
 
 ### Object
 
-Boolean => `bo`
+Boolean => (general) `bo`, (specific for "is good") `go`.
 
-Dictionary => `ke_va`
+Vector => (general) `ve`, (specific for "continuous vector") `co_`.
 
-Vector => `nu_`
+Matrix => (general) `ma`, (specific for "feature-by-sample categorical matrix") `ca_fe_sa`.
 
-Matrix => `nu_ro_co`
+N dimensional numbers => (general) `nu___`, (specific for "N-dimensional binary numbers") `bi___`.
 
-N dimensional number => `nu___`
+Index => (general) `ie` (`in` and `id` are reserved names), (specific for "selecting index") `ies`.
 
-`log(nu_)` => `nulo_`
+Dictionary => (general) `ke_va`, (specific for "name => new name") `na_ne`.
 
-`square(nu_ro_co)` => `nusq_ro_co`
+`GLOBAL_VARIABLE`.
 
-`GLOBAL_VARIABLE`
+Pandas DataFrame => (general) `da`, (specific for "DataFrame of feature-by-sample categorical numbers") `ca_ge_sa` (same as naming matrix).
 
-Match Plotly figure names.
+Pandas Series => (general) `se`, (specific for "Series of names indexing new names") `na_ne` (same as naming dictionary).
 
-Pandas index => `la_`
+Plotly colorscale => (general) `colorscale` (match Plotly naming), (specific for "node colorscale") `ncolorscale`.
 
 ### Function
 
 Never abbreviate.
 
-`get_extreme(nu_, ex="minimum")`
+Never use plural.
 
-`list_person(pe_)`
+`get_extreme(ve, ex="minimum")`.
+
+`list_person(pe_)`.
 
 ### IO
 
@@ -76,4 +78,4 @@ Keep the default name.
 
 For a new name, use `[_a-z]`.
 
-Directory => `"directory/"`
+Directory => `"directory/"`.
