@@ -56,7 +56,7 @@ Dictionary => (general) `ke_va`, (specific for "name => new name") `na_ne`.
 
 `GLOBAL_VARIABLE`.
 
-Pandas DataFrame => (general) `da`, (specific for "DataFrame of feature-by-sample categorical numbers") `ca_ge_sa` (same as naming matrix).
+Pandas DataFrame => (general) `da`, (specific for "DataFrame of feature-by-sample categorical numbers") `ca_fe_sa` (same as naming matrix).
 
 Pandas Series => (general) `se`, (specific for "Series of names indexing new names") `na_ne` (same as naming dictionary).
 
