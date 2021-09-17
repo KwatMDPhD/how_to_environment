@@ -52,7 +52,7 @@ N dimensional numbers => (general) `nu___`, (specific for "N-dimensional binary 
 
 Index => (general) `ie` (`in` and `id` are reserved names), (specific for "selecting index") `ies`.
 
-Dictionary => (general) `ke_va`, (specific for "name => new name") `na_ne`.
+Dictionary => (general) `di`, (specific for "name => new name") `na_ne`.
 
 `GLOBAL_VARIABLE`.
 
