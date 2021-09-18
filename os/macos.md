@@ -180,25 +180,3 @@ Settings > Advanced Settings Editor > Keyboard Shortcuts > User Preferences
   ]
 }
 ```
-
-## Note
-
-Uninstall brew
-
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)" &&
-
-sudo rm -fr /usr/local/*
-```
-
-Upgrade brew programs
-
-```sh
-brew update && brew upgrade
-```
-
-Uninstall jupyter kernel
-
-```sh
-jupyter kernelspec uninstall NAME
-```
