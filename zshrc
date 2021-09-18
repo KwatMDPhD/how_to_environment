@@ -168,43 +168,6 @@ function clean_web() {
 
 }
 
-function git_clone() {
-
-	for repository_name in \
-		\
-		environment \
-		\
-		medicine \
-		patient \
-		\
-		Kwat.jl \
-		kwat.py \
-		gsea \
-		clean_nb \
-		md_post \
-		\
-		comparison \
-		model \
-		proxy \
-		\
-		cancer_cell_line \
-		medulloblastoma \
-		chronic_fatigue_syndrome \
-		\
-		only_human \
-		blood_blood_everywhere \
-		cd4_t_cell_in_cfs \
-		metformin_in_cancer \
-		\
-		kwatme.com \
-		genome_explorer; do
-
-		git clone https://github.com/KwatME/$repository_name
-
-	done
-
-}
-
 function git_add_commit_push() {
 
 	git add -A && git commit -m "$1" && git push
