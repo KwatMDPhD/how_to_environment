@@ -71,11 +71,11 @@ brew install tree rename macvim fzf ripgrep node pyenv-virtualenv shfmt pandoc m
 ### Set profile
 
 ```sh
-curl https://raw.githubusercontent.com/kwatme/environment/master/zshrc > ~/.zshrc &&
+curl https://raw.githubusercontent.com/kwatme/environment/master/setting/zshrc > ~/.zshrc &&
 
-curl https://raw.githubusercontent.com/kwatme/environment/master/vimrc > ~/.vimrc &&
+curl https://raw.githubusercontent.com/kwatme/environment/master/setting/vimrc > ~/.vimrc &&
 
-curl https://raw.githubusercontent.com/kwatme/environment/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
+curl https://raw.githubusercontent.com/kwatme/environment/master/setting/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
 ### Set MacVim
