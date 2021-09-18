@@ -60,7 +60,7 @@ Pandas DataFrame => (general) `da`, (specific for "DataFrame of feature-by-sampl
 
 Pandas Series => (general) `se`, (specific for "Series of names indexing new names") `na_ne` (same as naming dictionary).
 
-Plotly colorscale => (general) `colorscale` (match Plotly naming), (specific for "node colorscale") `ncolorscale`.
+Plotly colorscale => (general) `colorscale` (match Plotly naming), (specific for "node colorscale") `colorscalen`.
 
 ### Function
 
