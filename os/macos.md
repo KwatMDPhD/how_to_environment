@@ -101,7 +101,7 @@ python --version
 ```
 
 ```sh
-python -m pip install jupyterlab isort black autoflake
+python -m pip install jupyterlab webio_jupyter_extension isort black autoflake
 ```
 
 ### Set git
@@ -140,7 +140,6 @@ for name in (
     "JuliaFormatter",
     "Revise",
     "BenchmarkTools",
-    "PyCall",
 )
 
     add(; name=name)
