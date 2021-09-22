@@ -10,9 +10,7 @@ Install third-party software for graphics and Wi-Fi hardware and additional medi
 
 Erase disk and install Ubuntu
 
-## Set OS
-
-### Get software
+## Get software
 
 ```sh
 sudo apt update &&
@@ -28,19 +26,19 @@ sudo apt full-upgrade --yes &&
 sudo apt autoremove --yes
 ```
 
-### Set the default text editor to be Vim
+## Set the default text editor to be Vim
 
 ```sh
 sudo update-alternatives --config editor
 ```
 
-### Set Settings
+## Set Settings
 
-### Clear dock
+## Clear dock
 
-### Set Files
+## Set Files
 
-### Fix suspend loop
+## Fix suspend loop
 
 ```sh
 sudo vim /etc/default/grub
@@ -52,4 +50,4 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash button.lid_init_state=open"
 sudo update-grub
 ```
 
-## Set up coding environment
+## [Set computational environment](computational_environment.md)
