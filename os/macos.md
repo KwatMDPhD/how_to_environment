@@ -36,7 +36,7 @@ SensibleSideButtons
 
 Corsair iCUE
 
-VLC Medica Player
+IINA
 
 Docker
 
