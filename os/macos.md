@@ -80,7 +80,7 @@ curl https://raw.githubusercontent.com/kwatme/environment/master/setting/JuliaFo
 
 ### Set MacVim
 
-Preferences >:
+### Set System Preferences
 
 General > Open untitled window > never
 
