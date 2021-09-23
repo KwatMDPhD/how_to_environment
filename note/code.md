@@ -26,6 +26,8 @@ Work on dimension 1 of a matrix.
 
 Introduce close to use.
 
+Never access global variable within a function.
+
 ## Name
 
 ### General
