@@ -54,6 +54,10 @@ Index => (general) `ie` (`in` and `id` are reserved names), (specific for "selec
 
 Dictionary => (general) `di`, (specific for "name => new name") `na_ne`.
 
+Dictionary mapping 1 key to 1+ values => ke_va_
+
+1+ dictionaries => _ke_va (appending _ is confusing)
+
 `GLOBAL_VARIABLE`.
 
 Pandas DataFrame => (general) `da`, (specific for "DataFrame of feature-by-sample categorical numbers") `ca_fe_sa` (same as naming matrix).

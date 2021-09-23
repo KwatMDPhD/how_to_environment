@@ -30,8 +30,6 @@ git lfs install
 
 Install Julia 1.6.2
 
-Link into /usr/local/bin/julia
-
 ```sh
 julia
 ```
@@ -40,13 +38,13 @@ julia
 using Pkg: add, build
 
 for name in (
+    "BenchmarkTools",
     "IJulia",
     "JuliaFormatter",
     "Revise",
-    "BenchmarkTools",
 )
 
-    add(; name=name)
+    add(name)
 
 end
 ```
