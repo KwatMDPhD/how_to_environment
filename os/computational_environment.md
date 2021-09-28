@@ -60,10 +60,32 @@ python --version
 ```
 
 ```sh
-python -m pip install isort black autoflake jupyterlab webio_jupyter_extension
+python -m pip install isort black autoflake jupyterlab webio_jupyter_extension kaleido
 ```
 
-## Set jupyter
+## Set jupyter notebook
+
+~/.jupyter/nbconfig/notebook.json
+
+```json
+{
+  "load_extensions": {
+    "vim_binding/vim_binding": true
+  },
+  "keys": {
+    "command": {
+      "bind": {
+        "ctrl-9": "jupyter-notebook:restart-kernel-and-run-all-cells",
+        "ctrl-0": "jupyter-notebook:restart-kernel-and-clear-output"
+      }
+    }
+  }
+}
+```
+
+https://github.com/lambdalisue/jupyter-vim-binding
+
+## Set jupyter lab?
 
 ```sh
 jupyter labextension install @axlair/jupyterlab_vim jupyterlab-plotly
