@@ -2,7 +2,7 @@
 
 Line (Atama | End) `Ctrl + A|E`
 
-Word (Back | Forward) `Alt + B|F`
+Word (Back | Forward) `Ctrl + B|F`
 
 ## Delete
 
