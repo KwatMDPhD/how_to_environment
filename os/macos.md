@@ -37,7 +37,7 @@ defaults write -globalDomain ApplePressAndHoldEnabled -bool false
 ```
 
 ```sh
-brew install tree rename macvim fzf ripgrep node pyenv-virtualenv shfmt pandoc mactex git-lfs
+brew install tree rename macvim fzf ripgrep node pyenv-virtualenv julia shfmt pandoc mactex git-lfs
 ```
 
 ## Set MacVim
