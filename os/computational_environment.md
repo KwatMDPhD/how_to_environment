@@ -28,7 +28,7 @@ git lfs install
 
 ## Set julia
 
-Install Julia 1.6.2
+Install Julia 1.6.3
 
 ```sh
 julia
