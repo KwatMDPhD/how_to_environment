@@ -77,7 +77,10 @@ python -m pip install isort black autoflake jupyterlab webio_jupyter_extension k
       "bind": {
         "ctrl-9": "jupyter-notebook:restart-kernel-and-run-all-cells",
         "ctrl-0": "jupyter-notebook:restart-kernel-and-clear-output"
-      }
+      },
+      "unbind": [
+        "0,0"
+      ]
     }
   }
 }
