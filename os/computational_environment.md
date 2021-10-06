@@ -41,6 +41,8 @@ for name in (
     "BenchmarkTools",
     "IJulia",
     "JuliaFormatter",
+    #"Kwat",
+    #"PyCall",
     "Revise",
 )
 
