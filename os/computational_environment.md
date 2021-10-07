@@ -23,6 +23,10 @@ git config --global fetch.prune true &&
 
 git config --global diff.colorMoved zebra &&
 
+git config --global status.submoduleSummary true
+
+git config --global diff.submodule log
+
 git lfs install
 ```
 
