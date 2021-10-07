@@ -164,7 +164,7 @@ function clean_nb() {
 
 function clean_web() {
 
-	npx prettier --write "**/*.{json,js,jsx,ts,tsx,md,html}"
+	npx prettier --write "**/*.{json,js,jsx,ts,tsx,md}"
 
 }
 
