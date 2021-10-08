@@ -138,10 +138,7 @@ function clean_sh() {
 
 function clean_jl() {
 
-	for f in $(find . -type f -name "*.jl"); do
-		echo $f
-		julia --eval "using JuliaFormatter; format_file(\"$f\")"
-	done
+	julia --sysimage "$HOME/.juliaformatter.sysimage.so" --eval "using JuliaFormatter; format(\".\"; verbose = true)"
 
 }
 

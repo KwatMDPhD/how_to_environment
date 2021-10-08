@@ -41,16 +41,18 @@ julia
 ```julia
 using Pkg: add, build
 
-for name in (
+for na in (
     "BenchmarkTools",
     "IJulia",
     "JuliaFormatter",
+    "OhMyREPL",
+    "PackageCompiler",
     #"Kwat",
     #"PyCall",
     "Revise",
 )
 
-    add(name)
+    add(na)
 
 end
 ```
@@ -84,9 +86,7 @@ python -m pip install isort black autoflake jupyterlab webio_jupyter_extension k
         "ctrl-9": "jupyter-notebook:restart-kernel-and-run-all-cells",
         "ctrl-0": "jupyter-notebook:restart-kernel-and-clear-output"
       },
-      "unbind": [
-        "0,0"
-      ]
+      "unbind": ["0,0"]
     }
   }
 }

@@ -56,7 +56,7 @@ Index => (general) `ie` (`in` and `id` are reserved names), (specific for "selec
 
 Dictionary => (general) `di`, (specific for "name => new name") `na_ne`.
 
-Dictionary mapping 1 key to 1+ values => ke_va_
+Dictionary mapping 1 key to 1+ values => ke*va*
 
 1+ dictionaries => _ke_va (appending _ is confusing)
 
