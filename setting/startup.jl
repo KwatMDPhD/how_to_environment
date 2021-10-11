@@ -1,7 +1,4 @@
-println("Starting up")
+using Revise
 
 using OhMyREPL
-using Revise
 using BenchmarkTools
-
-println("Ready.")

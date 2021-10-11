@@ -32,7 +32,7 @@ git lfs install
 
 ## Set julia
 
-Install Julia 1.6.3
+Install Julia 1.6
 
 ```sh
 julia
@@ -47,14 +47,18 @@ for na in (
     "JuliaFormatter",
     "OhMyREPL",
     "PackageCompiler",
-    #"Kwat",
-    #"PyCall",
     "Revise",
 )
 
     add(na)
 
 end
+```
+
+```sh
+mkdir ~/.julia/config/ &&
+
+curl https://raw.githubusercontent.com/kwatme/environment/master/setting/startup.jl > ~/.julia/config/startup.jl
 ```
 
 ## Set python

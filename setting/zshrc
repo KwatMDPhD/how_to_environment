@@ -138,7 +138,7 @@ function clean_sh() {
 
 function clean_jl() {
 
-	julia --sysimage "$HOME/.juliaformatter.sysimage.so" --eval "using JuliaFormatter; format(\".\"; verbose = true)"
+	julia --sysimage "$HOME/.juliaformatter.sysimage.so" --eval 'using JuliaFormatter; format("."; verbose = true)'
 
 }
 
