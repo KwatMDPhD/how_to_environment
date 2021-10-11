@@ -205,18 +205,6 @@ function find_and_git() {
 
 }
 
-function update_jl() {
-
-	julia --eval 'using Pkg; Pkg.update()' &&
-		for jl in *; do
-			printf "$jl\n"
-			cd $jl
-			julia --eval 'using Pkg; Pkg.activate("."); Pkg.update()'
-			cd ..
-		done
-
-}
-
 function pip_update() {
 
 	python -m pip list --outdated --format=freeze | grep -v "^-e" | cut -d = -f 1 | xargs python -m pip install --upgrade

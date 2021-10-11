@@ -62,13 +62,15 @@ curl https://raw.githubusercontent.com/kwatme/environment/master/setting/JuliaFo
 ## Set python
 
 ```sh
-PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install 3.9.6 &&
+INSTALLING_VERSION=3.10.0 &&
 
-pyenv global 3.9.6
+PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install $INSTALLING_VERSION &&
+
+pyenv global $INSTALLING_VERSION
 ```
 
 ```sh
-python -m pip install isort black autoflake jupyterlab webio_jupyter_extension kaleido
+python -m pip install black isort autoflake jupyter webio_jupyter_extension kaleido  # Installing jupyter installs jupyter-js-widgets.
 ```
 
 ## Set jupyter notebook
