@@ -19,7 +19,7 @@ set hidden
 set lazyredraw
 set wildmenu
 
-set guifont=Menlo-Regular:h13
+set guifont=Menlo-Regular:h16
 set guicursor+=a:blinkon0
 set belloff=all
 
@@ -64,8 +64,7 @@ endif
 
 call plug#begin()
 
-Plug 'morhetz/gruvbox'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'flazz/vim-colorschemes'
 
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-commentary'
@@ -82,6 +81,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Set up language servers: CocInstall coc-sh coc-html coc-json coc-julia coc-pyright
+Plug 'JuliaEditorSupport/julia-vim'
 Plug 'codota/tabnine-vim'
 
 call plug#end()
@@ -89,7 +89,8 @@ call plug#end()
 " ================================================================================
 " Colorscheme
 " ================================================================================
-colorscheme onehalfdark
+set background=dark
+colorscheme gruvbox
 
 " ================================================================================
 " Rainbow (bracket)
