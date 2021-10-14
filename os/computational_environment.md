@@ -70,7 +70,7 @@ pyenv global $INSTALLING_VERSION
 ```
 
 ```sh
-python -m pip install black isort autoflake jupyter webio_jupyter_extension kaleido  # Installing jupyter installs jupyter-js-widgets.
+python -m pip install black isort autoflake jupyter webio_jupyter_extension kaleido
 ```
 
 ## Set jupyter notebook
