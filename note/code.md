@@ -28,6 +28,8 @@ Introduce close to use.
 
 Never access global variable within a function.
 
+When setting julia function keyword arguments, use `;`.
+
 ## Name
 
 ### General
