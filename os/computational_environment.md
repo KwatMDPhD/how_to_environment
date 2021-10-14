@@ -30,7 +30,7 @@ git lfs install
 
 ## Set julia
 
-Install Julia 1.6
+Install Julia 1.6.3
 
 ```julia
 using Pkg: add, build
@@ -62,7 +62,7 @@ curl https://raw.githubusercontent.com/kwatme/environment/master/setting/JuliaFo
 ## Set python
 
 ```sh
-INSTALLING_VERSION=3.10.0 &&
+INSTALLING_VERSION=3.9.7 &&
 
 PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install $INSTALLING_VERSION &&
 
