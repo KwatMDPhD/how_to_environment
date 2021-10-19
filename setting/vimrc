@@ -102,8 +102,16 @@ let g:rainbow_active = 1
 " ================================================================================
 nnoremap <leader>tt :NERDTreeToggle<CR>
 nnoremap <leader>tf :NERDTreeFind<CR>
-let NERDTreeWinSize = 48
+let NERDTreeAutoCenterThreshold = 8
+let NERDTreeCaseSensitiveSort = 1
 let NERDTreeNaturalSort = 1
+let NERDTreeIgnore=['\.vim$', '\~$']
+let NERDTreeMouseMode = 2
+let NERDTreeSortOrder = []
+let NERDTreeStatusline = -1
+let NERDTreeWinSize = 48
+let NERDTreeMinimalUI = 1
+let NERDTreeCascadeSingleChildDir = 1
 let NERDTreeAutoDeleteBuffer = 1
 
 " ================================================================================
