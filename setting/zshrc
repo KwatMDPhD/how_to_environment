@@ -228,7 +228,7 @@ function release_pypi() {
 
 function container_exec() {
 
-	docker exec -it $1 /bin/bash
+	docker exec --user root --interactive --tty $1 /bin/bash
 
 }
 

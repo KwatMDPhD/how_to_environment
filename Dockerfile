@@ -117,5 +117,3 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
 RUN rm -rf /home/jovyan/work/
 
 WORKDIR $HOME
-
-
