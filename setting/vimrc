@@ -102,11 +102,9 @@ let g:rainbow_active = 1
 " ================================================================================
 nnoremap <leader>tt :NERDTreeToggle<CR>
 nnoremap <leader>tf :NERDTreeFind<CR>
-let NERDTreeWinSize = 64
+let NERDTreeWinSize = 48
 let NERDTreeNaturalSort = 1
 let NERDTreeAutoDeleteBuffer = 1
-let g:NERDTreeGitStatusShowClean = 1
-let g:NERDTreeGitStatusConcealBrackets = 1
 
 " ================================================================================
 " FZF 
@@ -134,4 +132,19 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" ================================================================================
+" Highlight all instances of word under cursor
+" ================================================================================
+setl updatetime=300
+
+highlight WordUnderCursor cterm=underline gui=underline
+autocmd CursorHold * call HighlightCursorWord()
+function! HighlightCursorWord()
+    let search = getreg('/')
+    let cword = expand('<cword>')
+    if match(cword, search) == -1
+        exe printf('match WordUnderCursor /\V\<%s\>/', escape(cword, '/\'))
+    endif
 endfunction
