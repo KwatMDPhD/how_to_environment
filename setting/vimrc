@@ -102,7 +102,6 @@ let g:rainbow_active = 1
 " ================================================================================
 nnoremap <leader>tt :NERDTreeToggle<CR>
 nnoremap <leader>tf :NERDTreeFind<CR>
-let NERDTreeAutoCenterThreshold = 8
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeNaturalSort = 1
 let NERDTreeIgnore=['\.vim$', '\~$']
