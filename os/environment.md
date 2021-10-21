@@ -41,6 +41,7 @@ for na in [
     "JuliaFormatter",
     "OhMyREPL",
     "PackageCompiler",
+    "PyCall",
     "Revise",
 ]
 
