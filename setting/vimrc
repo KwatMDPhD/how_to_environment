@@ -110,6 +110,7 @@ let NERDTreeSortOrder = []
 let NERDTreeStatusline = -1
 let NERDTreeWinSize = 48
 let NERDTreeMinimalUI = 1
+let NERDTreeMinimalMenu = 1
 let NERDTreeCascadeSingleChildDir = 1
 let NERDTreeAutoDeleteBuffer = 1
 
