@@ -105,7 +105,7 @@ nnoremap <leader>tf :NERDTreeFind<CR>
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeNaturalSort = 1
 let NERDTreeIgnore=['\.vim$', '\~$']
-let NERDTreeMouseMode = 2
+let NERDTreeMouseMode = 3
 let NERDTreeSortOrder = []
 let NERDTreeStatusline = -1
 let NERDTreeWinSize = 48
