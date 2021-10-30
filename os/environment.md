@@ -23,6 +23,8 @@ git config --global diff.colorMoved zebra &&
 
 git config --global status.submoduleSummary true &&
 
+git config --global init.defaultBranch main &&
+
 git config --global diff.submodule log &&
 
 git lfs install
