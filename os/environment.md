@@ -1,15 +1,15 @@
 ## Set profile
 
 ```sh
-curl https://raw.githubusercontent.com/kwatme/environment/master/setting/zshrc > ~/.zshrc &&
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/setting/zshrc > ~/.zshrc &&
 
-curl https://raw.githubusercontent.com/kwatme/environment/master/setting/vimrc > ~/.vimrc
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/setting/vimrc > ~/.vimrc
 ```
 
 ## Set git
 
 ```sh
-git config --global user.name "KwatME" &&
+git config --global user.name "KwatMDPhD" &&
 
 git config --global user.email "kwat.me@icloud.com" &&
 
@@ -55,11 +55,11 @@ end
 ```sh
 mkdir ~/.julia/config/ &&
 
-curl https://raw.githubusercontent.com/kwatme/environment/master/setting/startup.jl > ~/.julia/config/startup.jl
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/setting/startup.jl > ~/.julia/config/startup.jl
 ```
 
 ```sh
-curl https://raw.githubusercontent.com/kwatme/environment/master/setting/JuliaFormatter.toml > ~/.JuliaFormatter.toml
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/setting/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
 ## Set python
@@ -79,7 +79,7 @@ python -m pip install black isort autoflake jupyter webio_jupyter_extension kale
 ## Set jupyter notebook
 
 ```sh
-curl https://raw.githubusercontent.com/kwatme/environment/master/setting/notebook.json > ~/.jupyter/nbconfig/notebook.json
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/setting/notebook.json > ~/.jupyter/nbconfig/notebook.json
 ```
 
 Install https://github.com/lambdalisue/jupyter-vim-binding
