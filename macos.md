@@ -75,5 +75,3 @@ Vimari > Open Configuration File >
 ```json
 "excludedUrls": "localhost,tinkercad.com",
 ```
-
-## [Set computational environment](computational_environment.md)

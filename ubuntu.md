@@ -49,5 +49,3 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash button.lid_init_state=open"
 ```sh
 sudo update-grub
 ```
-
-## [Set computational environment](computational_environment.md)
