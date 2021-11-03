@@ -86,6 +86,7 @@ RUN conda config --set channel_priority false && \
     conda install --quiet --yes --channel bioconda \
     'seqtk' \
     'skewer' \
+    'fastp' \
     'fastqc' \
     'multiqc' \
     'minimap2' \
