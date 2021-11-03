@@ -13,9 +13,7 @@
         "alt-r": "jupyter-notebook:change-cell-to-raw",
         "alt-c": "jupyter-notebook:change-cell-to-code"
       },
-      "unbind": [
-        "0,0"
-      ]
+      "unbind": ["0,0"]
     }
   },
   "load_extensions": {
