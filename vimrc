@@ -86,8 +86,8 @@ Plug 'codota/tabnine-vim'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
-Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -164,12 +164,21 @@ function! HighlightCursorWord()
 endfunction
 
 " ================================================================================
-" Limelight
+" markdown-preview
+" ================================================================================
+let g:mkdp_auto_start = 1
+let g:mkdp_refresh_slow=1
+let g:mkdp_markdown_css=expand('~/craft/environment/markdown.css')
+
+" ================================================================================
+" limelight
 " ================================================================================
 nnoremap <leader>l :Limelight!!<CR>
 
+let g:limelight_conceal_ctermfg=244
+
 " ================================================================================
-" Goyo
+" goyo
 " ================================================================================
 nnoremap <leader>g :Goyo<CR>
 
