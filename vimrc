@@ -107,6 +107,7 @@ let g:rainbow_active = 1
 " ================================================================================
 nnoremap <leader>tt :NERDTreeToggle<CR>
 nnoremap <leader>tf :NERDTreeFind<CR>
+
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeNaturalSort = 1
 let NERDTreeIgnore=['\.vim$', '\~$']
@@ -171,5 +172,6 @@ nnoremap <leader>l :Limelight!!<CR>
 " Goyo
 " ================================================================================
 nnoremap <leader>g :Goyo<CR>
+
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
