@@ -84,6 +84,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'codota/tabnine-vim'
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
 call plug#end()
 
 " ================================================================================
@@ -156,3 +161,15 @@ function! HighlightCursorWord()
         exe printf('match WordUnderCursor /\V\<%s\>/', escape(cword, '/\'))
     endif
 endfunction
+
+" ================================================================================
+" Limelight
+" ================================================================================
+nnoremap <leader>l :Limelight!!<CR>
+
+" ================================================================================
+" Goyo
+" ================================================================================
+nnoremap <leader>g :Goyo<CR>
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
