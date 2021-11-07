@@ -205,6 +205,12 @@ function find_and_git() {
 
 }
 
+function update_and_test_jl() {
+
+	pkgr export-nb . && julia --eval 'using Pkg; Pkg.activate("."); Pkg.update(); Pkg.test()'
+
+}
+
 function pip_update() {
 
 	python -m pip list --outdated --format=freeze | grep -v "^-e" | cut -d = -f 1 | xargs python -m pip install --upgrade
