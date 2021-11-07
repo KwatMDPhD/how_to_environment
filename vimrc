@@ -64,46 +64,37 @@ endif
 
 call plug#begin()
 
-Plug 'flazz/vim-colorschemes'
-
-Plug 'luochen1990/rainbow'
-Plug 'tpope/vim-commentary'
-
 Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-Plug 'airblade/vim-gitgutter'
 
 " brew install fzf ripgrep
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
+Plug 'airblade/vim-gitgutter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'rhysd/vim-grammarous'
+
+Plug 'codota/tabnine-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Set up language servers: CocInstall coc-sh coc-html coc-json coc-julia coc-pyright
+
 Plug 'JuliaEditorSupport/julia-vim'
-Plug 'codota/tabnine-vim'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
-Plug 'junegunn/limelight.vim'
+Plug 'tpope/vim-commentary'
+
+Plug 'flazz/vim-colorschemes'
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'luochen1990/rainbow'
 
 call plug#end()
 
 " ================================================================================
-" Colorscheme
-" ================================================================================
-set background=dark
-colorscheme gruvbox
-
-" ================================================================================
-" Rainbow (bracket)
-" ================================================================================
-let g:rainbow_active = 1
-
-" ================================================================================
-" NERDTree
+" nerdtree
 " ================================================================================
 nnoremap <leader>tt :NERDTreeToggle<CR>
 nnoremap <leader>tf :NERDTreeFind<CR>
@@ -121,10 +112,9 @@ let NERDTreeCascadeSingleChildDir = 1
 let NERDTreeAutoDeleteBuffer = 1
 
 " ================================================================================
-" FZF 
+" fzf.vim (fzf)
 " ================================================================================
 nnoremap <leader>fi :Files<CR>
-nnoremap <leader>rg :Rg<CR>
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -135,7 +125,32 @@ command! -bang -nargs=* Rg
   \ )
 
 " ================================================================================
-" CoC 
+" fzf.vim (ripgrep)
+" ================================================================================
+nnoremap <leader>rg :Rg<CR>
+
+" ================================================================================
+" vim-gitgutter
+" ================================================================================
+
+" ================================================================================
+" nerdtree-git-plugin
+" ================================================================================
+
+" ================================================================================
+" vim-grammarous
+" ================================================================================
+
+" ================================================================================
+" tabnine-vim
+" ================================================================================
+
+" ================================================================================
+" vim-polyglot
+" ================================================================================
+
+" ================================================================================
+" coc.nvim
 " ================================================================================
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -149,11 +164,55 @@ function! s:check_back_space() abort
 endfunction
 
 " ================================================================================
+" julia-vim
+" ================================================================================
+
+" ================================================================================
+" markdown-preview.nvim
+" ================================================================================
+nnoremap <leader>m :MarkdownPreview<CR>
+
+let g:mkdp_refresh_slow=1
+let g:mkdp_markdown_css=expand('~/craft/environment/markdown.css')
+
+" ================================================================================
+" vim-commentary
+" ================================================================================
+
+" ================================================================================
+" vim-colorschemes
+" ================================================================================
+set background=dark
+colorscheme gruvbox
+
+" ================================================================================
+" goyo
+" ================================================================================
+nnoremap <leader>g :Goyo<CR>
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+
+" ================================================================================
+" limelight
+" ================================================================================
+nnoremap <leader>l :Limelight!!<CR>
+
+let g:limelight_conceal_ctermfg=244
+
+" ================================================================================
+" rainbow
+" ================================================================================
+let g:rainbow_active = 1
+
+" ================================================================================
 " Highlight all instances of word under cursor
 " ================================================================================
 setl updatetime=300
 
 highlight WordUnderCursor cterm=underline gui=underline
+
 autocmd CursorHold * call HighlightCursorWord()
 function! HighlightCursorWord()
     let search = getreg('/')
@@ -164,23 +223,11 @@ function! HighlightCursorWord()
 endfunction
 
 " ================================================================================
-" markdown-preview
+" Highlight articles
 " ================================================================================
-let g:mkdp_auto_start = 1
-let g:mkdp_refresh_slow=1
-let g:mkdp_markdown_css=expand('~/craft/environment/markdown.css')
+nnoremap <leader>a /\v<a>\|<an>\|<the>\|s 
 
 " ================================================================================
-" limelight
+" 
 " ================================================================================
-nnoremap <leader>l :Limelight!!<CR>
 
-let g:limelight_conceal_ctermfg=244
-
-" ================================================================================
-" goyo
-" ================================================================================
-nnoremap <leader>g :Goyo<CR>
-
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
