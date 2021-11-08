@@ -41,6 +41,7 @@ using Pkg: add, build
 
 for na in [
     "BenchmarkTools",
+    "Comonicon",
     "IJulia",
     "JuliaFormatter",
     "OhMyREPL",
