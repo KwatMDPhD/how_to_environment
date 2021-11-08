@@ -73,8 +73,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-Plug 'rhysd/vim-grammarous'
-
 Plug 'codota/tabnine-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -135,10 +133,6 @@ nnoremap <leader>rg :Rg<CR>
 
 " ================================================================================
 " nerdtree-git-plugin
-" ================================================================================
-
-" ================================================================================
-" vim-grammarous
 " ================================================================================
 
 " ================================================================================
