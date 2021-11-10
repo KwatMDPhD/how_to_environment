@@ -205,11 +205,19 @@ function find_and_git() {
 
 }
 
+# Reset Manifest.toml
+# Remove .gitignore Manifest.toml
+# Reset Project.toml?
+# Add dependencies
 function update_and_test_jl() {
 
+	# TODO: take path argument instead of `.`
 	pkgr export-nb . && julia --eval 'using Pkg; Pkg.activate("."); Pkg.update(); Pkg.test()'
 
 }
+# clean_jl
+# clean_nb
+# clean_web
 
 function pip_update() {
 
@@ -256,6 +264,8 @@ elif [ "$(uname)" = "Darwin" ]; then
 
 fi
 
+export NODE_OPTIONS="--max-old-space-size=16384"
+
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
@@ -264,5 +274,3 @@ eval "$(pyenv init -)"
 alias ju="julia --project"
 
 PATH=~/.julia/bin:$PATH
-
-export NODE_OPTIONS="--max-old-space-size=16384"
