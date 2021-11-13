@@ -1,3 +1,4 @@
+
 FONT_DEFAULT="$(tput sgr0)"
 
 FONT_BOLD="$(tput bold)"
@@ -205,19 +206,23 @@ function find_and_git() {
 
 }
 
-# Reset Manifest.toml
-# Remove .gitignore Manifest.toml
-# Reset Project.toml?
-# Add dependencies
+alias julia="/Applications/Julia-1.6.app/Contents/Resources/julia/bin/julia"
+
 function update_and_test_jl() {
 
-	# TODO: take path argument instead of `.`
-	pkgr export-nb . && julia --eval 'using Pkg; Pkg.activate("."); Pkg.update(); Pkg.test()'
+	for directory in $(find . -maxdepth 1 -name \*.jl); do;
+
+		printf "=%.0s"  $(seq 1 63) 
+
+		cd $directory
+		
+		pkgr export-nb . && julia --eval 'using Pkg; Pkg.activate("."); Pkg.update(); Pkg.test()'
+
+		cd ..
+	
+	 done
 
 }
-# clean_jl
-# clean_nb
-# clean_web
 
 function pip_update() {
 
@@ -274,3 +279,4 @@ eval "$(pyenv init -)"
 alias ju="julia --project"
 
 PATH=~/.julia/bin:$PATH
+
