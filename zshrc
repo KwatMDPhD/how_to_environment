@@ -47,6 +47,8 @@ alias df="df -h"
 
 alias vim="mvim"
 
+alias dru="docker ps -a"
+
 alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
 function list_path() {
@@ -206,7 +208,34 @@ function find_and_git() {
 
 }
 
-alias julia="/Applications/Julia-1.6.app/Contents/Resources/julia/bin/julia"
+function git_change_to_main() {
+
+	printf "${FONT_PURPLE}git branch -a$FONT_DEFAULT\n"
+	
+	git branch -a
+
+	printf "${FONT_PURPLE}git branch -m master main$FONT_DEFAULT\n"
+	
+	git branch -m master main
+	
+	printf "${FONT_PURPLE}git fetch origin$FONT_DEFAULT\n"
+	
+	git fetch origin
+
+	printf "${FONT_PURPLE}git branch -u origin/main main$FONT_DEFAULT\n"
+	
+	git branch -u origin/main main
+	
+	printf "${FONT_PURPLE}git remote set-head origin -a$FONT_DEFAULT\n"
+	
+	git remote set-head origin -a
+
+	printf "${FONT_PURPLE}git branch -a$FONT_DEFAULT\n"
+	
+	git branch -a
+
+}
+
 
 function update_and_test_jl() {
 
@@ -247,13 +276,19 @@ function release_pypi() {
 
 function container_exec() {
 
-	docker exec -it $1 /bin/bash
+	docker exec --interactive --tty --user root $1 /bin/bash
 
 }
 
-function container_run() {
+function container_fastq_run() {
 
-	docker run --rm --publish 10000:8888 --env JUPYTER_ENABLE_LAB=yes --volume ~/craft/:/home/jovyan/craft/ katharineme/kate
+	docker run --rm --publish 10000:8888 --env JUPYTER_ENABLE_LAB=yes --volume ~/craft/:/home/jovyan/craft/ katharineme/fastq
+
+}
+
+function container_ubuntu_run() {
+	
+	docker run --rm --detach --tty --volume ~/craft/:/home/craft/ ubuntu
 
 }
 
@@ -273,6 +308,7 @@ export NODE_OPTIONS="--max-old-space-size=16384"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 

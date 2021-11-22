@@ -7,10 +7,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 USER root
 
 # Julia installation
-ARG julia_version="1.5.2"
-
-# SHA256 checksum
-ARG julia_checksum="6da704fadcefa39725503e4c7a9cfa1a570ba8a647c4bd8de69a118f43584630"
+ARG julia_version="1.6.3"
 
 # R pre-requisites
 RUN apt-get update && \
@@ -32,7 +29,6 @@ WORKDIR /tmp
 # hadolint ignore=SC2046
 RUN mkdir "/opt/julia-${JULIA_VERSION}" && \
     wget -q https://julialang-s3.julialang.org/bin/linux/x64/$(echo "${JULIA_VERSION}" | cut -d. -f 1,2)"/julia-${JULIA_VERSION}-linux-x86_64.tar.gz" && \
-    echo "${julia_checksum} *julia-${JULIA_VERSION}-linux-x86_64.tar.gz" | sha256sum -c - && \
     tar xzf "julia-${JULIA_VERSION}-linux-x86_64.tar.gz" -C "/opt/julia-${JULIA_VERSION}" --strip-components=1 && \
     rm "/tmp/julia-${JULIA_VERSION}-linux-x86_64.tar.gz"
 RUN ln -fs /opt/julia-*/bin/julia /usr/local/bin/julia
@@ -86,7 +82,6 @@ RUN conda config --set channel_priority false && \
     conda install --quiet --yes --channel bioconda \
     'seqtk' \
     'skewer' \
-    'fastp' \
     'fastqc' \
     'multiqc' \
     'minimap2' \
