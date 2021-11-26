@@ -1,4 +1,3 @@
-
 FONT_DEFAULT="$(tput sgr0)"
 
 FONT_BOLD="$(tput bold)"
@@ -14,6 +13,8 @@ FONT_GREY="\033[38;5;8m"
 alias ..="cd .."
 
 alias ...="cd ../.."
+
+alias ....="cd ../../.."
 
 if [ "$(uname)" = "Linux" ]; then
 
@@ -46,8 +47,6 @@ alias du="du -h"
 alias df="df -h"
 
 alias vim="mvim"
-
-alias dru="docker ps -a"
 
 alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
@@ -92,12 +91,6 @@ function extract() {
 		esac
 
 	fi
-
-}
-
-function ssh_port() {
-
-	ssh $1 -f -N -L localhost:$3:localhost:$2
 
 }
 
@@ -208,48 +201,19 @@ function find_and_git() {
 
 }
 
-function git_change_to_main() {
+function jl_update_and_test() {
 
-	printf "${FONT_PURPLE}git branch -a$FONT_DEFAULT\n"
-	
-	git branch -a
+	for directory in $(find . -name \*.jl -maxdepth 1); do
 
-	printf "${FONT_PURPLE}git branch -m master main$FONT_DEFAULT\n"
-	
-	git branch -m master main
-	
-	printf "${FONT_PURPLE}git fetch origin$FONT_DEFAULT\n"
-	
-	git fetch origin
-
-	printf "${FONT_PURPLE}git branch -u origin/main main$FONT_DEFAULT\n"
-	
-	git branch -u origin/main main
-	
-	printf "${FONT_PURPLE}git remote set-head origin -a$FONT_DEFAULT\n"
-	
-	git remote set-head origin -a
-
-	printf "${FONT_PURPLE}git branch -a$FONT_DEFAULT\n"
-	
-	git branch -a
-
-}
-
-
-function update_and_test_jl() {
-
-	for directory in $(find . -maxdepth 1 -name \*.jl); do;
-
-		printf "=%.0s"  $(seq 1 63) 
+		printf "=%.0s" $(seq 1 63)
 
 		cd $directory
-		
+
 		pkgr export-nb . && julia --eval 'using Pkg; Pkg.activate("."); Pkg.update(); Pkg.test()'
 
 		cd ..
-	
-	 done
+
+	done
 
 }
 
@@ -262,15 +226,6 @@ function pip_update() {
 function pip_uninstall() {
 
 	python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall --yes
-
-}
-
-function release_pypi() {
-
-	rm -rf build dist *.egg-info &&
-		python setup.py sdist &&
-		twine upload dist/* &&
-		rm -rf build dist *.egg-info
 
 }
 
@@ -287,7 +242,7 @@ function container_fastq_run() {
 }
 
 function container_ubuntu_run() {
-	
+
 	docker run --rm --detach --tty --volume ~/craft/:/home/craft/ ubuntu
 
 }
@@ -308,11 +263,9 @@ export NODE_OPTIONS="--max-old-space-size=16384"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 alias ju="julia --project"
 
 PATH=~/.julia/bin:$PATH
-
