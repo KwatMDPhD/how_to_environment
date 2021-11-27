@@ -18,13 +18,9 @@ set confirm
 set hidden
 set lazyredraw
 set wildmenu
-
 set guifont=Menlo-Regular:h16
 set guicursor+=a:blinkon0
 set belloff=all
-
-highlight SignColumn guibg=NONE guifg=NONE ctermbg=NONE ctermbg=NONE
-highlight Cursor guibg=#20d9ba guifg=#ebf6f7
 
 set number
 set signcolumn=number
@@ -48,7 +44,7 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
-nnoremap <leader>nh :nohlsearch<CR>
+nnoremap <leader>h :nohlsearch<CR>
 set showmatch
 
 set mps+=<:>
@@ -94,13 +90,14 @@ call plug#end()
 " ================================================================================
 " nerdtree
 " ================================================================================
-nnoremap <leader>tt :NERDTreeToggle<CR>
-nnoremap <leader>tf :NERDTreeFind<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>b :NERDTreeFind<CR>
 
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeNaturalSort = 1
-let NERDTreeIgnore=['\.vim$', '\~$']
+let NERDTreeIgnore = ['\.vim$', '\~$']
 let NERDTreeMouseMode = 3
+"let NERDTreeQuitOnOpen = 1
 let NERDTreeSortOrder = []
 let NERDTreeStatusline = -1
 let NERDTreeWinSize = 64
@@ -112,7 +109,7 @@ let NERDTreeAutoDeleteBuffer = 1
 " ================================================================================
 " fzf.vim (fzf)
 " ================================================================================
-nnoremap <leader>fi :Files<CR>
+nnoremap <leader>f :Files<CR>
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -125,7 +122,7 @@ command! -bang -nargs=* Rg
 " ================================================================================
 " fzf.vim (ripgrep)
 " ================================================================================
-nnoremap <leader>rg :Rg<CR>
+nnoremap <leader>r :Rg<CR>
 
 " ================================================================================
 " vim-gitgutter
@@ -203,7 +200,7 @@ let g:rainbow_active = 1
 " ================================================================================
 " Highlight all instances of word under cursor
 " ================================================================================
-setl updatetime=300
+setl updatetime=160
 
 highlight WordUnderCursor cterm=underline gui=underline
 
@@ -219,9 +216,9 @@ endfunction
 " ================================================================================
 " Highlight articles
 " ================================================================================
-nnoremap <leader>a /\v<a>\|<an>\|<the>\|s 
+nnoremap <leader>a /\v<a>\|<an>\|<the>\|s<CR>
 
 " ================================================================================
 " 
 " ================================================================================
-
+highlight Search ctermbg=92 ctermfg=yellow guibg=#9016e6 guifg=#20d8ba

@@ -1,3 +1,6 @@
+# ==============================================================================
+# Colors
+# ==============================================================================
 FONT_DEFAULT="$(tput sgr0)"
 
 FONT_BOLD="$(tput bold)"
@@ -10,21 +13,16 @@ FONT_BLUE="\033[38;5;4m"
 
 FONT_GREY="\033[38;5;8m"
 
+# ==============================================================================
+# Aliases
+# ==============================================================================
 alias ..="cd .."
 
 alias ...="cd ../.."
 
 alias ....="cd ../../.."
 
-if [ "$(uname)" = "Linux" ]; then
-
-	alias ls="ls --human-readable --classify --no-group --color=auto"
-
-elif [ "$(uname)" = "Darwin" ]; then
-
-	alias ls="ls -G"
-
-fi
+alias ls="ls -G"
 
 alias ll="ls -l"
 
@@ -32,27 +30,40 @@ alias la="ls -lA"
 
 alias lt="ls -ltr"
 
+alias du="du -h"
+
+alias df="df -h"
+
+alias grep="grep --color"
+
 alias rm="rm -i"
+
+alias mkdir="mkdir -pv"
 
 alias cp="cp -i"
 
 alias mv="mv -i"
 
-alias mkdir="mkdir -pv"
-
-alias grep="grep --color"
-
-alias du="du -h"
-
-alias df="df -h"
-
-alias vim="mvim"
-
 alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
-function list_path() {
+alias xargs="xargs -t"
+
+alias ju="julia --project"
+
+alias shfmt="shfmt -s -w"
+
+# ==============================================================================
+# Functions
+# ==============================================================================
+function path() {
 
 	tr ":" "\n" <<<$PATH
+
+}
+
+function rc() {
+
+	source ~/.zshrc
 
 }
 
@@ -86,7 +97,7 @@ function extract() {
 
 		*.7z) 7z x $1 ;;
 
-		*) printf "Can not extract $1.\n" ;;
+		*) printf "Failed to extract $1\n" ;;
 
 		esac
 
@@ -94,104 +105,137 @@ function extract() {
 
 }
 
-function find_and_replace() {
+function recursively-rm() {
+
+	pa_=(".DS_Store" ".com.apple.*" ".~*" "*.swp" "__pycache__" "*.pyc" ".ipynb_checkpoints")
+
+	for pa in $pa_; do
+
+		find -E . -regex ".*/$pa" -prune -print0 | xargs -0 rm -rf
+
+	done
+
+}
+
+function recursively-chmod() {
+
+	find . -type f -print0 | xargs -0 chmod 644
+
+	find . -type d -print0 | xargs -0 chmod 755
+
+}
+
+function recursively-rename() {
+
+	find . -depth -print0 | xargs -0 -p rename --sanitize --lower-case --expr "s/-/_/g" --force
+
+}
+
+function recursively-sed() {
 
 	rg --files-with-matches $1 | xargs sed -i "" "s/$1/$2/g"
 
 }
 
-function remove_junk() {
+# ==============================================================================
+# Julia functions
+# ==============================================================================
+function recursively-update-jl() {
 
-	local patterns=("*.swp" "__pycache__" "*.pyc" ".ipynb_checkpoints" ".DS_Store" ".com.apple.*" ".~*")
+	for jl in $(find -E . -regex ".*/*.jl" -type d); do
 
-	for pattern in "${patterns[@]}"; do
+		printf "$FONT_BOLD$FONT_EMERALD$jl$FONT_DEFAULT\n"
 
-		find . -name $pattern -prune -exec rm -rf {} \;
+		pkgr export-nb $jl
+
+		ju --eval "using Pkg; Pkg.update(); Pkg.test()"
 
 	done
 
 }
 
-function clean_name() {
+# ==============================================================================
+# Pip functions
+# ==============================================================================
+function pip-update() {
 
-	find . -d | xargs rename --sanitize --lower-case --expr "s/-/_/g" --force *
-
-}
-
-function reset_mode() {
-
-	find . -not -path "*/.*" -type f -exec chmod 644 {} \;
-
-	find . -not -path "*/.*" -type d -exec chmod 755 {} \;
+	python -m pip list --outdated --format=freeze | grep -v "^-e" | cut -d = -f 1 | xargs python -m pip install --upgrade
 
 }
 
-function clean_sh() {
+function pip-reset() {
 
-	shfmt -s -w $1
-
-}
-
-function clean_jl() {
-
-	julia --sysimage "$HOME/.juliaformatter.sysimage.so" --eval 'using JuliaFormatter; format("."; verbose = true)'
+	python -m pip freeze | grep -v "^-e" | xargs -p python -m pip uninstall --yes
 
 }
 
-function clean_py() {
+# ==============================================================================
+# Clean functions
+# ==============================================================================
+function recursively-clean-jl() {
 
-	for f in $(find . -type f -name "*.py"); do
-		echo $f
-		isort --combine-as --quiet $f
-		autoflake --ignore-init-module-imports --in-place --remove-all-unused-imports $f
-		black --quiet $f
-	done
+	julia --sysimage $HOME/.clean-jl.sysimage.so --eval 'using JuliaFormatter; format("."; verbose = true)'
 
 }
 
-function clean_nb() {
+function recursively-clean-py() {
 
-	clean-nb **/*.ipynb
+	isort --combine-as .
 
-}
+	autoflake --in-place --remove-all-unused-imports .
 
-function clean_web() {
-
-	npx prettier --write "**/*.{json,js,jsx,ts,tsx,md}"
+	black .
 
 }
 
-function git_add_commit_push() {
+function recursively-clean-nb() {
 
-	git add -A && git commit -m "$1" && git push
+	find -E . -regex ".*/*.ipynb" -print0 | xargs -0 clean-nb
 
 }
 
-function find_and_git() {
+function recursively-clean-web() {
 
-	for directory in $(find . -name .git -type d); do
+	find -E . -regex ".*/*.(json|md|ts|tsx|js|jsx)" -print0 | xargs -0 npx prettier --write
 
-		printf "$FONT_BOLD$FONT_EMERALD$d\n"
+}
 
-		pushd $directory/../
+# ==============================================================================
+# Docker functions
+# ==============================================================================
 
-		printf "${FONT_PURPLE}git status$FONT_DEFAULT\n"
+# ==============================================================================
+# Git functions
+# ==============================================================================
+function recursively-git-fetch-status() {
+
+	for gi in $(find -E . -regex ".*/.git" -type d -prune); do
+
+		printf "$FONT_BOLD$FONT_EMERALD$gi$FONT_DEFAULT\n"
+
+		pushd $gi/../
+
+		git fetch
 
 		git status
 
-		printf "${FONT_BLUE}git add -A$FONT_DEFAULT\n"
+		popd
+
+	done
+
+}
+
+function recursively-git-add-commit-push() {
+
+	for gi in $(find -E . -regex ".*/.git" -type d -prune); do
+
+		printf "$FONT_BOLD$FONT_EMERALD$gi$FONT_DEFAULT\n"
+
+		pushd $gi/../
 
 		git add -A
 
-		printf "${FONT_PURPLE}git commit -m $1$FONT_DEFAULT\n"
-
 		git commit -m "$1"
-
-		printf "${FONT_BLUE}git pull$FONT_DEFAULT\n"
-
-		git pull
-
-		printf "${FONT_PURPLE}git push$FONT_DEFAULT\n"
 
 		git push
 
@@ -201,71 +245,30 @@ function find_and_git() {
 
 }
 
-function jl_update_and_test() {
+# ==============================================================================
+# Style
+# ==============================================================================
+PROMPT="%B%~%b "
 
-	for directory in $(find . -name \*.jl -maxdepth 1); do
+RPROMPT=" %B%*%b"
 
-		printf "=%.0s" $(seq 1 63)
+# ==============================================================================
+# Julia bin
+# ==============================================================================
+PATH=~/.julia/bin:$PATH
 
-		cd $directory
-
-		pkgr export-nb . && julia --eval 'using Pkg; Pkg.activate("."); Pkg.update(); Pkg.test()'
-
-		cd ..
-
-	done
-
-}
-
-function pip_update() {
-
-	python -m pip list --outdated --format=freeze | grep -v "^-e" | cut -d = -f 1 | xargs python -m pip install --upgrade
-
-}
-
-function pip_uninstall() {
-
-	python -m pip freeze | grep -v "^-e" | xargs python -m pip uninstall --yes
-
-}
-
-function container_exec() {
-
-	docker exec --interactive --tty --user root $1 /bin/bash
-
-}
-
-function container_fastq_run() {
-
-	docker run --rm --publish 10000:8888 --env JUPYTER_ENABLE_LAB=yes --volume ~/craft/:/home/jovyan/craft/ katharineme/fastq
-
-}
-
-function container_ubuntu_run() {
-
-	docker run --rm --detach --tty --volume ~/craft/:/home/craft/ ubuntu
-
-}
-
-if [ "$(uname)" = "Linux" ]; then
-
-	PS1="\[$FONT_BOLD\]\w\[$FONT_DEFAULT\] "
-
-elif [ "$(uname)" = "Darwin" ]; then
-
-	PROMPT="%B%~%b "
-
-	RPROMPT=" %B%*%b"
-
-fi
-
-export NODE_OPTIONS="--max-old-space-size=16384"
-
+# ==============================================================================
+# Pyenv
+# ==============================================================================
 export PYENV_ROOT="$HOME/.pyenv"
+
 export PATH="$PYENV_ROOT/bin:$PATH"
+
 eval "$(pyenv init --path)"
+
 eval "$(pyenv init -)"
 
-alias ju="julia --project"
-
-PATH=~/.julia/bin:$PATH
+# ==============================================================================
+# Additional settings
+# ==============================================================================
+export NODE_OPTIONS="--max-old-space-size=16000"
