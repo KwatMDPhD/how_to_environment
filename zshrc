@@ -111,7 +111,7 @@ function recursively-rm() {
 
 	for pa in $pa_; do
 
-		find -E . -regex ".*/$pa" -prune -print0 | xargs -0 rm -rf
+		find . -name "$pa" -prune -print0 | xargs -0 rm -rf
 
 	done
 
@@ -140,15 +140,21 @@ function recursively-sed() {
 # ==============================================================================
 # Julia functions
 # ==============================================================================
-function recursively-update-jl() {
+function recursively-jl() {
 
-	for jl in $(find -E . -regex ".*/*.jl" -type d); do
+	for jl in $(find -E . -regex ".*/*\.jl" -type d); do
 
-		printf "$FONT_BOLD$FONT_EMERALD$jl$FONT_DEFAULT\n"
+		pushd $jl
 
-		pkgr export-nb $jl
+		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
+
+		pkgr check .
+
+		pkgr export-nb .
 
 		ju --eval "using Pkg; Pkg.update(); Pkg.test()"
+
+		popd
 
 	done
 
@@ -190,13 +196,13 @@ function recursively-clean-py() {
 
 function recursively-clean-nb() {
 
-	find -E . -regex ".*/*.ipynb" -print0 | xargs -0 clean-nb
+	find -E . -regex ".*/*\.ipynb" -print0 | xargs -0 clean-nb
 
 }
 
 function recursively-clean-web() {
 
-	find -E . -regex ".*/*.(json|md|ts|tsx|js|jsx)" -print0 | xargs -0 npx prettier --write
+	find -E . -regex ".*/*\.(json|md|ts|tsx|js|jsx)" -print0 | xargs -0 npx prettier --write
 
 }
 
@@ -209,11 +215,11 @@ function recursively-clean-web() {
 # ==============================================================================
 function recursively-git-fetch-status() {
 
-	for gi in $(find -E . -regex ".*/.git" -type d -prune); do
-
-		printf "$FONT_BOLD$FONT_EMERALD$gi$FONT_DEFAULT\n"
+	for gi in $(find -E . -regex ".*/\.git" -type d -prune); do
 
 		pushd $gi/../
+
+		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
 
 		git fetch
 
@@ -227,11 +233,11 @@ function recursively-git-fetch-status() {
 
 function recursively-git-add-commit-push() {
 
-	for gi in $(find -E . -regex ".*/.git" -type d -prune); do
-
-		printf "$FONT_BOLD$FONT_EMERALD$gi$FONT_DEFAULT\n"
+	for gi in $(find -E . -regex ".*/\.git" -type d -prune); do
 
 		pushd $gi/../
+
+		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
 
 		git add -A
 
