@@ -1,4 +1,6 @@
-# Environment
+# environment
+
+Minimal computational environment :bath:
 
 ## Set profile
 
