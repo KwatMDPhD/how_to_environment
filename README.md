@@ -1,6 +1,6 @@
 # environment
 
-Create a minimal computational environment :bath:
+Create a nice computational environment :bath:
 
 ## Set profile
 
@@ -10,7 +10,7 @@ curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/zshrc > ~/.z
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/vimrc > ~/.vimrc
 ```
 
-## Set git
+## Set Git
 
 ```sh
 git config --global user.name "KwatMDPhD" &&
@@ -34,12 +34,12 @@ git config --global diff.submodule log &&
 git lfs install
 ```
 
-## Set julia
+## Set Julia
 
-Install Julia 1.6.3
+Install Julia 1.6
 
 ```julia
-using Pkg: add, build
+using Pkg
 
 for na in [
     "BenchmarkTools",
@@ -52,7 +52,7 @@ for na in [
     "Revise",
 ]
 
-    add(na)
+    Pkg.add(na)
 
 end
 ```
@@ -67,7 +67,7 @@ curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/startup.jl >
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
-## Set python
+## Set Python
 
 ```sh
 INSTALLING_VERSION=3.9.7 &&
@@ -78,10 +78,10 @@ pyenv global $INSTALLING_VERSION
 ```
 
 ```sh
-python -m pip install black isort autoflake jupyter webio_jupyter_extension kaleido
+python -m pip install autoflake isort black jupyter jupyter-black webio_jupyter_extension kaleido
 ```
 
-## Set jupyter notebook
+## Set Jupyter notebook
 
 ```sh
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/notebook.json > ~/.jupyter/nbconfig/notebook.json
