@@ -105,7 +105,7 @@ function extract() {
 
 }
 
-function recursively-rm() {
+function re-rm() {
 
 	pa_=(".DS_Store" ".com.apple.*" ".~*" "*.swp" "__pycache__" "*.pyc" ".ipynb_checkpoints")
 
@@ -117,7 +117,7 @@ function recursively-rm() {
 
 }
 
-function recursively-chmod() {
+function re-chmod() {
 
 	find . -type f -print0 | xargs -0 chmod 644
 
@@ -125,13 +125,13 @@ function recursively-chmod() {
 
 }
 
-function recursively-rename() {
+function re-rename() {
 
 	find . -depth -print0 | xargs -0 -p rename --sanitize --lower-case --expr "s/-/_/g" --force
 
 }
 
-function recursively-sed() {
+function re-sed() {
 
 	rg --files-with-matches $1 | xargs sed -i "" "s/$1/$2/g"
 
@@ -140,7 +140,7 @@ function recursively-sed() {
 # ==============================================================================
 # Julia functions
 # ==============================================================================
-function recursively-jl() {
+function re-jl() {
 
 	for jl in $(find -E . -regex ".*/*\.jl" -type d); do
 
@@ -148,7 +148,7 @@ function recursively-jl() {
 
 		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
 
-		pkgr check .
+		pkgr enforce .
 
 		pkgr export-nb .
 
@@ -178,29 +178,29 @@ function pip-reset() {
 # ==============================================================================
 # Clean functions
 # ==============================================================================
-function recursively-clean-jl() {
+function re-clean-jl() {
 
 	julia --sysimage $HOME/.clean-jl.sysimage.so --eval 'using JuliaFormatter; format("."; verbose = true)'
 
 }
 
-function recursively-clean-py() {
+function re-clean-py() {
 
 	isort --combine-as .
 
 	autoflake --in-place --remove-all-unused-imports .
 
-	black .
+	black --quiet .
 
 }
 
-function recursively-clean-nb() {
+function re-clean-nb() {
 
 	find -E . -regex ".*/*\.ipynb" -print0 | xargs -0 clean-nb
 
 }
 
-function recursively-clean-web() {
+function re-clean-web() {
 
 	find -E . -regex ".*/*\.(json|md|ts|tsx|js|jsx)" -print0 | xargs -0 npx prettier --write
 
@@ -213,7 +213,7 @@ function recursively-clean-web() {
 # ==============================================================================
 # Git functions
 # ==============================================================================
-function recursively-git-fetch-status() {
+function re-git-fetch-status() {
 
 	for gi in $(find -E . -regex ".*/\.git" -type d -prune); do
 
@@ -231,7 +231,7 @@ function recursively-git-fetch-status() {
 
 }
 
-function recursively-git-add-commit-push() {
+function re-git-add-commit-push() {
 
 	for gi in $(find -E . -regex ".*/\.git" -type d -prune); do
 
@@ -248,6 +248,27 @@ function recursively-git-add-commit-push() {
 		popd
 
 	done
+
+}
+
+# ==============================================================================
+# Housekeep
+# ==============================================================================
+function re-housekeep() {
+
+	re-rm
+
+	re-jl
+
+	re-clean-jl
+
+	re-clean-py
+
+	re-clean-nb
+
+	re-clean-web
+
+	re-git-add-commit-push "Housekeep"
 
 }
 

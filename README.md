@@ -1,6 +1,6 @@
 # environment
 
-Minimal computational environment :bath:
+Create a minimal computational environment :bath:
 
 ## Set profile
 
