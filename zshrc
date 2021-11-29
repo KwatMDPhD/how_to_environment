@@ -138,29 +138,6 @@ function re-sed() {
 }
 
 # ==============================================================================
-# Julia functions
-# ==============================================================================
-function re-jl() {
-
-	for jl in $(find -E . -regex ".*/*\.jl" -type d); do
-
-		pushd $jl
-
-		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
-
-		pkgr enforce .
-
-		pkgr export-nb .
-
-		ju --eval "using Pkg; Pkg.update(); Pkg.test()"
-
-		popd
-
-	done
-
-}
-
-# ==============================================================================
 # Pip functions
 # ==============================================================================
 function pip-update() {
@@ -176,6 +153,50 @@ function pip-reset() {
 }
 
 # ==============================================================================
+# Julia functions
+# ==============================================================================
+function re-jl() {
+
+	for jl in $(find -E . -regex ".*/*\.jl" -type d -prune); do
+
+		pushd $jl
+
+		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
+
+		pkgr enforce .
+
+		pkgr export-nb .
+
+		ju --eval "using Pkg; Pkg.instantiate(); Pkg.update(); Pkg.test()"
+
+		popd
+
+	done
+
+}
+
+# ==============================================================================
+# Lean project functions
+# ==============================================================================
+function re-pro() {
+
+	for pr in $(find -E . -regex ".*/*\.pro" -type d -prune); do
+
+		pushd $pr
+
+		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
+
+		lea enforce .
+
+		ju --eval "using Pkg; Pkg.instantiate(); Pkg.update()"
+
+		popd
+
+	done
+
+}
+
+# ==============================================================================
 # Clean functions
 # ==============================================================================
 function re-clean-jl() {
@@ -186,11 +207,11 @@ function re-clean-jl() {
 
 function re-clean-py() {
 
-	isort --combine-as .
-
 	autoflake --in-place --remove-all-unused-imports .
 
-	black --quiet .
+	isort --profile black .
+
+	black .
 
 }
 
@@ -259,6 +280,8 @@ function re-housekeep() {
 	re-rm
 
 	re-jl
+
+	re-pro
 
 	re-clean-jl
 
