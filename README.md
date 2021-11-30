@@ -42,12 +42,7 @@ Install Julia 1.6
 using Pkg
 
 for na in [
-    #"BenchmarkTools",
     "IJulia",
-    "JuliaFormatter",
-    "PackageCompiler",
-    #"PyCall",
-    #"Revise",
 ]
 
     Pkg.add(na)
@@ -68,7 +63,7 @@ curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/JuliaFormatt
 ## Set Python
 
 ```sh
-INSTALLING_VERSION=3.9.7 &&
+INSTALLING_VERSION=3.10.0 &&
 
 PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install $INSTALLING_VERSION &&
 
