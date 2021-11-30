@@ -201,15 +201,15 @@ function re-pro() {
 # ==============================================================================
 function re-clean-jl() {
 
-	julia --sysimage $HOME/.clean-jl.sysimage.so --eval 'using JuliaFormatter; format("."; verbose = true)'
+	find -E . -regex ".*/*\.jl" -type f -print0 | xargs -0 clean-jl
 
 }
 
 function re-clean-py() {
 
-	autoflake --in-place --remove-all-unused-imports .
+	autoflake --in-place --remove-all-unused-imports . &&
 
-	isort --profile black .
+	isort --profile black . &&
 
 	black .
 
@@ -217,13 +217,13 @@ function re-clean-py() {
 
 function re-clean-nb() {
 
-	find -E . -regex ".*/*\.ipynb" -print0 | xargs -0 clean-nb
+	find -E . -regex ".*/*\.ipynb" -type f -print0 | xargs -0 clean-nb
 
 }
 
 function re-clean-web() {
 
-	find -E . -regex ".*/*\.(json|md|ts|tsx|js|jsx)" -print0 | xargs -0 npx prettier --write
+	find -E . -regex ".*/*\.(json|md|ts|tsx|js|jsx)" -type f -print0 | xargs -0 npx prettier --write
 
 }
 

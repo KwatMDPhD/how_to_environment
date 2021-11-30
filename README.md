@@ -42,14 +42,12 @@ Install Julia 1.6
 using Pkg
 
 for na in [
-    "BenchmarkTools",
-    "Comonicon",
+    #"BenchmarkTools",
     "IJulia",
     "JuliaFormatter",
-    "OhMyREPL",
     "PackageCompiler",
-    "PyCall",
-    "Revise",
+    #"PyCall",
+    #"Revise",
 ]
 
     Pkg.add(na)
