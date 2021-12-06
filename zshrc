@@ -157,11 +157,11 @@ function pip-reset() {
 # ==============================================================================
 function re-jl() {
 
-	for jl in $(find -E . -regex ".*/*\.jl" -type d -prune); do
+	for pa in $(find -E . -regex ".*/*\.jl" -type d -prune); do
 
-		pushd $jl
+		pushd $pa
 
-		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
+		printf "$FONT_BOLD$FONT_PURPLE$(pwd)$FONT_DEFAULT\n"
 
 		pkgr enforce .
 
@@ -180,11 +180,11 @@ function re-jl() {
 # ==============================================================================
 function re-pro() {
 
-	for pr in $(find -E . -regex ".*/*\.pro" -type d -prune); do
+	for pa in $(find -E . -regex ".*/*\.pro" -type d -prune); do
 
-		pushd $pr
+		pushd $pa
 
-		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
+		printf "$FONT_BOLD$FONT_BLUE$(pwd)$FONT_DEFAULT\n"
 
 		lea enforce .
 
@@ -201,7 +201,7 @@ function re-pro() {
 # ==============================================================================
 function re-clean-jl() {
 
-	find -E . -regex ".*/*\.jl" -type f -print0 | xargs -0 clean-jl
+	find -E . -regex ".*/*\.(jl|ipynb)" -type f -print0 | xargs -0 clean-jl
 
 }
 
@@ -212,12 +212,6 @@ function re-clean-py() {
 	isort --profile black . &&
 
 	black .
-
-}
-
-function re-clean-nb() {
-
-	find -E . -regex ".*/*\.ipynb" -type f -print0 | xargs -0 clean-nb
 
 }
 
@@ -234,17 +228,19 @@ function re-clean-web() {
 # ==============================================================================
 # Git functions
 # ==============================================================================
-function re-git-fetch-status() {
+function re-git-fetch-status-diff() {
 
-	for gi in $(find -E . -regex ".*/\.git" -type d -prune); do
+	for pa in $(find -E . -regex ".*/\.git" -type d -prune); do
 
-		pushd $gi/../
+		pushd $pa/../
 
 		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
 
 		git fetch
 
 		git status
+
+		git diff
 
 		popd
 
@@ -254,15 +250,13 @@ function re-git-fetch-status() {
 
 function re-git-add-commit-push() {
 
-	for gi in $(find -E . -regex ".*/\.git" -type d -prune); do
+	for pa in $(find -E . -regex ".*/\.git" -type d -prune); do
 
-		pushd $gi/../
+		pushd $pa/../
 
 		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
 
-		git add -A
-
-		git commit -m "$1"
+		git commit -a -m "$1"
 
 		git push
 
@@ -281,17 +275,15 @@ function re-housekeep() {
 
 	re-jl
 
-	#re-pro
+	re-pro
 
 	re-clean-jl
 
 	re-clean-py
 
-	re-clean-nb
-
 	re-clean-web
 
-	re-git-add-commit-push "Housekeep"
+	re-git-add-commit-push "$1"
 
 }
 
