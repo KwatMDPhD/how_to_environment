@@ -46,7 +46,7 @@ alias mv="mv -i"
 
 alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
-alias xargs="xargs -t"
+#alias xargs="xargs -t"
 
 alias ju="julia --project"
 
@@ -58,12 +58,6 @@ alias shfmt="shfmt -s -w"
 function path() {
 
 	tr ":" "\n" <<<$PATH
-
-}
-
-function rc() {
-
-	source ~/.zshrc
 
 }
 
@@ -163,11 +157,9 @@ function re-jl() {
 
 		printf "$FONT_BOLD$FONT_PURPLE$(pwd)$FONT_DEFAULT\n"
 
-		pkgr enforce .
+		pkgr check .
 
-		pkgr export-nb .
-
-		ju --eval "using Pkg; Pkg.instantiate(); Pkg.update(); Pkg.test()"
+		pkgr run .
 
 		popd
 
@@ -186,9 +178,7 @@ function re-pro() {
 
 		printf "$FONT_BOLD$FONT_BLUE$(pwd)$FONT_DEFAULT\n"
 
-		lea enforce .
-
-		ju --eval "using Pkg; Pkg.instantiate(); Pkg.update()"
+		lea run . --sk
 
 		popd
 
@@ -256,7 +246,9 @@ function re-git-add-commit-push() {
 
 		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
 
-		git commit -a -m "$1"
+		git add -A
+
+		git commit -m "$1"
 
 		git push
 
