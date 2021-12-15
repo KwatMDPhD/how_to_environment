@@ -46,8 +46,6 @@ alias mv="mv -i"
 
 alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
-#alias xargs="xargs -t"
-
 alias ju="julia --project"
 
 alias shfmt="shfmt -s -w"
@@ -99,9 +97,21 @@ function extract() {
 
 }
 
+function prefix-and-flatten() {
+
+	rename -A $1 * &&
+
+	mv * .. &&
+
+	rm -r $(pwd) &&
+
+	cd ..
+
+}
+
 function re-rm() {
 
-	pa_=(".DS_Store" ".com.apple.*" ".~*" "*.swp" "__pycache__" "*.pyc" ".ipynb_checkpoints")
+	pa_=(".DS_Store" ".com.apple.*" ".~*" "*.swp" "__pycache__" "*.pyc" ".ipynb_checkpoints") &&
 
 	for pa in $pa_; do
 
@@ -113,7 +123,7 @@ function re-rm() {
 
 function re-chmod() {
 
-	find . -type f -print0 | xargs -0 chmod 644
+	find . -type f -print0 | xargs -0 chmod 644 &&
 
 	find . -type d -print0 | xargs -0 chmod 755
 
@@ -151,15 +161,15 @@ function pip-reset() {
 # ==============================================================================
 function re-jl() {
 
-	for pa in $(find -E . -regex ".*/*\.jl" -type d -prune); do
+	for pa in $(find -E . -regex ".*/*\.jl" -type d); do
 
-		pushd $pa
+		pushd $pa &&
 
-		printf "$FONT_BOLD$FONT_PURPLE$(pwd)$FONT_DEFAULT\n"
+		printf "$FONT_BOLD$FONT_PURPLE$(pwd)$FONT_DEFAULT\n" &&
 
-		pkgr check .
+		pkgr check . &&
 
-		pkgr run . --sk
+		pkgr run . --sk &&
 
 		popd
 
@@ -172,13 +182,15 @@ function re-jl() {
 # ==============================================================================
 function re-pro() {
 
-	for pa in $(find -E . -regex ".*/*\.pro" -type d -prune); do
+	for pa in $(find -E . -regex ".*/*\.pro" -type d); do
 
-		pushd $pa
+		pushd $pa &&
 
-		printf "$FONT_BOLD$FONT_BLUE$(pwd)$FONT_DEFAULT\n"
+		printf "$FONT_BOLD$FONT_BLUE$(pwd)$FONT_DEFAULT\n" &&
 
-		lea run . --sk
+		lea check . &&
+
+		lea run . --sk &&
 
 		popd
 
@@ -220,17 +232,17 @@ function re-clean-web() {
 # ==============================================================================
 function re-git-fetch-status-diff() {
 
-	for pa in $(find -E . -regex ".*/\.git" -type d -prune); do
+	for pa in $(find -E . -regex ".*/\.git" -type d); do
 
-		pushd $pa/../
+		pushd $pa/../ &&
 
-		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n"
+		printf "$FONT_BOLD$FONT_EMERALD$(pwd)$FONT_DEFAULT\n" &&
 
-		git fetch
+		git fetch &&
 
-		git status
+		git status &&
 
-		git diff
+		git diff &&
 
 		popd
 
@@ -240,7 +252,7 @@ function re-git-fetch-status-diff() {
 
 function re-git-add-commit-push() {
 
-	for pa in $(find -E . -regex ".*/\.git" -type d -prune); do
+	for pa in $(find -E . -regex ".*/\.git" -type d); do
 
 		pushd $pa/../
 
@@ -263,17 +275,17 @@ function re-git-add-commit-push() {
 # ==============================================================================
 function re-housekeep() {
 
-	re-rm
+	re-rm &&
 
-	re-jl
+	re-jl &&
 
-	re-pro
+	re-pro &&
 
-	re-clean-jl
+	re-clean-jl &&
 
-	re-clean-py
+	re-clean-py &&
 
-	re-clean-web
+	re-clean-web &&
 
 	re-git-add-commit-push "$1"
 
