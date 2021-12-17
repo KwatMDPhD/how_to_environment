@@ -63,11 +63,11 @@ curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/JuliaFormatt
 ## Set Python
 
 ```sh
-INSTALLING_VERSION=3.10.0 &&
+VE=3.10.0 &&
 
-PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install $INSTALLING_VERSION &&
+PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install $VE &&
 
-pyenv global $INSTALLING_VERSION
+pyenv global $VE
 ```
 
 ```sh
@@ -77,6 +77,8 @@ python -m pip install autoflake isort black jupyter jupyter-black webio_jupyter_
 ## Set Jupyter notebook
 
 ```sh
+mkdir ~/.jupyter/nbconfig &&
+
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/notebook.json > ~/.jupyter/nbconfig/notebook.json
 ```
 
