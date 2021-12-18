@@ -103,7 +103,7 @@ function prefix-and-flatten() {
 
 	mv * .. &&
 
-	rm -r $(pwd) &&
+	rm -rf $(pwd) &&
 
 	cd ..
 
