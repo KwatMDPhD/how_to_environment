@@ -169,7 +169,7 @@ function re-jl() {
 
 		pkgr check . &&
 
-		pkgr run . --sk &&
+		pkgr run . &&
 
 		popd
 
