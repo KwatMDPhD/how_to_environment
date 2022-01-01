@@ -49,6 +49,8 @@ set showmatch
 
 set mps+=<:>
 
+nnoremap <leader>b :Buffers<CR>
+
 " ================================================================================
 " Plug
 " ================================================================================
@@ -61,6 +63,8 @@ endif
 call plug#begin()
 
 Plug 'preservim/nerdtree'
+
+Plug 'vim-airline/vim-airline'
 
 " brew install fzf ripgrep
 Plug '/usr/local/opt/fzf'
@@ -91,7 +95,7 @@ call plug#end()
 " nerdtree
 " ================================================================================
 nnoremap <leader>t :NERDTreeToggle<CR>
-nnoremap <leader>b :NERDTreeFind<CR>
+nnoremap <leader>i :NERDTreeFind<CR>
 
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeNaturalSort = 1
@@ -100,11 +104,15 @@ let NERDTreeMouseMode = 3
 "let NERDTreeQuitOnOpen = 1
 let NERDTreeSortOrder = []
 let NERDTreeStatusline = -1
-let NERDTreeWinSize = 48
+let NERDTreeWinSize = 50
 let NERDTreeMinimalUI = 1
 let NERDTreeMinimalMenu = 1
 let NERDTreeCascadeSingleChildDir = 1
 let NERDTreeAutoDeleteBuffer = 1
+
+" ================================================================================
+" vim-airline
+" ================================================================================
 
 " ================================================================================
 " fzf.vim (fzf)
