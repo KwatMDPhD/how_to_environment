@@ -109,7 +109,7 @@ function prefix-and-flatten() {
 
 }
 
-function re-rm() {
+function recursively-rm() {
 
 	pa_=(".DS_Store" ".com.apple.*" ".~*" "*.swp" "__pycache__" "*.pyc" ".ipynb_checkpoints") &&
 
@@ -121,7 +121,7 @@ function re-rm() {
 
 }
 
-function re-chmod() {
+function recursively-chmod() {
 
 	find . -type f -print0 | xargs -0 chmod 644 &&
 
@@ -129,13 +129,13 @@ function re-chmod() {
 
 }
 
-function re-rename() {
+function recursively-clean-name() {
 
 	find . -depth -print0 | xargs -0 -p rename --sanitize --lower-case --expr "s/-/_/g" --force
 
 }
 
-function re-sed() {
+function recursively-sed() {
 
 	rg --files-with-matches $1 | xargs sed -i "" "s/$1/$2/g"
 
@@ -159,7 +159,7 @@ function pip-reset() {
 # ==============================================================================
 # Julia functions
 # ==============================================================================
-function re-jl() {
+function recursively-jl() {
 
 	for pa in $(find -E . -regex ".*/*\.jl" -type d); do
 
@@ -169,7 +169,7 @@ function re-jl() {
 
 		pkgr check . &&
 
-		pkgr run . &&
+		pkgr run . --sk &&
 
 		popd
 
@@ -180,7 +180,7 @@ function re-jl() {
 # ==============================================================================
 # Lean project functions
 # ==============================================================================
-function re-pro() {
+function recursively-pro() {
 
 	for pa in $(find -E . -regex ".*/*\.pro" -type d); do
 
@@ -201,13 +201,13 @@ function re-pro() {
 # ==============================================================================
 # Clean functions
 # ==============================================================================
-function re-clean-jl() {
+function recursively-clean-jl() {
 
 	find -E . -regex ".*/*\.(jl|ipynb)" -type f -print0 | xargs -0 clean-jl
 
 }
 
-function re-clean-py() {
+function recursively-clean-py() {
 
 	autoflake --in-place --remove-all-unused-imports . &&
 
@@ -217,7 +217,7 @@ function re-clean-py() {
 
 }
 
-function re-clean-web() {
+function recursively-clean-web() {
 
 	find -E . -regex ".*/*\.(json|md|ts|tsx|js|jsx)" -type f -print0 | xargs -0 npx prettier --write
 
@@ -230,7 +230,7 @@ function re-clean-web() {
 # ==============================================================================
 # Git functions
 # ==============================================================================
-function re-git-fetch-status-diff() {
+function recursively-git-fetch-status-diff() {
 
 	for pa in $(find -E . -regex ".*/\.git" -type d); do
 
@@ -250,7 +250,7 @@ function re-git-fetch-status-diff() {
 
 }
 
-function re-git-add-commit-push() {
+function recursively-git-add-commit-push() {
 
 	for pa in $(find -E . -regex ".*/\.git" -type d); do
 
@@ -273,21 +273,21 @@ function re-git-add-commit-push() {
 # ==============================================================================
 # Housekeep
 # ==============================================================================
-function re-housekeep() {
+function recursively-housekeep() {
 
-	re-rm &&
+	recursively-rm &&
 
-	re-jl &&
+	recursively-jl &&
 
-	re-pro &&
+	recursively-pro &&
 
-	re-clean-jl &&
+	recursively-clean-jl &&
 
-	re-clean-py &&
+	recursively-clean-py &&
 
-	re-clean-web &&
+	recursively-clean-web &&
 
-	re-git-add-commit-push "$1"
+	recursively-git-add-commit-push "$1"
 
 }
 
