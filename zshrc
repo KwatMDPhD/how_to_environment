@@ -50,6 +50,8 @@ alias ju="julia --project"
 
 alias shfmt="shfmt -s -w"
 
+alias dockerrun="docker run --rm --interactive --tty --user root --volume ~/craft/:/home/craft/"
+
 # ==============================================================================
 # Functions
 # ==============================================================================
@@ -222,10 +224,6 @@ function recursively-clean-web() {
 	find -E . -regex ".*/*\.(json|md|ts|tsx|js|jsx)" -type f -print0 | xargs -0 npx prettier --write
 
 }
-
-# ==============================================================================
-# Docker functions
-# ==============================================================================
 
 # ==============================================================================
 # Git functions
