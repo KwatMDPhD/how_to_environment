@@ -1,12 +1,10 @@
 ## Reset disk
 
-Boot into the recovery mode
-
-Restart > `Cmd + R`
+Restart > `Cmd + R` > Boot into recovery mode
 
 Erase all volumes except the base
 
-Make a new volume (case-sensitive, encrypted)
+Make a new case-sensitive, encrypted volume
 
 Reinstall macOS
 
@@ -29,7 +27,7 @@ Remove everything
 ```
 
 ```sh
-brew install tree rename macvim fzf ripgrep node pyenv-virtualenv shfmt git-lfs
+brew install tree rename macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
 ```
 
 ## Set MacVim
@@ -40,7 +38,7 @@ Preferences > General > Open files from applications > in the current window
 
 Preferences > General > After last window closes > Quit MacVim
 
-Preferences > Appearance > Titlebar appearance > Transparent
+Preferences > Appearance > Titlebar appearance > Hidden
 
 ## Get software
 
