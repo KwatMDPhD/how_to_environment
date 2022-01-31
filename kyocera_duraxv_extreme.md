@@ -83,8 +83,6 @@ adb shell pm uninstall -k --user 0 com.verizon.mips.services
 
 adb shell pm uninstall -k --user 0 com.verizon.obdm_permissions
 
-adb shell pm uninstall -k --user 0 com.vzw.hss.myverizon
-
 adb shell pm uninstall -k --user 0 com.verizon.bootstrapclient
 
 adb shell pm uninstall -k --user 0 com.verizon.obdm
@@ -95,7 +93,17 @@ adb shell pm uninstall -k --user 0 com.verizon.mdm.pushtotalkplus
 
 adb shell pm uninstall -k --user 0 com.verizon.pushtotalkplus
 
+adb shell pm uninstall -k --user 0 com.vzw.hss.myverizon
+
 adb shell pm uninstall -k --user 0 com.vzw.apnlib
 
 adb shell pm uninstall -k --user 0 jp.kyocera.vzwextension.service
+
+adb shell pm uninstall -k --user 0 com.vcast.mediamanager
+
+adb shell pm uninstall -k --user 0 com.ffm.kyocera
+
+adb shell pm uninstall -k --user 0 com.mobisystems.office.kyocera
+
+adb shell pm uninstall -k --user 0 com.android.email
 ```
