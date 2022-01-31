@@ -27,7 +27,7 @@ Remove everything
 ```
 
 ```sh
-brew install tree rename macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
+brew install tree rename macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs #android-platform-tools 
 ```
 
 ## Set MacVim
