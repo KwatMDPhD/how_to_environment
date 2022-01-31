@@ -6,7 +6,7 @@ Restart > `Cmd + R`
 
 Erase all volumes except the base
 
-Make a new volume
+Make a new volume (case-sensitive, encrypted)
 
 Reinstall macOS
 
@@ -16,28 +16,20 @@ System Preferences > Software Update
 
 ## Simlify dock
 
-Move to the left
-
 Remove everything
 
 ## Set System Preferences
 
 ## Set Finder Preferences
 
-## Disable press-and-hold
-
-```sh
-defaults write -globalDomain ApplePressAndHoldEnabled -bool false
-```
-
 ## Get Brew and program
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ```sh
-brew install tree rename macvim fzf ripgrep node pyenv-virtualenv julia shfmt pandoc mactex git-lfs
+brew install tree rename macvim fzf ripgrep node pyenv-virtualenv shfmt git-lfs
 ```
 
 ## Set MacVim
