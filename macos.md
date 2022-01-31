@@ -36,10 +36,6 @@ Preferences > General > Open untitled window > never
 
 Preferences > General > Open files from applications > in the current window
 
-Preferences > General > After last window closes > Quit MacVim
-
-Preferences > Appearance > Titlebar appearance > Hidden
-
 ## Get software
 
 XCode
@@ -50,13 +46,17 @@ SensibleSideButtons
 
 Corsair iCUE
 
+OBS
+
+Sony Imaging Edge Webcam
+
 Zoom
 
-IINA
+Spotify
 
 ## Get Safari extension
 
-Ad block
+(Ad block)
 
 Vimari
 
