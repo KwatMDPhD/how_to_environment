@@ -16,6 +16,8 @@ Add APN
 
 ## Setting
 
+Display backlight > 1 minute
+
 Enable group message
 
 Any key answer > Off
