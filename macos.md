@@ -14,7 +14,9 @@ Reinstall macOS
 
 System Preferences > Software Update
 
-## TODO
+Remove everything
+
+## Set System Preferences
 
 Preferences /
 
@@ -105,6 +107,7 @@ More Gestures / App Expose / Check
 
 Mouse / * / 4th Fastest
 
+## Set Finder Preferences
 
 Finder / Preferences /
 
@@ -121,16 +124,6 @@ Icon size / Large
 Show columns: / Data Modified, Size
 Calculate all sizes / Check
 Use as Defaults
-
-
-
-## Simlify dock
-
-Remove everything
-
-## Set System Preferences
-
-## Set Finder Preferences
 
 ## Get Brew and program
 
@@ -151,8 +144,6 @@ Preferences > General > Open files from applications > in the current window
 ## Get software
 
 XCode
-
-Docker
 
 SensibleSideButtons
 
