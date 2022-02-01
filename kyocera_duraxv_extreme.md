@@ -4,6 +4,10 @@ Become a developer
 
 Enable USB debugging
 
+```sh
+brew install android-platform-tools
+```
+
 Remove junk
 
 ## Network
