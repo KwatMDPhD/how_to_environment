@@ -5,9 +5,9 @@ Create a nice computational environment :bath:
 ## Set profile
 
 ```sh
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/zshrc > ~/.zshrc &&
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/zshrc > ~/.zshrc &&
 
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/vimrc > ~/.vimrc
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/vimrc > ~/.vimrc
 ```
 
 ## Set Git
@@ -51,13 +51,7 @@ end
 ```
 
 ```sh
-mkdir ~/.julia/config/ &&
-
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/startup.jl > ~/.julia/config/startup.jl
-```
-
-```sh
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/JuliaFormatter.toml > ~/.JuliaFormatter.toml
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
 ## Set Python
@@ -79,7 +73,7 @@ python -m pip install autoflake isort black jupyter jupyter-black webio_jupyter_
 ```sh
 mkdir ~/.jupyter/nbconfig &&
 
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/master/notebook.json > ~/.jupyter/nbconfig/notebook.json
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/notebook.json > ~/.jupyter/nbconfig/notebook.json
 ```
 
 Install https://github.com/lambdalisue/jupyter-vim-binding

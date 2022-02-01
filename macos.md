@@ -125,6 +125,22 @@ Show columns: / Data Modified, Size
 Calculate all sizes / Check
 Use as Defaults
 
+## Get software
+
+XCode
+
+SensibleSideButtons
+
+Corsair iCUE
+
+OBS
+
+Zoom
+
+Spotify
+
+Sony Imaging Edge Webcam
+
 ## Get Brew and program
 
 ```sh
@@ -140,22 +156,6 @@ brew install tree rename macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git
 Preferences > General > Open untitled window > never
 
 Preferences > General > Open files from applications > in the current window
-
-## Get software
-
-XCode
-
-SensibleSideButtons
-
-Corsair iCUE
-
-OBS
-
-Sony Imaging Edge Webcam
-
-Zoom
-
-Spotify
 
 ## Get Safari extension
 
