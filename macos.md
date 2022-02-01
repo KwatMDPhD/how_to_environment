@@ -45,7 +45,7 @@ Desktop / Monterey Graphic / Dynamic
 Dock & Menu Bar /
 Automatically hide and show the Dock / Check
 Automatically hide and show the menu bar on desktop / Check
-* / Show in Menu Bar / Uncheck
+ALL / Show in Menu Bar / Uncheck
 Battery / Show percentage / Check
 Clock / Use 24-hour clock / Check
 Display the time with seconds / Check
@@ -57,20 +57,20 @@ Automatically rearrange Spaces based on most recent use / Uncheck
 Hot Corners / Desktop, Notification Center, Mission Control, Application Windows
 
 Siri /
-Siri Suggestions & Privacy / * / * / Uncheck
+Siri Suggestions & Privacy / ALL / ALL / Uncheck
 
 Language & Region /
 Temperature / C - Celsius
 Advanced / First day of week / Monday
 
 Notification & Focus / Focus /
-* except “Do Not Disturb” / -
+ALL except “Do Not Disturb” / -
 Do Not Disturb / Do Not Disturb / On
 Share Focus Status / Uncheck
 
 Internet Accounts /
 Game Center / -
-* / ONLY Mail / Check
+ALL / ONLY Mail / Check
 
 Wallet & Apple Pay / Add Card / Only Apple Card
 
@@ -85,13 +85,13 @@ Security & Privacy /
 Location Services / System Services / Details / ONLY Show location icon in menu bar when System Service request your location / Check
 Location Services / Enable Location Services / Uncheck
 Apple Advertising / Personalized Ads / Uncheck
-Analytics & Improvements / * / Uncheck
+Analytics & Improvements / ALL / Uncheck
 
 Software Update / Automatically keep my Mac up to date / Uncheck
 
 Network / Wi-Fi / Advanced / AS MANY Network Name / -
 
-Touch ID / Finger 1 / * / Check
+Touch ID / Finger 1 / ALL / Check
 
 Keyboard /
 Key Repeat / Fastest
@@ -105,14 +105,14 @@ Point & Click / Click / Light
 Point & Click / Tracking speed / 4th fastest
 More Gestures / App Expose / Check
 
-Mouse / * / 4th Fastest
+Mouse / ALL / 4th Fastest
 
 ## Set Finder Preferences
 
 Finder / Preferences /
 
 General / New Finder window show: / (Kwat)
-Tags / * / Uncheck
+Tags / ALL / Uncheck
 Sidebar / Favorites / AirDrop, Recents, Applications, (Kwat)
 Advanced / Show all filename extensions / Check
 Advanced / Show warning before removing from iCloud Drive / Uncheck
