@@ -1,17 +1,17 @@
-## Set profile
+## Set profiles
 
 ```sh
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/zshrc > ~/.zshrc &&
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/zshrc > ~/.zshrc &&
 
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/vimrc > ~/.vimrc
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/vimrc > ~/.vimrc
 ```
 
-## Set Git
+## Set git preferences
 
 ```sh
-git config --global user.name "KwatMDPhD" &&
+git config --global user.name ""
 
-git config --global user.email "kwat.me@icloud.com" &&
+git config --global user.email ""
 
 git config --global credential.helper osxkeychain &&
 
@@ -30,9 +30,9 @@ git config --global diff.submodule log &&
 git lfs install
 ```
 
-## Set Julia
+## Set julia
 
-Install Julia 1.7
+Install [julia](https://julialang.org/downloads).
 
 ```julia
 using Pkg
@@ -47,4 +47,11 @@ end
 ```
 
 ```sh
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/JuliaFormatter.toml > ~/.JuliaFormatter.toml
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/JuliaFormatter.toml > ~/.JuliaFormatter.toml
+```
+
+## Set jupyter
+
+```sh
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/notebook.json > ~/
+```

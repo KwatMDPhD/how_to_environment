@@ -1,147 +1,212 @@
 ## Reset disk
 
-Restart > `Cmd + R` > Boot into recovery mode
+Restart > `Cmd + R`
 
-Disk Utility > Internal > (Disk name) > Erase > APFS (Case-sensitive)
+Disk Utility > Internal > NAME > Erase > APFS
 
-Erase all volumes except the base
+Have only 1 volume.
 
-Make a new case-sensitive, encrypted volume
+Reinstall macOS.
 
-Reinstall macOS
+Location > :thumbsdown:
 
-## Update software
+Analytics > :thumbsdown:
 
-System Preferences > Software Update
-
-Remove everything
+Siri > :thumbsdown:
 
 ## Set System Preferences
 
-Preferences /
+### Software Update
 
-Sharing /
-Computer Name / (lemo create)
-AirPlay Receiver / Uncheck
+UPDATE.
 
-Apple ID / iCloud /
-Private Relay / Check
-News / Uncheck
-Stocks / Uncheck
-Home / Uncheck
-Siri / Uncheck
+Automatically keep my Mac up to date > :thumbsdown:
 
-Family Sharing /
-Location Sharing / (Name) / (Check)
-Purchase Sharing / Share My Purchase / Check
+### Sharing
 
-General /
-Click in the scroll bar to: / Jump to the spot that’s clicked
-Ask to keep changes when closing documents / Check
+Computer Name > NAME
 
-Desktop & Screen Saver /
-Desktop / Monterey Graphic / Dynamic
+AirPlay Receiver > :thumbsdown:
 
-Dock & Menu Bar /
-Automatically hide and show the Dock / Check
-Automatically hide and show the menu bar on desktop / Check
-ALL / Show in Menu Bar / Uncheck
-Battery / Show percentage / Check
-Clock / Use 24-hour clock / Check
-Display the time with seconds / Check
+### Apple ID
 
-Dock should only have Finder, running apps, Downloads, and Trash.
+iCloud > Private Relay > :thumbsup:
 
-Mission Control /
-Automatically rearrange Spaces based on most recent use / Uncheck
-Hot Corners / Desktop, Notification Center, Mission Control, Application Windows
+iCloud > News > :thumbsdown:
 
-Siri /
-Siri Suggestions & Privacy / ALL / ALL / Uncheck
+iCloud > Stocks > :thumbsdown:
 
-Language & Region /
-Temperature / C - Celsius
-Advanced / First day of week / Monday
+iCloud > Home > :thumbsdown:
 
-Notification & Focus / Focus /
-ALL except “Do Not Disturb” / -
-Do Not Disturb / Do Not Disturb / On
-Share Focus Status / Uncheck
+iCloud > Siri > :thumbsdown:
 
-Internet Accounts /
-Game Center / -
-ALL / ONLY Mail / Check
+### Family Sharing
 
-Wallet & Apple Pay / Add Card / Only Apple Card
+Location Sharing > NAME > :thinking:
 
-Users & Groups
-Guest User / (Make sure it is disabled)
+Purchase Sharing > Share My Purchase > :thumbsup:
 
-Extensions / Share Menu /
-Open in News / Uncheck
-Add to Reading List / Uncheck
+### General
 
-Security & Privacy /
-Location Services / System Services / Details / ONLY Show location icon in menu bar when System Service request your location / Check
-Location Services / Enable Location Services / Uncheck
-Apple Advertising / Personalized Ads / Uncheck
-Analytics & Improvements / ALL / Uncheck
+Click in the scroll bar to: > Jump to the spot that’s clicked
 
-Software Update / Automatically keep my Mac up to date / Uncheck
+Ask to keep changes when closing documents > :thinking:
 
-Network / Wi-Fi / Advanced / AS MANY Network Name / -
+### Desktop & Screen Saver
 
-Touch ID / Finger 1 / ALL / Check
+Desktop > Monterey Graphic > Dynamic
 
-Keyboard /
-Key Repeat / Fastest
-Delay Until Repeat / Shortest
-Touch Bar shows / Expanded Control Strip
-Customize Control Strip / Keyboard Brightness, Space, Brightness, Space, Volume, Space, Media, Space, Night Shift, Space, Sleep
+### Dock & Menu Bar
 
-Trackpad /
-Point & Click / Tap to click / Check
-Point & Click / Click / Light
-Point & Click / Tracking speed / 4th fastest
-More Gestures / App Expose / Check
+Automatically hide and show the Dock > :thumbsup:
 
-Mouse / ALL / 4th Fastest
+Automatically hide and show the menu bar on desktop > :thumbsup:
+
+ALL > Show in Menu Bar > :thumbsdown:
+
+Battery > Show percentage > :thumbsup:
+
+Clock > Use 24-hour clock > :thumbsup:
+
+Display the time with seconds > :thumbsup:
+
+Dock > ALL except Finder & Reminders & Downloads & Trash > :skull_and_crossbones:
+
+### Mission Control
+
+Automatically rearrange Spaces based on most recent use > :thumbsdown:
+
+Hot Corners > (top left) Desktop (top right) Notification Center (bottom left) Mission Control (bottom right) Application Windows
+
+### Siri
+
+Siri Suggestions & Privacy > ALL > ALL > :thumbsdown:
+
+### Language & Region
+
+Temperature > C - Celsius
+
+Advanced > First day of week > Monday
+
+### Notifications & Focus
+
+Notifications > ALL except Calender & FaceTime & Mail & Messages & Reminders & Safari & Screen Time & Wallet & Zoom > Allow Notifications > :thumbsdown:
+
+Focus > ALL except Do Not Disturb > :skull_and_crossbones:
+
+Focus > Share Focus Status > :thumbsdown:
+
+### Internet Accounts
+
+Game Center > :skull_and_crossbones:
+
+ALL > ALL except Mail > :thumbsdown:
+
+### Wallet & Apple Pay
+
+Add Card > Apple Card
+
+### Users & Groups
+
+Guest User > Off
+
+### Extensions
+
+Share Menu > Open in News > :thumbsdown:
+
+Share Menu > Add to Reading List > :thumbsdown:
+
+### Security & Privacy
+
+Location Services > System Services > Details > ALL except Show location icon in menu bar when System Service request your location > :thumbsdown:
+
+Location Services > Enable Location Services > :thumbsdown:
+
+Analytics & Improvements > ALL > :thumbsdown:
+
+Apple Advertising > Personalized Ads > :thumbsdown:
+
+### Network
+
+Wi-Fi > Advanced > AS MANY Network Name > :skull_and_crossbones:
+
+### Touch ID
+
+Add Fingerprint > 4TH DIGITS OF BOTH HANDS > Use Touch ID for: > ALL > :thumbsup:
+
+### Keyboard
+
+Keyboard > Key Repeat > Fastest
+
+Keyboard > Delay Until Repeat > Shortest
+
+Keyboard > Touch Bar shows > Expanded Control Strip
+
+Keyboard > Customize Control Strip > SPACE JOINING Keyboard Brightness & Brightness & Volume & Media & Night Shift & Sleep
+
+Input Sources > ADD LANGUAGES
+
+Dictation > Dictation > Off
+
+### Trackpad
+
+Point & Click > Tap to click > :thumbsup:
+
+Point & Click > Click > Light
+
+Point & Click > Tracking speed > 4th fastest
+
+More Gestures > App Expose > :thumbsup:
+
+### Mouse
+
+ALL > 4th fastest
 
 ## Set Finder Preferences
 
-Finder / Preferences /
+General > New Finder window show: > USER
 
-General / New Finder window show: / (Kwat)
-Tags / ALL / Uncheck
-Sidebar / Favorites / AirDrop, Recents, Applications, (Kwat)
-Advanced / Show all filename extensions / Check
-Advanced / Show warning before removing from iCloud Drive / Uncheck
-Advanced / Show warning before emptying the Trash / Uncheck
-When performing a search / Search the Current Folder
+Tags > ALL > :thumbsdown:
 
-Show items in a list / Show View Options /
-Icon size / Large
-Show columns: / Data Modified, Size
-Calculate all sizes / Check
-Use as Defaults
+Sidebar > Favorites > AirDrop & Recents & Applications & USER
 
-## Get software
+Advanced > Show all filename extensions > :thumbsup:
 
-XCode
+Advanced > Show warning before removing from iCloud Drive > :thumbsdown:
+
+Advanced > Show warning before emptying the Trash > :thumbsdown:
+
+When performing a search > Search the Current Folder
+
+## Set Finder view
+
+### Show items in a list > Show View Options
+
+Icon size > Large
+
+Show columns: > Data Modified & Size
+
+Calculate all sizes > :thumbsup:
+
+Use as Defaults.
+
+## Install software
+
+### From .dmg
 
 SensibleSideButtons
 
-Corsair iCUE
+Sony Imaging Edge Webcam
 
 OBS
 
 Zoom
 
+Corsair iCUE
+
 Spotify
 
-Sony Imaging Edge Webcam
-
-## Get Brew and program
+### From brew
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -151,17 +216,89 @@ Sony Imaging Edge Webcam
 brew install tree rename macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
 ```
 
-## Set MacVim
+## Set Terminal Preferences
 
-Preferences > General > Open untitled window > never
+Import [../export/\*.terminal](https://github.com/KwatMDPhD/environment/tree/main/export/).
 
-Preferences > General > Open files from applications > in the current window
+## Set iCUE Preferences
+
+Import [../export/one_for_all.cueprofile](https://github.com/KwatMDPhD/environment/tree/main/export/one_for_all.cueprofile).
+
+## Set MacVim Preferences
+
+### Preferences > General
+
+Open untitled window > never
+
+Open files from applications > in the current window
+
+## Set Zoom Preferences
+
+### General
+
+Copy invite link when starting a meeting > :thumbsup:
+
+Show my meeting duration > :thumbsup:
+
+Add zoom to macOS menu bar > :thumbsdown:
+
+Stop my video and audio when my display is off or screen saver begins > :thumbsup:
+
+### Video
+
+Always display participant name on their videos
+
+Stop my video when joining a meeting
+
+### Audio
+
+Speaker > Same as System
+
+Microphone > Same as System
+
+Automatically join computer audio when joining a meeting > :thumbsup:
+
+Mute my mic when joining a meeting > :thumbsup:
+
+Press and hold "Space Key" to temporarily unmute > :thumbsdown:
+
+### Share Screen
+
+Window size when screen sharing: > Maintain current size
+
+When I share directly to a Zoom Room > Show all sharing options > :thumbsup:
+
+### Recording
+
+Store my recordings at: > Downloads
+
+Record a separate audio file of each participant > :thumbsup:
+
+Optimize for 3rd party video editor > :thumbsup:
+
+Add a timestamp to the recording > :thumbsup:
+
+## Set Spotify Preferences
+
+### Audio quality
+
+Streaming quality > Very high
+
+Download > Very high
+
+### Display
+
+Show announcements about new releases > :thumbsdown:
+
+See what your friends are playing > :thumbsdown:
+
+### Show advanced settings
+
+Startup and window behavior > Open Spotify automatically after you log into the computer > No
 
 ## Get Safari extension
 
 (Ad block)
-
-Vimari
 
 Vimari > Open Configuration File >
 
