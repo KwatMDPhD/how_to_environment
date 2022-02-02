@@ -78,7 +78,7 @@ npm install --save-dev gh-pages
 ```
 
 ```bash
-npx gh-pages --dist build --dotfiles
+npx gh-pages --dist build
 ```
 
 `gh-pages` updates the repository
@@ -90,6 +90,45 @@ Set `Pages`
 ![Pages preferences](pages_preferences.png)
 
 ---
+
+## Grow app
+
+Edit `src/routes/index.svelte`.
+
+Remove old build
+
+```bash
+rm -fr build
+```
+
+Build
+
+```bash
+npm run build
+```
+
+Deploy
+
+```bash
+npx gh-pages --dist build #--dotfiles
+```
+
+Remember this sequence as `scripts.deploy` in `package.json`
+
+```json
+    "build": "svelte-kit build",
+    "deploy": "rm -rf build && npm run build && npx gh-pages --dist build",
+```
+
+Edit more.
+
+Run the sequence
+
+```bash
+npm run deploy
+```
+
+Repeat.
 
 ##
 
