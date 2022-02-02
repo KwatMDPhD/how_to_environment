@@ -4,7 +4,7 @@
 		<cereal_class_version>301</cereal_class_version>
 		<profile>
 			<cereal_class_version>314</cereal_class_version>
-			<name>Corsair</name>
+			<name>one_for_all</name>
 			<id>{c76c4a20-8b57-4761-9698-88f97d2eb102}</id>
 			<iconUrl></iconUrl>
 			<iconColor>#00000000</iconColor>
@@ -1131,8 +1131,8 @@
 														<data>
 															<cereal_class_version>301</cereal_class_version>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1153,8 +1153,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1175,8 +1175,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1197,8 +1197,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1219,8 +1219,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1241,8 +1241,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1263,8 +1263,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1285,8 +1285,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1307,8 +1307,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1329,8 +1329,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1351,8 +1351,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -1611,46 +1611,6 @@
 						<properties size="dynamic">
 							<value0>
 								<polymorphic_id>2147483673</polymorphic_id>
-								<polymorphic_name>BrightnessIndicatorProperty::Proxy</polymorphic_name>
-								<ptr_wrapper>
-									<valid>1</valid>
-									<data>
-										<cereal_class_version>200</cereal_class_version>
-										<base/>
-										<properties size="dynamic">
-											<value0>
-												<key>true</key>
-												<value>
-													<polymorphic_id>1073741824</polymorphic_id>
-													<ptr_wrapper>
-														<valid>1</valid>
-														<data>
-															<cereal_class_version>200</cereal_class_version>
-															<base/>
-															<indicatorColor>#ffffffff</indicatorColor>
-														</data>
-													</ptr_wrapper>
-												</value>
-											</value0>
-											<value1>
-												<key>false</key>
-												<value>
-													<polymorphic_id>1073741824</polymorphic_id>
-													<ptr_wrapper>
-														<valid>1</valid>
-														<data>
-															<base/>
-															<indicatorColor>#ffffffff</indicatorColor>
-														</data>
-													</ptr_wrapper>
-												</value>
-											</value1>
-										</properties>
-									</data>
-								</ptr_wrapper>
-							</value0>
-							<value1>
-								<polymorphic_id>2147483674</polymorphic_id>
 								<polymorphic_name>LockIndicatorProperty::Proxy</polymorphic_name>
 								<ptr_wrapper>
 									<valid>1</valid>
@@ -1711,6 +1671,46 @@
 															<base/>
 															<availableIndicatorStatus size="dynamic"/>
 															<singlecolor>true</singlecolor>
+														</data>
+													</ptr_wrapper>
+												</value>
+											</value1>
+										</properties>
+									</data>
+								</ptr_wrapper>
+							</value0>
+							<value1>
+								<polymorphic_id>2147483674</polymorphic_id>
+								<polymorphic_name>BrightnessIndicatorProperty::Proxy</polymorphic_name>
+								<ptr_wrapper>
+									<valid>1</valid>
+									<data>
+										<cereal_class_version>200</cereal_class_version>
+										<base/>
+										<properties size="dynamic">
+											<value0>
+												<key>true</key>
+												<value>
+													<polymorphic_id>1073741824</polymorphic_id>
+													<ptr_wrapper>
+														<valid>1</valid>
+														<data>
+															<cereal_class_version>200</cereal_class_version>
+															<base/>
+															<indicatorColor>#ffffffff</indicatorColor>
+														</data>
+													</ptr_wrapper>
+												</value>
+											</value0>
+											<value1>
+												<key>false</key>
+												<value>
+													<polymorphic_id>1073741824</polymorphic_id>
+													<ptr_wrapper>
+														<valid>1</valid>
+														<data>
+															<base/>
+															<indicatorColor>#ffffffff</indicatorColor>
 														</data>
 													</ptr_wrapper>
 												</value>
@@ -3637,8 +3637,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -3659,8 +3659,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -3681,8 +3681,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -3703,8 +3703,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -3725,8 +3725,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -3747,8 +3747,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -3769,8 +3769,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -3791,8 +3791,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -3813,8 +3813,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -3835,8 +3835,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -3857,8 +3857,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4395,8 +4395,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4417,8 +4417,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4439,8 +4439,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4461,8 +4461,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4483,8 +4483,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4505,8 +4505,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4527,8 +4527,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4549,8 +4549,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4571,8 +4571,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4593,8 +4593,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -4615,8 +4615,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6654,8 +6654,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6676,8 +6676,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6698,8 +6698,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6720,8 +6720,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6742,8 +6742,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6764,8 +6764,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6786,8 +6786,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6808,8 +6808,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6830,8 +6830,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6852,8 +6852,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -6874,8 +6874,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -8122,8 +8122,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -8144,8 +8144,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -8166,8 +8166,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -8188,8 +8188,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -8210,8 +8210,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>
@@ -8232,8 +8232,8 @@
 														<valid>1</valid>
 														<data>
 															<base/>
-															<cookie>1</cookie>
-															<blobCookie>1</blobCookie>
+															<cookie>2</cookie>
+															<blobCookie>2</blobCookie>
 															<dpiCookie>0</dpiCookie>
 														</data>
 													</ptr_wrapper>

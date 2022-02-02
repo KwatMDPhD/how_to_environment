@@ -54,6 +54,10 @@ Shutter sound > Off
 
 Video size > High
 
+Open to answer > Off
+
+Close to end > Off
+
 ## Install apps
 
 ```sh

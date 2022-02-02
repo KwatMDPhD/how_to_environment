@@ -55,9 +55,7 @@ nnoremap <leader>b :Buffers<CR>
 " Plug
 " ================================================================================
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
 call plug#begin()
@@ -73,14 +71,12 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-Plug 'codota/tabnine-vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Set up language servers: CocInstall coc-sh coc-html coc-json coc-julia coc-pyright
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install'}
 
 Plug 'JuliaEditorSupport/julia-vim'
 
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'}
 
 Plug 'tpope/vim-commentary'
 
@@ -141,16 +137,14 @@ nnoremap <leader>r :Rg<CR>
 " ================================================================================
 
 " ================================================================================
-" tabnine-vim
-" ================================================================================
-
-" ================================================================================
 " vim-polyglot
 " ================================================================================
 
 " ================================================================================
 " coc.nvim
 " ================================================================================
+let g:coc_global_extensions = ['coc-tabnine', 'coc-sh', 'coc-json', 'coc-julia', 'coc-pyright', 'coc-html', 'coc-git']
+
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -172,7 +166,7 @@ endfunction
 nnoremap <leader>m :MarkdownPreview<CR>
 
 let g:mkdp_refresh_slow=1
-let g:mkdp_markdown_css=expand('~/craft/environment/markdown.css')
+let g:mkdp_markdown_css=expand('~/craft/environment/profile/markdown.css')
 
 " ================================================================================
 " vim-commentary
