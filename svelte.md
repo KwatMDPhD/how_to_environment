@@ -1,4 +1,4 @@
-Make the most minimal app (template skeleton and say no to everything else)
+Make the most minimal app (select `Skeleton project` and no to everything else)
 
 ## Make one
 
@@ -23,7 +23,7 @@ npm run dev -- --open
 Build the app
 
 ```bash
-ls -l .svelt-kit
+ls -l .svelte-kit
 ```
 
 ```bash
@@ -31,16 +31,16 @@ npm run build
 ```
 
 ```bash
-ls -l .svelt-kit
+ls -l .svelte-kit
 ```
 
-Preview the built app
+Preview the build
 
 ```bash
 npm run preview -- --open
 ```
 
-## Publish to GitHub
+## Publish to GitHub Pages
 
 Read https://kit.svelte.dev/docs#adapters-supported-environments-static-sites and follow:
 
@@ -57,24 +57,44 @@ Edit `svelte.config.js`
 +import adapter from '@sveltejs/adapter-static';
 ```
 
-Carry `.nojekyll` so tha GitHub nojekyll does not mess with this app
+Build
 
 ```bash
-touch static/.nojekyll
+ls -l .
 ```
-
-Build
 
 ```bash
 npm run build
 ```
 
 ```bash
-ls -l build
+ls -l .
 ```
 
+Use `gh-pages` to deploy the app to `gh-pages` branch:
+
+Install
+
 ```bash
-npx gh-pages --dist build --dotfiles --branch main --dest docs
+npm install --save-dev gh-pages
+```
+
+Deploy
+
+```bash
+npx gh-pages --dist build --dotfiles
+```
+
+[gh-pages pull request](gh_pages_pull_request.png)
+
+[Pages preferences](pages_preferences.png)
+
+##
+
+Carry `.nojekyll` so tha GitHub nojekyll does not mess with this app
+
+```bash
+touch static/.nojekyll
 ```
 
 ## 10
