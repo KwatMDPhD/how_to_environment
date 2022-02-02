@@ -73,21 +73,23 @@ ls -l .
 
 Use `gh-pages` to deploy the app to `gh-pages` branch:
 
-Install
-
 ```bash
 npm install --save-dev gh-pages
 ```
-
-Deploy
 
 ```bash
 npx gh-pages --dist build --dotfiles
 ```
 
-[gh-pages pull request](gh_pages_pull_request.png)
+`gh-pages` updates the repository
 
-[Pages preferences](pages_preferences.png)
+![gh-pages pull request](gh_pages_pull_request.png)
+
+Set `Pages`
+
+![Pages preferences](pages_preferences.png)
+
+---
 
 ##
 
@@ -97,8 +99,10 @@ Carry `.nojekyll` so tha GitHub nojekyll does not mess with this app
 touch static/.nojekyll
 ```
 
-## 10
+##
 
 Do all https://svelte.dev/tutorial/basics.
+
+##
 
 Do all https://kit.svelte.dev/docs.
