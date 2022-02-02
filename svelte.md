@@ -47,7 +47,7 @@ Read https://kit.svelte.dev/docs#adapters-supported-environments-static-sites an
 Install `adapter-static` (for only during development)
 
 ```bash
-npm install --save-dev @sveltejs/adapter-static@next 
+npm install --save-dev @sveltejs/adapter-static@next
 ```
 
 Edit `svelte.config.js`
@@ -89,6 +89,8 @@ Set `Pages`
 
 ![Pages preferences](pages_preferences.png)
 
+Look at the deployment with private browsing (incognito), which does not cache.
+
 ---
 
 ## Grow app
@@ -113,7 +115,9 @@ Deploy
 npx gh-pages --dist build #--dotfiles
 ```
 
-Remember this sequence as `scripts.deploy` in `package.json`
+If the update does not show up, clear cache or use private browsing (incognito), which does not cache.
+
+Remember this rebuild-deploy sequence as `scripts.deploy` in `package.json`
 
 ```json
     "build": "svelte-kit build",
@@ -129,6 +133,18 @@ npm run deploy
 ```
 
 Repeat.
+
+## Set custom domain
+
+Read https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site.
+
+Update DNS
+
+![dns](dns.png)
+
+Check `Pages`
+
+![custom_domain](pages_custom_domain.png)
 
 ##
 
