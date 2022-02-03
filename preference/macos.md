@@ -210,11 +210,11 @@ Spotify
 
 ### From brew
 
-```sh
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-```sh
+```bash
 brew install tree rename macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
 ```
 

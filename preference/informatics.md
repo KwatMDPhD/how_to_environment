@@ -1,6 +1,6 @@
 ## Set profiles
 
-```sh
+```bash
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/zshrc > ~/.zshrc &&
 
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/vimrc > ~/.vimrc
@@ -8,7 +8,7 @@ curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/vimrc 
 
 ## Set git preferences
 
-```sh
+```bash
 git config --global user.name ""
 
 git config --global user.email ""
@@ -50,12 +50,12 @@ for na in [
 end
 ```
 
-```sh
+```bash
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
 ## Set jupyter
 
-```sh
+```bash
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/notebook.json > ~/
 ```
