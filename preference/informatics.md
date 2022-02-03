@@ -32,6 +32,10 @@ git lfs install
 
 ## Set julia
 
+```bash
+ln -s /Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
+```
+
 Install [julia](https://julialang.org/downloads).
 
 ```julia

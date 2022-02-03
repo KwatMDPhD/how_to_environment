@@ -190,6 +190,8 @@ Calculate all sizes > :thumbsup:
 
 Use as Defaults.
 
+Desktop > Sort By > Date Modified
+
 ## Install software
 
 ### From .dmg
@@ -231,6 +233,22 @@ Import [../export/one_for_all.cueprofile](https://github.com/KwatMDPhD/environme
 Open untitled window > never
 
 Open files from applications > in the current window
+
+## Set Messages Preferences
+
+### General
+
+Do not set up name or photo.
+
+### iMessage
+
+Send read receipts > :thumbsdown:
+
+### Shared with You
+
+Automatic Sharing > Off
+
+ALL > :thumbsdown:
 
 ## Set Zoom Preferences
 
