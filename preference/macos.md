@@ -18,6 +18,12 @@ Siri > :thumbsdown:
 
 ## [Set Finder Preferences and view](finder_preferences.md)
 
+## [Set Terminal Preferences](terminal.md)
+
+## [Set Safari extensions and Preferences](safari.md)
+
+## [Set Messages Preferences](message.md)
+
 ## Install software
 
 ### From .dmg
@@ -44,20 +50,12 @@ Spotify
 brew install tree rename macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
 ```
 
-## Set preferences
+## [Set MacVim Preferences](macvim.md)
 
-[Set Terminal Preferences](terminal.md)
+## [Set OBS Preferences](obs.md)
 
-[Set Safari extensions and Preferences](safari.md)
+## [Set Zoom Preferences](zoom.md)
 
-[Set Messages Preferences](message.md)
+## [Set iCUE Preferences](icue.md)
 
-[Set MacVim Preferences](macvim.md)
-
-[Set OBS Preferences](obs.md)
-
-[Set Zoom Preferences](zoom.md)
-
-[Set iCUE Preferences](icue.md)
-
-[Set Spotify Preferences](spotify.md)
+## [Set Spotify Preferences](spotify.md)
