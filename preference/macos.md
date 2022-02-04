@@ -26,20 +26,6 @@ Siri > :thumbsdown:
 
 ## Install software
 
-### From .dmg
-
-SensibleSideButtons
-
-Sony Imaging Edge Webcam
-
-OBS
-
-Zoom
-
-Corsair iCUE
-
-Spotify
-
 ### From brew
 
 ```bash
@@ -50,14 +36,26 @@ Spotify
 brew install tree rename macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
 ```
 
-## Set more preferences
+[Set MacVim Preferences](macvim.md)
 
-### [Set MacVim Preferences](macvim.md)
+### From .dmg
 
-### [Set OBS Preferences](obs.md)
+SensibleSideButtons
 
-### [Set Zoom Preferences](zoom.md)
+Sony Imaging Edge Webcam
 
-### [Set iCUE Preferences](icue.md)
+OBS
 
-### [Set Spotify Preferences](spotify.md)
+[Set OBS Preferences](obs.md)
+
+Zoom
+
+[Set Zoom Preferences](zoom.md)
+
+Corsair iCUE
+
+[Set iCUE Preferences](icue.md)
+
+Spotify
+
+[Set Spotify Preferences](spotify.md)
