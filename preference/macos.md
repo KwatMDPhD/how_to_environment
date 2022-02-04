@@ -14,15 +14,15 @@ Analytics > :thumbsdown:
 
 Siri > :thumbsdown:
 
-## [Set System Preferences](system_preferences.md)
+### [Set System Preferences](system_preferences.md)
 
-## [Set Finder Preferences and view](finder_preferences.md)
+### [Set Finder Preferences and view](finder_preferences.md)
 
-## [Set Terminal Preferences](terminal.md)
+### [Set Terminal Preferences](terminal.md)
 
-## [Set Safari extensions and Preferences](safari.md)
+### [Set Safari extensions and Preferences](safari.md)
 
-## [Set Messages Preferences](message.md)
+### [Set Messages Preferences](message.md)
 
 ## Install software
 
@@ -50,12 +50,14 @@ Spotify
 brew install tree rename macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
 ```
 
-## [Set MacVim Preferences](macvim.md)
+## Set more preferences
 
-## [Set OBS Preferences](obs.md)
+### [Set MacVim Preferences](macvim.md)
 
-## [Set Zoom Preferences](zoom.md)
+### [Set OBS Preferences](obs.md)
 
-## [Set iCUE Preferences](icue.md)
+### [Set Zoom Preferences](zoom.md)
 
-## [Set Spotify Preferences](spotify.md)
+### [Set iCUE Preferences](icue.md)
+
+### [Set Spotify Preferences](spotify.md)
