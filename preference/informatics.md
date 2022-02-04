@@ -75,5 +75,9 @@ python -m pip install jupyter webio_jupyter_extension
 ## Set jupyter
 
 ```bash
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/notebook.json > ~/
+mkdir ~/.jupyter/nbconfig &&
+
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/notebook.json > ~/.jupyter/nbconfig/notebook.json
 ```
+
+Install https://github.com/lambdalisue/jupyter-vim-binding

@@ -5,7 +5,7 @@
 Vimari > Open Configuration File >
 
 ```json
-"excludedUrls": "localhost,tinkercad.com",
+  "excludedUrls": "127.0.0.1,localhost,tinkercad.com",
 ```
 
 ### Websites
