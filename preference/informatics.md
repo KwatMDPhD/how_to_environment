@@ -54,6 +54,24 @@ end
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
+## Set python
+
+```bash
+ pyenv install --list | grep 3.10
+```
+
+```bash
+VERSION=3.10.2 &&
+
+PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install $VERSION &&
+
+pyenv global $VERSION
+```
+
+```bash
+python -m pip install jupyter webio_jupyter_extension
+```
+
 ## Set jupyter
 
 ```bash
