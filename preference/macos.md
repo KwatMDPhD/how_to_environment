@@ -314,7 +314,9 @@ See what your friends are playing > :thumbsdown:
 
 Startup and window behavior > Open Spotify automatically after you log into the computer > No
 
-## Get Safari extension
+## Set Safari
+
+### Extensions
 
 (Ad block)
 
@@ -323,3 +325,25 @@ Vimari > Open Configuration File >
 ```json
 "excludedUrls": "localhost,tinkercad.com",
 ```
+
+### Websites
+
+Camera > When visiting other websites > Deny
+
+Microphone > When visiting other websites > Deny
+
+Screen Sharing > When visiting other websites > Deny
+
+Location > When visiting other websites > Deny
+
+Notifications > Allow websites to ask for permission to send notification > :thumbsdown:
+
+## Set OBS
+
+### Output
+
+Recording Path > Downloads
+
+Generate File Name without Space > :thumbsup:
+
+Recording Format > mp4
