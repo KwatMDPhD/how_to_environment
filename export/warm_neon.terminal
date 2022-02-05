@@ -210,11 +210,11 @@
 	<key>VisualBell</key>
 	<false/>
 	<key>columnCount</key>
-	<integer>80</integer>
+	<integer>99</integer>
 	<key>name</key>
 	<string>warm_neon</string>
 	<key>rowCount</key>
-	<integer>24</integer>
+	<integer>33</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 </dict>

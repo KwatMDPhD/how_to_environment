@@ -1,3 +1,5 @@
+###
+
 General > New Finder window show: > USER
 
 Tags > ALL > :thumbsdown:
@@ -23,3 +25,7 @@ Calculate all sizes > :thumbsup:
 Use as Defaults.
 
 Desktop > Sort By > Date Modified
+
+###
+
+Right click a `html` file > Open with: > Safari.app > Change All
