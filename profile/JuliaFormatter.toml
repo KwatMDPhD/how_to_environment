@@ -1,6 +1,6 @@
 indent = 4
 
-margin = 80
+margin = 99
 
 always_for_in = true
 
@@ -16,7 +16,7 @@ pipe_to_function_call = true
 
 short_to_long_function_def = true
 
-always_use_return = true
+always_use_return = false
 
 whitespace_in_kwargs = true
 
@@ -24,14 +24,22 @@ annotate_untyped_fields_with_any = true
 
 format_docstrings = true
 
-align_struct_field = false
+align_struct_field = true
 
-align_conditional = false
+align_conditional = true
 
-align_assignment = false
+align_assignment = true
 
-align_pair_arrow = false
+align_pair_arrow = true
+
+align_matrix = true
 
 conditional_to_if = true
 
 normalize_line_endings = "auto"
+
+trailing_comma = true
+
+join_lines_based_on_source = false
+
+indent_submodule = true
