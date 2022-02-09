@@ -14,6 +14,8 @@ AirPlay Receiver > :thumbsdown:
 
 iCloud > Private Relay > :thumbsup:
 
+iCloud > Private Relay > Options > IP Address Location > Use country and time zone
+
 iCloud > News > :thumbsdown:
 
 iCloud > Stocks > :thumbsdown:
