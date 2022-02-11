@@ -22,7 +22,7 @@ Siri > :thumbsdown:
 
 ### [Set Safari extensions and Preferences](safari.md)
 
-### [Set Messages Preferences](message.md)
+### [Set Messages Preferences](messages.md)
 
 ## Install software
 
