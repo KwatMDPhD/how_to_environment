@@ -33,7 +33,7 @@ Siri > :thumbsdown:
 ```
 
 ```bash
-brew install tree rename macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
+brew install tree rename watch macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
 ```
 
 [Set MacVim Preferences](macvim.md)
