@@ -228,6 +228,15 @@ let g:limelight_conceal_ctermfg=244
 let g:rainbow_active = 1
 
 " ================================================================================
+" pluto-vim
+" ================================================================================
+set autoread
+
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+
+autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+" ================================================================================
 " Style highlight
 " ================================================================================
 highlight Search ctermbg=92 ctermfg=yellow guibg=#9016e6 guifg=#20d8ba
@@ -256,6 +265,6 @@ function! HighlightCursorWord()
 endfunction
 
 " ================================================================================
-" Highlight articles
+" Mapping
 " ================================================================================
-nnoremap <leader>a /\v<a>\|<an>\|<the>\|s<CR>
+nnoremap <leader>d :wq<CR>
