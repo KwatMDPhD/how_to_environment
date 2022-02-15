@@ -14,9 +14,9 @@ Analytics > :thumbsdown:
 
 Siri > :thumbsdown:
 
-### [Set System Preferences](system_preferences.md)
+### [Set System Preferences](preferences.md)
 
-### [Set Finder Preferences and view](finder_preferences.md)
+### [Set Finder Preferences and view](finder.md)
 
 ### [Set Terminal Preferences](terminal.md)
 

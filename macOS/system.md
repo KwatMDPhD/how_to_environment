@@ -1,6 +1,6 @@
 ### Software Update
 
-UPDATE.
+Update.
 
 Automatically keep my Mac up to date > :thumbsdown:
 
