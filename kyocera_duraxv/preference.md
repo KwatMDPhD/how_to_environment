@@ -4,7 +4,7 @@ Become a developer
 
 Enable USB debugging
 
-```bash
+```
 brew install android-platform-tools
 ```
 
@@ -60,17 +60,17 @@ Close to end > Off
 
 ## Install apps
 
-```bash
+```
 adb install ~/Downloads/Spotify_8.7.0.1147_apkcombo.com.apk
 ```
 
 ## Install mouse
 
-```bash
+```
 adb install ~/Downloads/a4fmouse.apk
 ```
 
-```bash
+```
 adb shell pm uninstall -k --user 0 com.lge.voicecommand
 
 adb shell appops set com.android.cts.appsflipcursor SYSTEM_ALERT_WINDOW allow
@@ -84,7 +84,7 @@ adb shell am startservice com.android.cts.appsflipcursor/com.android.cts.appsfli
 
 ## Remove junk
 
-```bash
+```
 adb shell pm list packages | grep verizon
 
 adb shell pm list packages | grep vzw

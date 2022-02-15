@@ -28,11 +28,11 @@ Siri > :thumbsdown:
 
 ### From brew
 
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+/bin/ -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-```bash
+```
 brew install tree rename watch macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
 ```
 
@@ -46,16 +46,16 @@ Sony Imaging Edge Webcam
 
 OBS
 
-[Set OBS Preferences](obs.md)
+[Set OBS Preferences]((../application/obs.md)
 
 Zoom
 
-[Set Zoom Preferences](zoom.md)
+[Set Zoom Preferences]((../application/zoom.md)
 
 Corsair iCUE
 
-[Set iCUE Preferences](icue.md)
+[Set iCUE Preferences]((../application/icue.md)
 
 Spotify
 
-[Set Spotify Preferences](spotify.md)
+[Set Spotify Preferences](../application/spotify.md)

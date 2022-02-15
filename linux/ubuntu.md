@@ -12,7 +12,7 @@ Erase disk and install Ubuntu
 
 ## Get software
 
-```bash
+```
 sudo apt update &&
 
 sudo apt full-upgrade --yes &&
@@ -28,7 +28,7 @@ sudo apt autoremove --yes
 
 ## Set the default text editor to be Vim
 
-```bash
+```
 sudo update-alternatives --config editor
 ```
 
@@ -40,12 +40,12 @@ sudo update-alternatives --config editor
 
 ## Fix suspend loop
 
-```bash
+```
 sudo vim /etc/default/grub
 ```
 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash button.lid_init_state=open"
 
-```bash
+```
 sudo update-grub
 ```
