@@ -33,7 +33,7 @@ Siri > :thumbsdown:
 ```
 
 ```
-brew install tree rename watch macvim fzf ripgrep node yarn pyenv-virtualenv shfmt git-lfs
+brew install tree rename watch macvim fzf ripgrep node pyenv-virtualenv shfmt git-lfs
 ```
 
 [Set MacVim Preferences](macvim.md)
@@ -46,15 +46,15 @@ Sony Imaging Edge Webcam
 
 OBS
 
-[Set OBS Preferences]((../application/obs.md)
+[Set OBS Preferences](../application/obs.md)
 
 Zoom
 
-[Set Zoom Preferences]((../application/zoom.md)
+[Set Zoom Preferences](../application/zoom.md)
 
 Corsair iCUE
 
-[Set iCUE Preferences]((../application/icue.md)
+[Set iCUE Preferences](../application/icue.md)
 
 Spotify
 
