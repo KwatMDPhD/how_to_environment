@@ -1,9 +1,9 @@
 ## Set profiles
 
 ```
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/zshrc > ~/.zshrc &&
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/zshrc > ~/.zshrc &&
 
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/vimrc > ~/.vimrc
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/vimrc > ~/.vimrc
 ```
 
 ## Set git preferences
@@ -49,7 +49,7 @@ end
 ```
 
 ```
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/profile/JuliaFormatter.toml > ~/.JuliaFormatter.toml
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
 ## Set python
