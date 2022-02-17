@@ -156,7 +156,7 @@ function recursively-jl() {
 
 		pkgr check . &&
 
-		pkgr run . --sk &&
+		pkgr run . --skip-run &&
 
 		popd
 
@@ -177,7 +177,7 @@ function recursively-pro() {
 
 		lea check . &&
 
-		lea run . --sk &&
+		lea run . --skip-run &&
 
 		popd
 
@@ -252,7 +252,7 @@ function recursively-housekeep() {
 
 	recursively-jl &&
 
-	recursively-pro &&
+	#recursively-pro &&
 
 	recursively-clean-jl &&
 
