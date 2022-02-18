@@ -22,7 +22,7 @@ alias ...="cd ../.."
 
 alias ....="cd ../../.."
 
-alias ls="ls -G"
+alias ls="ls -hG"
 
 alias ll="ls -l"
 
@@ -47,6 +47,8 @@ alias mv="mv -i"
 alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
 alias ju="julia --project"
+
+alias pu="ju --eval \"using Pluto; Pluto.run(auto_reload_from_file = true)\""
 
 alias shfmt="shfmt -s -w"
 
