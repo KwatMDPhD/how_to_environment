@@ -158,7 +158,8 @@ function recursively-jl() {
 
 		pkgr check . &&
 
-		pkgr run . --skip-run &&
+		#pkgr run . --skip-run &&
+		pkgr run . &&
 
 		popd
 
@@ -254,7 +255,7 @@ function recursively-housekeep() {
 
 	recursively-jl &&
 
-	#recursively-pro &&
+	recursively-pro &&
 
 	recursively-clean-jl &&
 
