@@ -46,6 +46,8 @@ alias mv="mv -i"
 
 alias rsync="rsync --archive --verbose --itemize-changes --human-readable --progress --stats"
 
+alias tree="tree -h"
+
 alias ju="julia --project"
 
 alias pu="ju --eval \"using Pluto; Pluto.run(auto_reload_from_file = true)\""
@@ -158,8 +160,8 @@ function recursively-jl() {
 
 		pkgr check . &&
 
-		#pkgr run . --skip-run &&
-		pkgr run . &&
+		pkgr run . --skip-run &&
+		#pkgr run . &&
 
 		popd
 
