@@ -120,6 +120,10 @@ Plug 'junegunn/limelight.vim'
 
 Plug 'luochen1990/rainbow'
 
+Plug 'vim-denops/denops.vim'
+
+Plug 'hasundue/vim-pluto'
+
 call plug#end()
 
 " ================================================================================
@@ -235,6 +239,22 @@ set autoread
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
 
 autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+:let maplocalleader = "`"
+
+nnoremap <LocalLeader>O :call pluto#insert_cell_above()<CR>
+
+nnoremap <LocalLeader>o :call pluto#insert_cell_below()<CR>
+
+nnoremap <LocalLeader>yy :call pluto#yank_cell()<CR>
+
+nnoremap <LocalLeader>dd :call pluto#delete_cell()<CR>
+
+nnoremap <LocalLeader>P :call pluto#paste_cell_above()<CR>
+
+nnoremap <LocalLeader>p :call pluto#paste_cell_below()<CR>
+
+nnoremap <LocalLeader>t :call pluto#toggle_code()<CR>
 
 " ================================================================================
 " Style highlight

@@ -73,7 +73,7 @@ pyenv global $VERSION
 ## Set jupyter
 
 ```bash
-python -m pip install jupyter webio_jupyter_extension
+python -m pip install jupyter webio_jupyter_extension autoflake isort black jupyter-black
 ```
 
 ```bash

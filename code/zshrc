@@ -203,6 +203,16 @@ function recursively-clean-web() {
 
 }
 
+function recursively-clean-py() {
+
+	autoflake --in-place --remove-all-unused-imports . &&
+
+	isort --profile black . &&
+
+	black .
+
+}
+
 # ==============================================================================
 # Git functions
 # ==============================================================================
@@ -260,6 +270,8 @@ function recursively-housekeep() {
 	recursively-clean-jl &&
 
 	recursively-clean-web &&
+
+	recursively-clean-py &&
 
 	recursively-git-add-commit-push "$1"
 
