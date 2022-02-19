@@ -1,0 +1,22 @@
+{
+  "Notebook": {
+    "Header": true,
+    "Toolbar": false
+  },
+  "keys": {
+    "command": {
+      "bind": {
+        "ctrl-0": "jupyter-notebook:restart-kernel-and-clear-output",
+        "ctrl-9": "jupyter-notebook:restart-kernel-and-run-all-cells",
+        "ctrl-1": "jupyter-notebook:interrupt-kernel",
+        "alt-m": "jupyter-notebook:change-cell-to-markdown",
+        "alt-r": "jupyter-notebook:change-cell-to-raw",
+        "alt-c": "jupyter-notebook:change-cell-to-code"
+      },
+      "unbind": ["0,0"]
+    }
+  },
+  "load_extensions": {
+    "vim_binding/vim_binding": true
+  }
+}

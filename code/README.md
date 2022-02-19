@@ -1,6 +1,6 @@
 ## Set profiles
 
-```
+```bash
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/zshrc > ~/.zshrc &&
 
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/vimrc > ~/.vimrc
@@ -8,7 +8,7 @@ curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/vimrc > ~
 
 ## Set git preferences
 
-```
+```bash
 git config --global user.name ""
 
 git config --global user.email ""
@@ -34,7 +34,7 @@ git lfs install
 
 Install [julia](https://julialang.org/downloads).
 
-```
+```bash
 ln -s /Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia /usr/local/bin/julia
 ```
 
@@ -48,7 +48,7 @@ for na in []
 end
 ```
 
-```
+```bash
 curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
@@ -56,16 +56,30 @@ curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/JuliaForm
 
 Check for the latest, stable version
 
-```
+```bash
  pyenv install --list | grep 3.10
 ```
 
 Install
 
-```
+```bash
 VERSION=3.10.2 &&
 
 PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install $VERSION &&
 
 pyenv global $VERSION
 ```
+
+## Set jupyter
+
+```bash
+python -m pip install jupyter webio_jupyter_extension
+```
+
+```bash
+mkdir ~/.jupyter/nbconfig &&
+
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/notebook.json > ~/.jupyter/nbconfig/notebook.json
+```
+
+Install https://github.com/lambdalisue/jupyter-vim-binding
