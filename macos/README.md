@@ -59,3 +59,5 @@ Corsair iCUE
 Spotify
 
 [Set Spotify Preferences](../application/spotify.md)
+
+Signal
