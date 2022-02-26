@@ -1,6 +1,6 @@
-" ================================================================================
-" General
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
+" Cache
+" ----------------------------------------------------------------------------------------------- "
 if empty(glob('~/.cache/vim'))
 
   silent !mkdir -p ~/.cache/vim
@@ -15,7 +15,10 @@ set nobackup
 
 set nowritebackup
 
-set updatetime=200
+" ----------------------------------------------------------------------------------------------- "
+" General
+" ----------------------------------------------------------------------------------------------- "
+set updatetime=160
 
 set encoding=utf-8
 
@@ -69,17 +72,59 @@ set ignorecase
 
 set smartcase
 
-nnoremap <leader>h :nohlsearch<CR>
-
 set showmatch
 
 set mps+=<:>
 
+" ----------------------------------------------------------------------------------------------- "
+" Auto-reload
+" ----------------------------------------------------------------------------------------------- "
+set autoread
+
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+
+autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+" ----------------------------------------------------------------------------------------------- "
+" Style highlight
+" ----------------------------------------------------------------------------------------------- "
+highlight Search ctermbg=92 ctermfg=yellow guibg=#9016e6 guifg=#20d8ba
+
+" ----------------------------------------------------------------------------------------------- "
+" Highlight word-under-cursor instances
+" ----------------------------------------------------------------------------------------------- "
+highlight WordUnderCursor cterm=underline gui=underline
+
+autocmd CursorHold * call HighlightCursorWord()
+
+function! HighlightCursorWord()
+
+    let search = getreg('/')
+
+    let cword = expand('<cword>')
+
+    if match(cword, search) == -1
+
+        exe printf('match WordUnderCursor /\V\<%s\>/', escape(cword, '/\'))
+
+    endif
+
+endfunction
+
+" ----------------------------------------------------------------------------------------------- "
+" Map
+" ----------------------------------------------------------------------------------------------- "
+:let maplocalleader = "`"
+
 nnoremap <leader>b :Buffers<CR>
 
-" ================================================================================
+nnoremap <leader>h :nohlsearch<CR>
+
+nnoremap <leader>d :wq<CR>
+
+" ----------------------------------------------------------------------------------------------- "
 " Plug
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 if empty(glob('~/.vim/autoload/plug.vim'))
 
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -114,21 +159,13 @@ Plug 'tpope/vim-commentary'
 
 Plug 'flazz/vim-colorschemes'
 
-Plug 'junegunn/goyo.vim'
-
-Plug 'junegunn/limelight.vim'
-
 Plug 'luochen1990/rainbow'
-
-Plug 'vim-denops/denops.vim'
-
-Plug 'hasundue/vim-pluto'
 
 call plug#end()
 
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 " nerdtree
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 nnoremap <leader>t :NERDTreeToggle<CR>
 
 nnoremap <leader>i :NERDTreeFind<CR>
@@ -157,9 +194,9 @@ let NERDTreeCascadeSingleChildDir = 1
 
 let NERDTreeAutoDeleteBuffer = 1
 
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 " fzf.vim (fzf)
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 nnoremap <leader>f :Files<CR>
 
 command! -bang -nargs=* Rg
@@ -170,14 +207,14 @@ command! -bang -nargs=* Rg
   \   <bang>0,
   \ )
 
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 " fzf.vim (ripgrep)
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 nnoremap <leader>r :Rg<CR>
 
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 " coc.nvim
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 let g:coc_global_extensions = ['coc-tabnine', 'coc-sh', 'coc-json', 'coc-julia', 'coc-html']
 
 inoremap <silent><expr> <TAB>
@@ -195,96 +232,21 @@ function! s:check_back_space() abort
 
 endfunction
 
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 " markdown-preview.nvim
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 nnoremap <leader>m :MarkdownPreview<CR>
 
 let g:mkdp_refresh_slow=1
 
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 " vim-colorschemes
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 set background=dark
 
 colorscheme gruvbox
 
-" ================================================================================
-" goyo
-" ================================================================================
-nnoremap <leader>g :Goyo<CR>
-
-autocmd! User GoyoEnter Limelight
-
-autocmd! User GoyoLeave Limelight!
-
-
-" ================================================================================
-" limelight
-" ================================================================================
-nnoremap <leader>l :Limelight!!<CR>
-
-let g:limelight_conceal_ctermfg=244
-
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 " rainbow
-" ================================================================================
+" ----------------------------------------------------------------------------------------------- "
 let g:rainbow_active = 1
-
-" ================================================================================
-" pluto-vim
-" ================================================================================
-set autoread
-
-autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
-
-autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
-
-:let maplocalleader = "`"
-
-nnoremap <LocalLeader>O :call pluto#insert_cell_above()<CR>
-
-nnoremap <LocalLeader>o :call pluto#insert_cell_below()<CR>
-
-nnoremap <LocalLeader>yy :call pluto#yank_cell()<CR>
-
-nnoremap <LocalLeader>dd :call pluto#delete_cell()<CR>
-
-nnoremap <LocalLeader>P :call pluto#paste_cell_above()<CR>
-
-nnoremap <LocalLeader>p :call pluto#paste_cell_below()<CR>
-
-nnoremap <LocalLeader>t :call pluto#toggle_code()<CR>
-
-" ================================================================================
-" Style highlight
-" ================================================================================
-highlight Search ctermbg=92 ctermfg=yellow guibg=#9016e6 guifg=#20d8ba
-
-" ================================================================================
-" Highlight all instances of word under cursor
-" ================================================================================
-setl updatetime=160
-
-highlight WordUnderCursor cterm=underline gui=underline
-
-autocmd CursorHold * call HighlightCursorWord()
-
-function! HighlightCursorWord()
-
-    let search = getreg('/')
-
-    let cword = expand('<cword>')
-
-    if match(cword, search) == -1
-
-        exe printf('match WordUnderCursor /\V\<%s\>/', escape(cword, '/\'))
-
-    endif
-
-endfunction
-
-" ================================================================================
-" Mapping
-" ================================================================================
-nnoremap <leader>d :wq<CR>

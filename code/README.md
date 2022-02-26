@@ -41,7 +41,11 @@ ln -s /Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia /usr/local/
 ```julia
 using Pkg
 
-for na in []
+for na in [
+    "OhMyREPL",
+    "BenchmarkTools",
+    "IJulia",
+]
 
     Pkg.add(na)
 
