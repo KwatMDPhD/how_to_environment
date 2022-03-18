@@ -8,6 +8,8 @@ Sidebar > Favorites > AirDrop & Recents & Applications & USER
 
 Advanced > Show all filename extensions > :thumbsup:
 
+Advanced > Show warning before changing an extension > :thumbsdown:
+
 Advanced > Show warning before removing from iCloud Drive > :thumbsdown:
 
 Advanced > Show warning before emptying the Trash > :thumbsdown:
