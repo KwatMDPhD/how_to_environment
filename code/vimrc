@@ -177,6 +177,8 @@ set cmdheight=1
 
 syntax enable
 
+set spell
+
 set linebreak
 
 set scrolloff=8
