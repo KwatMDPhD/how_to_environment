@@ -61,8 +61,6 @@ call plug#end()
 " ----------------------------------------------------------------------------------------------- "
 nnoremap <leader>t :NERDTreeToggle<CR>
 
-nnoremap <leader>i :NERDTreeFind<CR>
-
 let NERDTreeCaseSensitiveSort = 1
 
 let NERDTreeNaturalSort = 1
@@ -86,11 +84,32 @@ let NERDTreeCascadeSingleChildDir = 1
 let NERDTreeAutoDeleteBuffer = 1
 
 " ----------------------------------------------------------------------------------------------- "
-" Start NERDTree when Vim is started without file arguments
+" 
 " ----------------------------------------------------------------------------------------------- "
-autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | wincmd p
 
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" ----------------------------------------------------------------------------------------------- "
+" Highlight current file
+" ----------------------------------------------------------------------------------------------- "
+function s:isNERDTreeOpen()
+
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+
+endfunction
+
+function! s:syncTree()
+
+  if &modifiable && s:isNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+
+    NERDTreeFind
+
+    wincmd p
+
+  endif
+
+endfunction
+
+autocmd BufEnter * call s:syncTree()
 
 " ----------------------------------------------------------------------------------------------- "
 " fzf.vim (fzf)
