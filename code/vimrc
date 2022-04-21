@@ -28,6 +28,8 @@ call plug#begin()
 
 Plug 'preservim/nerdtree'
 
+Plug 'unkiwii/vim-nerdtree-sync'
+
 Plug 'vim-airline/vim-airline'
 
 " brew install fzf ripgrep
@@ -84,32 +86,11 @@ let NERDTreeCascadeSingleChildDir = 1
 let NERDTreeAutoDeleteBuffer = 1
 
 " ----------------------------------------------------------------------------------------------- "
-" 
+" Vim NERDTree sync
 " ----------------------------------------------------------------------------------------------- "
-autocmd VimEnter * NERDTree | wincmd p
+let g:nerdtree_sync_cursorline = 1
 
-" ----------------------------------------------------------------------------------------------- "
-" Highlight current file
-" ----------------------------------------------------------------------------------------------- "
-function s:isNERDTreeOpen()
-
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-
-endfunction
-
-function! s:syncTree()
-
-  if &modifiable && s:isNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-
-    NERDTreeFind
-
-    wincmd p
-
-  endif
-
-endfunction
-
-autocmd BufEnter * call s:syncTree()
+let g:NERDTreeHighlightCursorline = 1
 
 " ----------------------------------------------------------------------------------------------- "
 " fzf.vim (fzf)
@@ -274,8 +255,3 @@ endfunction
 nnoremap <leader>b :Buffers<CR>
 
 nnoremap <leader>h :nohlsearch<CR>
-
-nnoremap <leader>w :wq<CR>
-
-nnoremap <leader>q :wq<CR>
-
