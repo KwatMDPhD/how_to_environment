@@ -250,6 +250,8 @@ function recursively-git-add-commit-push() {
 
 		git commit -m "$1"
 
+        git pull
+
 		git push
 
 		popd
