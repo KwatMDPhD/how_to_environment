@@ -135,9 +135,9 @@ function recursively-chmod() {
 
 }
 
-function recursively-clean-name() {
+function recursively-rename() {
 
-	find . -depth -print0 | xargs -0 -p rename --sanitize --lower-case --expr "s/-/_/g" --force
+	find . -not -path "*/.*" -not -path "*/README.md*" -not -path "*/LICENSE*" -depth -print0 | xargs -0 -p rename --sanitize --lower-case --expr "s/-/_/g" --force
 
 }
 
