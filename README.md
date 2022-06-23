@@ -3,9 +3,9 @@
 ## Set profiles
 
 ```bash
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/zshrc > ~/.zshrc &&
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/zshrc > ~/.zshrc &&
 
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/vimrc > ~/.vimrc
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/vimrc > ~/.vimrc
 ```
 
 ## Set git preferences
@@ -45,7 +45,6 @@ using Pkg
 
 for na in [
     "OhMyREPL",
-    "BenchmarkTools",
     "IJulia",
 ]
 
@@ -55,7 +54,7 @@ end
 ```
 
 ```bash
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/JuliaFormatter.toml > ~/.JuliaFormatter.toml
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/JuliaFormatter.toml > ~/.JuliaFormatter.toml
 ```
 
 ## Set python
@@ -63,13 +62,13 @@ curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/JuliaForm
 Check for the latest, stable version
 
 ```bash
- pyenv install --list | grep 3.10
+ pyenv install --list
 ```
 
 Install
 
 ```bash
-VERSION=3.10.2 &&
+VERSION=3.10.4 &&
 
 PYTHON_CONFIGURE_OPTS="--enable-shared" pyenv install $VERSION &&
 
@@ -79,13 +78,13 @@ pyenv global $VERSION
 ## Set jupyter
 
 ```bash
-python -m pip install jupyter webio_jupyter_extension autoflake isort black jupyter-black
+python -m pip install --upgrade pip jupyter webio_jupyter_extension autoflake isort black jupyter-black
 ```
 
 ```bash
 mkdir ~/.jupyter/nbconfig &&
 
-curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/code/notebook.json > ~/.jupyter/nbconfig/notebook.json
+curl https://raw.githubusercontent.com/KwatMDPhD/environment/main/notebook.json > ~/.jupyter/nbconfig/notebook.json
 ```
 
 Install https://github.com/lambdalisue/jupyter-vim-binding
