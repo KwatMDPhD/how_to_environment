@@ -54,7 +54,7 @@ alias ju="julia --project"
 
 alias pu="ju --eval \"using Pluto; Pluto.run(auto_reload_from_file = true)\""
 
-alias jp="jupyter-nbconvert --execute --ExecutePreprocessor.timeout=-1 --clear-output --inplace"
+alias jp="jupyter-nbconvert --log-level 40 --inplace --execute --ExecutePreprocessor.timeout=-1 --clear-output"
 
 alias dc="docker run --rm --interactive --tty --user root --volume ~/craft/:/home/craft/"
 
