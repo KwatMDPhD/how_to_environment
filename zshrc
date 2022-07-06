@@ -160,9 +160,9 @@ function recursively-jl() {
 
 		printf "$FONT_BOLD$FONT_PURPLE$(pwd)$FONT_DEFAULT\n" &&
 
-		pkgr check . &&
+		kata format . &&
 
-		pkgr run . --skip-run &&
+		kata run . --skip-run &&
 
 		popd
 
@@ -181,9 +181,9 @@ function recursively-pro() {
 
 		printf "$FONT_BOLD$FONT_BLUE$(pwd)$FONT_DEFAULT\n" &&
 
-		lea check . &&
+		kata format . &&
 
-		lea run . --skip-run &&
+		kata run . --skip-run &&
 
 		popd
 
@@ -270,7 +270,7 @@ function recursively-housekeep() {
 
 	recursively-jl &&
 
-	recursively-pro &&
+	#recursively-pro &&
 
 	recursively-clean-jl &&
 
