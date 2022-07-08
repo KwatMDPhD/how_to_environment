@@ -162,7 +162,7 @@ function recursively-jl() {
 
 		kata format . &&
 
-		kata run . --skip-run &&
+		kata run . --skip &&
 
 		popd
 
@@ -183,7 +183,7 @@ function recursively-pro() {
 
 		kata format . &&
 
-		kata run . --skip-run &&
+		kata run . --skip &&
 
 		popd
 
