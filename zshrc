@@ -150,11 +150,11 @@ function recursively-sed() {
 }
 
 # ================================================================================================
-# Julia functions
+# Kata functions
 # ================================================================================================
-function recursively-jl() {
+function recursively-kata() {
 
-	for pa in $(find -E . -regex ".*/*\.jl" -type d); do
+	for pa in $(find -E . -regex ".*/*\.(jl|pro)" -type d); do
 
 		pushd $pa &&
 
@@ -162,28 +162,7 @@ function recursively-jl() {
 
 		kata format . &&
 
-		kata run . --skip &&
-
-		popd
-
-	done
-
-}
-
-# ================================================================================================
-# Lean project functions
-# ================================================================================================
-function recursively-pro() {
-
-	for pa in $(find -E . -regex ".*/*\.pro" -type d); do
-
-		pushd $pa &&
-
-		printf "$FONT_BOLD$FONT_BLUE$(pwd)$FONT_DEFAULT\n" &&
-
-		kata format . &&
-
-		kata run . --skip &&
+		kata run . &&
 
 		popd
 
@@ -268,15 +247,13 @@ function recursively-housekeep() {
 
 	recursively-rm &&
 
-	recursively-jl &&
-
-	#recursively-pro &&
-
 	recursively-clean-jl &&
 
 	recursively-clean-web &&
 
 	recursively-clean-py &&
+
+	recursively-kata &&
 
 	recursively-git-add-commit-push "$1"
 
