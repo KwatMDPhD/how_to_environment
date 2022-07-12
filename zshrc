@@ -162,7 +162,9 @@ function recursively-kata() {
 
 		kata format . &&
 
-		kata run $1 . &&
+		kata call . "update" &&
+
+		#kata call . "run" &&
 
 		popd
 
@@ -253,7 +255,7 @@ function recursively-housekeep() {
 
 	recursively-clean-py &&
 
-	recursively-kata $2 &&
+	recursively-kata &&
 
 	recursively-git-add-commit-push "$1"
 
