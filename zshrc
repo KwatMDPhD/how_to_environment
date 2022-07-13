@@ -164,7 +164,7 @@ function recursively-kata() {
 
 		kata call . "update" &&
 
-		#kata call . "run" &&
+		kata call . "run" &&
 
 		popd
 
