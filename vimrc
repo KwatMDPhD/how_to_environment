@@ -113,7 +113,7 @@ nnoremap <leader>r :Rg<CR>
 " ----------------------------------------------------------------------------------------------- "
 " coc.nvim
 " ----------------------------------------------------------------------------------------------- "
-let g:coc_global_extensions = ['coc-tabnine', 'coc-sh', 'coc-json', 'coc-julia', 'coc-html']
+let g:coc_global_extensions = ['coc-tabnine', 'coc-sh', 'coc-json', 'coc-julia', 'coc-html', 'coc-svelte']
 
 "inoremap <silent><expr> <TAB>
 "      \ pumvisible() ? "\<C-n>" :
